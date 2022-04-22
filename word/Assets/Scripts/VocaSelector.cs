@@ -8,7 +8,19 @@ public class VocaSelector : MonoBehaviour
     public List<Voca> SelectVoca(int difficulty, int level)
     {
         List<Voca> voca = null;
-
+        
+        
         return voca;
+    }
+
+    /// <summary>
+    /// 특정 diffculty의 set 갯수를 반환한다.
+    /// </summary>
+    public int GetVocaSetCount(int difficulty)
+    {
+        int count = 0;
+        
+
+        return count;
     }
 }
