@@ -21,7 +21,11 @@ public class ButtonVocaSet : MonoBehaviour
             fullStars[i].SetActive(true);
             emptyStars[i].SetActive(false);
         }
-        
+    }
+
+    public void OnButtonClicked()
+    {
+
     }
 
 }
