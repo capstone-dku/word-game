@@ -10,14 +10,16 @@ public class UserData
     // TODO: 저장할 데이터 변수들 추가
     // 사용자의 단어 학습 별 갯수
     public int[][] stars = new int[4][];
+    public int[][] vocaSet = new int[4][];
 
     public UserData()
     {
         for (int i = 0; i < 4; i++)
         {
-            // TODO: 특정 난이도의 단어 갯수만큼만 배열 크기 선언하기,
+            // TODO: 특정 난이도의 단어 갯수만큼만 배열 크기 선언하기
             // 근데 대충 크게만 선언해줘도 상관은 없을 것 같습니다
-            stars[i]= new int[100];
+            stars[i] = new int[100];
+            vocaSet[i] = new int[100];
         }
     }
 }

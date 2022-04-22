@@ -16,14 +16,15 @@ public class VocaStudy : MonoBehaviour
     {
         for (int i = 0; i < 4; i++)
         {
-            UpdatePanelVocaSet(i);
+            InitPanelVocaSet(i);
         }
     }
+    
     /// <summary>
     /// 학습 버튼 눌렀을 때 호출되는 함수.
     /// 난이도 선택창을 연다.
     /// </summary>
-    public void ShowPanelDifficulty()
+    public void OnButtonClickedStudy()
     {
         // 난이도 선택창을 보여준다.
         panelDifficulty.SetActive(true);
@@ -48,13 +49,21 @@ public class VocaStudy : MonoBehaviour
         ShowPanelVocaSet(diff);
     }
 
+    /// <summary>
+    /// 해당 난이도의 세트선택 패널창을 보여준다.
+    /// </summary>
+    /// <param name="diff"></param>
     public void ShowPanelVocaSet(int diff)
     {
         panelVocaSet[diff].gameObject.SetActive(true);
     }
 
-    private void UpdatePanelVocaSet(int diff)
+    /// <summary>
+    /// 해당 난이도의 세트선택 패널창을 초기화한다. 
+    /// </summary>
+    /// <param name="diff"></param>
+    private void InitPanelVocaSet(int diff)
     {
-        panelVocaSet[diff].UpdatePanel();
+        panelVocaSet[diff].InitPanel();
     }
 }
