@@ -11,6 +11,11 @@ public class VocaStudy : MonoBehaviour
     [SerializeField] private GameObject panelDifficulty; // 난이도 선택 패널창
     [SerializeField] private PanelVocaSet[] panelVocaSet = new PanelVocaSet[4]; // 세트 선택 패널창
 
+    [SerializeField] private PanelStudyConfirm panelStudyConfirm; // 학습 확인 창
+    [SerializeField] private GameObject panelStudy; // 깜빡이 학습 패널창
+    [SerializeField] private Text textStudy;
+    
+
 
     private void Start()
     {
@@ -65,5 +70,61 @@ public class VocaStudy : MonoBehaviour
     private void InitPanelVocaSet(int diff)
     {
         panelVocaSet[diff].InitPanel();
+    }
+
+    /// <summary>
+    /// 단어 세트를 골랐을때 호출되는 함수.
+    /// 깜빡이 학습 확인창을 보여준다.
+    /// </summary>
+    public void StudyConfirm(int difficulty, int setNumber, int star)
+    {
+        panelStudyConfirm.gameObject.SetActive(true);
+        panelStudyConfirm.UpdateStars(star);
+        panelStudyConfirm.UpdateSetNumber(setNumber);
+    }
+
+    /// <summary>
+    /// 깜빡이 학습 확인창에서 확인버튼을 눌렀을 때 호출되는 함수,
+    /// 깜빡이 학습을 시작한다.
+    /// </summary>
+    public void Study(int difficulty, int setNumber)
+    {
+        // TODO: vocaSelector 구현 후 함수 바꾸기
+        //List<Voca> voca = vocaSelector.SelectVoca(difficulty, setNumber);
+        
+        // 테스트용 단어 세트
+        // 테스트하고나서 지우기
+        List<Voca> voca = new List<Voca>();
+        voca.Add(new Voca(0, "A", "에이", 0));
+        voca.Add(new Voca(1, "B", "비", 0));
+        voca.Add(new Voca(2, "C", "씨", 0));
+        
+        panelStudy.SetActive(true);
+        panelStudyConfirm.gameObject.SetActive(false);
+        panelDifficulty.SetActive(false);
+        panelVocaSet[difficulty].gameObject.SetActive(false);
+        StartCoroutine(ShowVoca(voca));
+
+    }
+
+    IEnumerator ShowVoca(List<Voca> vocaList)
+    {
+        textStudy.text = "학습이 시작됩니다.";
+        yield return new WaitForSeconds(2.0f);
+        for (int i = 0; i < 3; i++)
+        {
+            for (int j = 0; j < vocaList.Count; j++)
+            {
+                textStudy.text = vocaList[j].voca;
+                yield return new WaitForSeconds(2.0f);
+                textStudy.text = vocaList[j].meaning;
+                yield return new WaitForSeconds(2.0f);
+                textStudy.text = "";
+                yield return null;
+            }
+        }
+        textStudy.text = "학습이 종료되었습니다.";
+        yield return new WaitForSeconds(2.0f);
+        textStudy.text = "퀴즈가 시작됩니다.";
     }
 }

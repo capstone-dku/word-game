@@ -14,13 +14,18 @@ public class PanelVocaSet : MonoBehaviour
     {
         // 패널에 단어 세트만큼 버튼을 추가한다.
         int count = vocaSelector.GetVocaSetCount(difficulty);
-        for (int i = 0; i < 4/*TODO: 테스트 후 count로 바꾸기*/; i++)
+        for (int i = 1; i <= 4/*TODO: vocaSelector 기능 구현 후 count로 바꾸기*/; i++)
         {
             ButtonVocaSet button = Instantiate(prefabButtonVocaSet, scrollViewContent);
-            button.textSet.text = (i + 1).ToString();
+            button.textSet.text = i.ToString();
+            button.Init();
+            button.UpdateDifficulty(difficulty);
+            button.UpdateSetNumber(i);
+
+            // TODO: SaveLoad.cs의 GetStars(별 갯수 불러오기 기능) 구현 후 함수 바꾸기
             button.UpdateStars(2);
-            // 사용자가 했던것만큼 
-            //button.UpdateStars(saveLoad.GetStars(diff, i + 1));
+            // 사용자의 정답률만큼 별 갯수 갱신
+            //button.UpdateStars(saveLoad.GetStars(diff, i));
 
 
         }
