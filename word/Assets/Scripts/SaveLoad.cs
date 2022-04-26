@@ -3,6 +3,7 @@ using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
 using UnityEditor;
 using UnityEngine;
+using Newtonsoft.Json;
 
 [System.Serializable]
 public class UserData
@@ -23,7 +24,7 @@ public class UserData
         }
     }
 }
-
+ 
 public class SaveLoad : MonoBehaviour
 {
     private UserData currentData;
@@ -31,7 +32,7 @@ public class SaveLoad : MonoBehaviour
 
     private void Awake()
     {
-        filePath = Application.persistentDataPath + "/data.dat";
+        filePath = Application.persistentDataPath + "/data.json";
     }
     private void Start()
     {
@@ -64,6 +65,7 @@ public class SaveLoad : MonoBehaviour
     public void SaveData(UserData data)
     {
         // TODO: 저장 기능 구현
+        /*
         using(var fs = File.Open(filePath, FileMode.OpenOrCreate))
         {
             using (var bw = new BinaryWriter(fs))
@@ -71,6 +73,9 @@ public class SaveLoad : MonoBehaviour
 
             }
         }
+        */
+        string jdata = JsonConvert.SerializeObject(currentData);
+        File.WriteAllText(Application.dataPath + "/data.json", jdata);
     }
     /// <summary>
     /// 데이터를 불러온다.
@@ -79,7 +84,8 @@ public class SaveLoad : MonoBehaviour
     public UserData LoadData()
     {
         UserData data = null;
-        // TODO: 불러오기 기능 구현
+        // TODO: 불러오기 기능 
+        /*
         using (var fs = File.OpenRead(filePath))
         {
             using (var br = new BinaryReader(fs))
@@ -87,6 +93,10 @@ public class SaveLoad : MonoBehaviour
                 return data;
             }
         }
+        */
+        string jdata = File.ReadAllText(Application.dataPath + "/data.json");
+        data = JsonConvert.DeserializeObject<UserData>(jdata);
+        return data;
     }
 
     public int GetStars(int difficulty, int set)
