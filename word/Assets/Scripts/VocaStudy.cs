@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,14 +9,21 @@ public class VocaStudy : MonoBehaviour
 {
     [SerializeField] private SaveLoad saveLoad;
     [SerializeField] private VocaSelector vocaSelector;
+
     [SerializeField] private GameObject panelDifficulty; // 난이도 선택 패널창
+
     [SerializeField] private PanelVocaSet[] panelVocaSet = new PanelVocaSet[4]; // 세트 선택 패널창
 
     [SerializeField] private PanelStudyConfirm panelStudyConfirm; // 학습 확인 창
-    [SerializeField] private GameObject panelStudy; // 깜빡이 학습 패널창
-    [SerializeField] private Text textStudy;
-    
 
+    [SerializeField] private GameObject panelStudy; // 깜빡이 학습 패널창
+    [SerializeField] private Text textStudy; // 깜빡이 학습 단어 UI텍스트
+    [SerializeField] private Text textVocaCount; // 깜빡이 학습 단어 갯수 UI텍스트
+    [SerializeField] private Text textStudyCount; // 깜빡이 학습 회차 UI텍스트
+    [SerializeField] private Button buttonStartQuiz;
+
+    private List<Voca> vocaList;
+    [SerializeField] private PanelQuiz panelQuiz;
 
     private void Start()
     {
@@ -109,12 +117,18 @@ public class VocaStudy : MonoBehaviour
 
     IEnumerator ShowVoca(List<Voca> vocaList)
     {
+        this.vocaList = vocaList;
+        buttonStartQuiz.gameObject.SetActive(false);
         textStudy.text = "학습이 시작됩니다.";
+        textStudyCount.text = "";
+        textVocaCount.text = "";
         yield return new WaitForSeconds(2.0f);
-        for (int i = 0; i < 3; i++)
+        for (int i = 1; i <= 3; i++)
         {
+            textStudyCount.text = i.ToString() + "회차";
             for (int j = 0; j < vocaList.Count; j++)
             {
+                textVocaCount.text = (j + 1).ToString() + " / " + vocaList.Count.ToString();
                 textStudy.text = vocaList[j].voca;
                 yield return new WaitForSeconds(2.0f);
                 textStudy.text = vocaList[j].meaning;
@@ -123,8 +137,27 @@ public class VocaStudy : MonoBehaviour
                 yield return null;
             }
         }
+
         textStudy.text = "학습이 종료되었습니다.";
         yield return new WaitForSeconds(2.0f);
         textStudy.text = "퀴즈가 시작됩니다.";
+        
+        buttonStartQuiz.gameObject.SetActive(true);
+        yield return null;
+        buttonStartQuiz.gameObject.SetActive(true);
+    }
+    
+    public void Quiz()
+    {
+        buttonStartQuiz.gameObject.SetActive(false);
+        panelStudy.gameObject.SetActive(false);
+        panelQuiz.gameObject.SetActive(true);
+        panelQuiz.Init(this.vocaList);
+        panelQuiz.StartQuiz();
+    }
+
+    public void OnButtonClickQuiz(int num)
+    {
+
     }
 }
