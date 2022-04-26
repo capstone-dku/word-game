@@ -70,3 +70,5 @@ crashlytics-build.properties
 # Temporary auto-generated Android Assets
 /[Aa]ssets/[Ss]treamingAssets/aa.meta
 /[Aa]ssets/[Ss]treamingAssets/aa/*
+word/Assets/GSpreadSheets/Editor/Google.Apis.Auth.OAuth2.Responses.TokenResponse-user
+word/Assets/GSpreadSheets/Editor/Google.Apis.Auth.OAuth2.Responses.TokenResponse-user.meta
