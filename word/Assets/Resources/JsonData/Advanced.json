@@ -1,0 +1,3267 @@
+﻿[
+    {
+        "num": 1,
+        "voca": "pat",
+        "meaning": [
+            "톡톡 가볍게 치다"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 2,
+        "voca": "exclusive",
+        "meaning": [
+            "배타적인"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 3,
+        "voca": "commence",
+        "meaning": [
+            "시작하다"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 4,
+        "voca": "wreck",
+        "meaning": [
+            "난파"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 5,
+        "voca": "treaty",
+        "meaning": [
+            "조약"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 6,
+        "voca": "corridor",
+        "meaning": [
+            "복도"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 7,
+        "voca": "respective",
+        "meaning": [
+            "각각의"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 8,
+        "voca": "habitat",
+        "meaning": [
+            "(동물의)자연번식지"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 9,
+        "voca": "legislate",
+        "meaning": [
+            "법률을 제정하다"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 10,
+        "voca": "prominent",
+        "meaning": [
+            "두드러진",
+            " 돌기한",
+            " 양각된 현저한",
+            " 탁월한",
+            " 중요한"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 11,
+        "voca": "riot",
+        "meaning": [
+            "폭동",
+            " 소요",
+            " 소동   야단법석",
+            " 다채로움",
+            ""
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 12,
+        "voca": "mutual",
+        "meaning": [
+            "상호의"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 13,
+        "voca": "resume",
+        "meaning": [
+            "다시 잡다"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 14,
+        "voca": "orbit",
+        "meaning": [
+            "궤도"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 15,
+        "voca": "obsess",
+        "meaning": [
+            "늘러붙다"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 16,
+        "voca": "profound",
+        "meaning": [
+            "깊은",
+            " 심원한"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 17,
+        "voca": "particle",
+        "meaning": [
+            "입자"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 18,
+        "voca": "notion",
+        "meaning": [
+            "n",
+            "관념"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 19,
+        "voca": "convert",
+        "meaning": [
+            "바꾸다"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 20,
+        "voca": "whereas",
+        "meaning": [
+            "cnj.(-인)까닭에"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 21,
+        "voca": "discriminate",
+        "meaning": [
+            "분별하다"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 22,
+        "voca": "patent",
+        "meaning": [
+            "전매특허권 전매특허의"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 23,
+        "voca": "molecule",
+        "meaning": [
+            "분자"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 24,
+        "voca": "deficiency",
+        "meaning": [
+            "결핍"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 25,
+        "voca": "headquarters",
+        "meaning": [
+            "본부"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 26,
+        "voca": "nanny",
+        "meaning": [
+            "유모"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 27,
+        "voca": "spit",
+        "meaning": [
+            "침을 뱉다"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 28,
+        "voca": "rot",
+        "meaning": [
+            "썩다"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 29,
+        "voca": "dread",
+        "meaning": [
+            "두려워하다 두려움"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 30,
+        "voca": "transact",
+        "meaning": [
+            "처리하다"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 31,
+        "voca": "tick",
+        "meaning": [
+            "시계소리"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 32,
+        "voca": "transmit",
+        "meaning": [
+            "보내다"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 33,
+        "voca": "creep",
+        "meaning": [
+            "기다"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 34,
+        "voca": "profile",
+        "meaning": [
+            "옆 얼굴",
+            " 반면상 인물 소개  태도",
+            " 자세"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 35,
+        "voca": "incline",
+        "meaning": [
+            "기울이다"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 36,
+        "voca": "criteria",
+        "meaning": [
+            "criterion의 복수형"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 37,
+        "voca": "index",
+        "meaning": [
+            "색인"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 38,
+        "voca": "nominate",
+        "meaning": [
+            "추천하다"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 39,
+        "voca": "heritage",
+        "meaning": [
+            "세습 재산"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 40,
+        "voca": "hook",
+        "meaning": [
+            "갈고리"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 41,
+        "voca": "embrace",
+        "meaning": [
+            "포옹하다"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 42,
+        "voca": "inevitable",
+        "meaning": [
+            "피할 수 없는"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 43,
+        "voca": "frost",
+        "meaning": [
+            "서리"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 44,
+        "voca": "designate",
+        "meaning": [
+            "가리키다"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 45,
+        "voca": "perspective",
+        "meaning": [
+            "원근법의 원근 화법"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 46,
+        "voca": "questionnaire",
+        "meaning": [
+            "질문표"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 47,
+        "voca": "valid",
+        "meaning": [
+            "유효한"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 48,
+        "voca": "subtle",
+        "meaning": [
+            "미묘한"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 49,
+        "voca": "proportion",
+        "meaning": [
+            "비율",
+            " 비 균형",
+            " 조화"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 50,
+        "voca": "undermine",
+        "meaning": [
+            "-밑을 파다"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 51,
+        "voca": "monument",
+        "meaning": [
+            "기념비"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 52,
+        "voca": "starve",
+        "meaning": [
+            "굶어 죽다"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 53,
+        "voca": "withdraw",
+        "meaning": [
+            "물러나다"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 54,
+        "voca": "testify",
+        "meaning": [
+            "증명하다"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 55,
+        "voca": "legitimate",
+        "meaning": [
+            "합법의"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 56,
+        "voca": "sweep",
+        "meaning": [
+            "청소하다"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 57,
+        "voca": "portion",
+        "meaning": [
+            "일부",
+            " 부분"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 58,
+        "voca": "regulate",
+        "meaning": [
+            "규정하다"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 59,
+        "voca": "intrigue",
+        "meaning": [
+            "음모"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 60,
+        "voca": "reverse",
+        "meaning": [
+            "역"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 61,
+        "voca": "currency",
+        "meaning": [
+            "통용"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 62,
+        "voca": "reluctant",
+        "meaning": [
+            "마음이 내키지 않는"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 63,
+        "voca": "gaze",
+        "meaning": [
+            "지켜보다"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 64,
+        "voca": "fond",
+        "meaning": [
+            "좋아하는"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 65,
+        "voca": "acquisition",
+        "meaning": [
+            "획득"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 66,
+        "voca": "contend",
+        "meaning": [
+            "싸우다"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 67,
+        "voca": "brew",
+        "meaning": [
+            "양조하다"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 68,
+        "voca": "rebel",
+        "meaning": [
+            "반역자"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 69,
+        "voca": "spectrum",
+        "meaning": [
+            "스펙트럼"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 70,
+        "voca": "privilege",
+        "meaning": [
+            "특권",
+            " 특전",
+            " 특별 취급"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 71,
+        "voca": "trim",
+        "meaning": [
+            "산뜻한 정돈하다"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 72,
+        "voca": "modest",
+        "meaning": [
+            "겸손한"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 73,
+        "voca": "sphere",
+        "meaning": [
+            "구"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 74,
+        "voca": "scrub",
+        "meaning": [
+            "(관목의)숲"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 75,
+        "voca": "trail",
+        "meaning": [
+            "질질 끌다"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 76,
+        "voca": "delegate",
+        "meaning": [
+            "파견하다"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 77,
+        "voca": "county",
+        "meaning": [
+            "주"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 78,
+        "voca": "utilize",
+        "meaning": [
+            "-을 이용하다"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 79,
+        "voca": "archive",
+        "meaning": [
+            "기록보관소"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 80,
+        "voca": "quote",
+        "meaning": [
+            "인용하다"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 81,
+        "voca": "incorporate",
+        "meaning": [
+            "합동시키다"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 82,
+        "voca": "sole",
+        "meaning": [
+            "유일한 발바닥"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 83,
+        "voca": "equate",
+        "meaning": [
+            "같게하다"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 84,
+        "voca": "prompt",
+        "meaning": [
+            "재빠른",
+            " 신속한",
+            " 즉시 …하는"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 85,
+        "voca": "constitute",
+        "meaning": [
+            "구성하다"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 86,
+        "voca": "transition",
+        "meaning": [
+            "변천"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 87,
+        "voca": "presume",
+        "meaning": [
+            "가정하다"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 88,
+        "voca": "accord",
+        "meaning": [
+            "일치하다"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 89,
+        "voca": "inherent",
+        "meaning": [
+            "생태의"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 90,
+        "voca": "compromise",
+        "meaning": [
+            "타협 타협하다"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 91,
+        "voca": "vanish",
+        "meaning": [
+            "자취를 감추다"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 92,
+        "voca": "strip",
+        "meaning": [
+            "벗기다"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 93,
+        "voca": "commodity",
+        "meaning": [
+            "상품"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 94,
+        "voca": "patch",
+        "meaning": [
+            "깁는 헝겊"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 95,
+        "voca": "virtual",
+        "meaning": [
+            "사실상의",
+            " 실질상의",
+            " 실제의  허상의"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 96,
+        "voca": "entitle",
+        "meaning": [
+            "자격을 주다"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 97,
+        "voca": "attorney",
+        "meaning": [
+            "변호사"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 98,
+        "voca": "fertile",
+        "meaning": [
+            "비옥한"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 99,
+        "voca": "evacuate",
+        "meaning": [
+            "비우다"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 100,
+        "voca": "accumulate",
+        "meaning": [
+            "축적하다"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 101,
+        "voca": "decent",
+        "meaning": [
+            "점잖은"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 102,
+        "voca": "condemn",
+        "meaning": [
+            "나무라다"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 103,
+        "voca": "fatal",
+        "meaning": [
+            "치명적인"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 104,
+        "voca": "mortal",
+        "meaning": [
+            "죽을운명의"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 105,
+        "voca": "deficit",
+        "meaning": [
+            "결손"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 106,
+        "voca": "magnificent",
+        "meaning": [
+            "장대한"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 107,
+        "voca": "compile",
+        "meaning": [
+            "편찬하다"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 108,
+        "voca": "migrate",
+        "meaning": [
+            "이주하다"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 109,
+        "voca": "shrink",
+        "meaning": [
+            "줄어들다"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 110,
+        "voca": "immigrate",
+        "meaning": [
+            "이주하다"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 111,
+        "voca": "precede",
+        "meaning": [
+            "-에 앞서다"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 112,
+        "voca": "integrate",
+        "meaning": [
+            "통합하다"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 113,
+        "voca": "swear",
+        "meaning": [
+            "맹세하다"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 114,
+        "voca": "manifest",
+        "meaning": [
+            "명백히 하다"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 115,
+        "voca": "slope",
+        "meaning": [
+            "비탈"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 116,
+        "voca": "dictate",
+        "meaning": [
+            "받아쓰게 하다"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 117,
+        "voca": "rod",
+        "meaning": [
+            "막대"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 118,
+        "voca": "depict",
+        "meaning": [
+            "묘사하다"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 119,
+        "voca": "aesthetic",
+        "meaning": [
+            "미적인"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 120,
+        "voca": "implement",
+        "meaning": [
+            "기구"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 121,
+        "voca": "displace",
+        "meaning": [
+            "바꾸어놓다"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 122,
+        "voca": "hostile",
+        "meaning": [
+            "반대하는"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 123,
+        "voca": "absurd",
+        "meaning": [
+            "불합리한"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 124,
+        "voca": "veteran",
+        "meaning": [
+            "노련가",
+            " 경험 많은 대가",
+            " 베테랑"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 125,
+        "voca": "allocate",
+        "meaning": [
+            "할당하다"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 126,
+        "voca": "split",
+        "meaning": [
+            "쪼개다"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 127,
+        "voca": "dedicate",
+        "meaning": [
+            "봉납하다"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 128,
+        "voca": "numerous",
+        "meaning": [
+            "다 수의",
+            " 수많은",
+            " 셀 수 없이 많은"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 129,
+        "voca": "disrupt",
+        "meaning": [
+            "분열시키다"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 130,
+        "voca": "cynical",
+        "meaning": [
+            "냉소적인"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 131,
+        "voca": "undertake",
+        "meaning": [
+            "떠맡다"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 132,
+        "voca": "surrender",
+        "meaning": [
+            "넘겨주다"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 133,
+        "voca": "sneak",
+        "meaning": [
+            "몰래 움직이다"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 134,
+        "voca": "temporary",
+        "meaning": [
+            "일시적인"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 135,
+        "voca": "widow",
+        "meaning": [
+            "미망인"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 136,
+        "voca": "overwhelm",
+        "meaning": [
+            "압도하다"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 137,
+        "voca": "compatible",
+        "meaning": [
+            "양립할 수 있는"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 138,
+        "voca": "suck",
+        "meaning": [
+            "빨다"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 139,
+        "voca": "nonetheless",
+        "meaning": [
+            "역시"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 140,
+        "voca": "reputation",
+        "meaning": [
+            "평판"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 141,
+        "voca": "prohibit",
+        "meaning": [
+            "금하다",
+            " 금지하다"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 142,
+        "voca": "meanwhile",
+        "meaning": [
+            "그동안"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 143,
+        "voca": "procedure",
+        "meaning": [
+            "진행",
+            " 경과 절차"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 144,
+        "voca": "swell",
+        "meaning": [
+            "부풀다"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 145,
+        "voca": "deliberate",
+        "meaning": [
+            "숙고하다"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 146,
+        "voca": "premium",
+        "meaning": [
+            "할증금",
+            "  액면 초과액",
+            " 프리미엄"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 147,
+        "voca": "generate",
+        "meaning": [
+            "낳다"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 148,
+        "voca": "revenge",
+        "meaning": [
+            "복수"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 149,
+        "voca": "warrant",
+        "meaning": [
+            "보증하다 보증"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 150,
+        "voca": "prior",
+        "meaning": [
+            "이전의",
+            " 앞의"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 151,
+        "voca": "ounce",
+        "meaning": [
+            "삵괭이"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 152,
+        "voca": "illusion",
+        "meaning": [
+            "환영"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 153,
+        "voca": "stimulate",
+        "meaning": [
+            "자극하다"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 154,
+        "voca": "medieval",
+        "meaning": [
+            "중세(풍)의"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 155,
+        "voca": "dignity",
+        "meaning": [
+            "위엄"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 156,
+        "voca": "curse",
+        "meaning": [
+            "저주"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 157,
+        "voca": "dominant",
+        "meaning": [
+            "우세한"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 158,
+        "voca": "virgin",
+        "meaning": [
+            "처녀",
+            " 동정녀",
+            " 미혼 여성",
+            " 동정녀 마리아"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 159,
+        "voca": "brute",
+        "meaning": [
+            "야수 짐승같은"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 160,
+        "voca": "sequence",
+        "meaning": [
+            "연속"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 161,
+        "voca": "custody",
+        "meaning": [
+            "보호"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 162,
+        "voca": "supplement",
+        "meaning": [
+            "부록"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 163,
+        "voca": "bulk",
+        "meaning": [
+            "부피"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 164,
+        "voca": "dose",
+        "meaning": [
+            "1회복용량 투약하다"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 165,
+        "voca": "whip",
+        "meaning": [
+            "채찍 채찍질하다"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 166,
+        "voca": "vessel",
+        "meaning": [
+            "그릇"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 167,
+        "voca": "vigorous",
+        "meaning": [
+            "정력적인",
+            " 강건한",
+            " 활기 있는",
+            " 격렬한"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 168,
+        "voca": "inhibit",
+        "meaning": [
+            "금하다"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 169,
+        "voca": "utter",
+        "meaning": [
+            "전적인"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 170,
+        "voca": "telegraph",
+        "meaning": [
+            "전신"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 171,
+        "voca": "provoke",
+        "meaning": [
+            "화나게 하다"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 172,
+        "voca": "suspend",
+        "meaning": [
+            "매달다"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 173,
+        "voca": "faculty",
+        "meaning": [
+            "능력"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 174,
+        "voca": "persist",
+        "meaning": [
+            "고집하다"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 175,
+        "voca": "consensus",
+        "meaning": [
+            "(의견 등의)일치"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 176,
+        "voca": "sack",
+        "meaning": [
+            "마대"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 177,
+        "voca": "stir",
+        "meaning": [
+            "휘젓다"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 178,
+        "voca": "sustain",
+        "meaning": [
+            "떠받치다"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 179,
+        "voca": "foster",
+        "meaning": [
+            "기르다"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 180,
+        "voca": "parliament",
+        "meaning": [
+            "의회"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 181,
+        "voca": "pinch",
+        "meaning": [
+            "꼬집다"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 182,
+        "voca": "fraction",
+        "meaning": [
+            "분수"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 183,
+        "voca": "dimension",
+        "meaning": [
+            "치수"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 184,
+        "voca": "hypothesis",
+        "meaning": [
+            "가설"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 185,
+        "voca": "curriculum",
+        "meaning": [
+            "과목"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 186,
+        "voca": "weed",
+        "meaning": [
+            "잡초 잡초를 뽑다"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 187,
+        "voca": "confer",
+        "meaning": [
+            "주다"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 188,
+        "voca": "expertise",
+        "meaning": [
+            "대가의 의견"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 189,
+        "voca": "halt",
+        "meaning": [
+            "멈춰서다"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 190,
+        "voca": "verbal",
+        "meaning": [
+            "말의",
+            " 말에 관한",
+            " 언어상의",
+            " 말로 나타낸",
+            " 말로 된"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 191,
+        "voca": "discharge",
+        "meaning": [
+            "짐을부리다"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 192,
+        "voca": "relevant",
+        "meaning": [
+            "관련된"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 193,
+        "voca": "statistic",
+        "meaning": [
+            "통계의 통계량"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 194,
+        "voca": "submit",
+        "meaning": [
+            "복종시키다"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 195,
+        "voca": "hostage",
+        "meaning": [
+            "볼모"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 196,
+        "voca": "substance",
+        "meaning": [
+            "물질"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 197,
+        "voca": "stack",
+        "meaning": [
+            "낟가리"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 198,
+        "voca": "compulsory",
+        "meaning": [
+            "의무적인"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 199,
+        "voca": "grasp",
+        "meaning": [
+            "붙잡다"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 200,
+        "voca": "slaughter",
+        "meaning": [
+            "도살"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 201,
+        "voca": "mock",
+        "meaning": [
+            "조롱하다"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 202,
+        "voca": "stiff",
+        "meaning": [
+            "굳은"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 203,
+        "voca": "emit",
+        "meaning": [
+            "방사하다"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 204,
+        "voca": "enroll",
+        "meaning": [
+            "명부에 올리다"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 205,
+        "voca": "mere",
+        "meaning": [
+            "단순한"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 206,
+        "voca": "bankrupt",
+        "meaning": [
+            "파산자"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 207,
+        "voca": "reinforce",
+        "meaning": [
+            "보강하다"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 208,
+        "voca": "horn",
+        "meaning": [
+            "뿔"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 209,
+        "voca": "pope",
+        "meaning": [
+            "로마 교황  최고 권위자로 자처하는 사람"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 210,
+        "voca": "nun",
+        "meaning": [
+            "수녀 집비둘기의 일종"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 211,
+        "voca": "salon",
+        "meaning": [
+            "객실"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 212,
+        "voca": "retreat",
+        "meaning": [
+            "후퇴"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 213,
+        "voca": "flush",
+        "meaning": [
+            "왈칵흐르다"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 214,
+        "voca": "subjective",
+        "meaning": [
+            "주관의"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 215,
+        "voca": "vertical",
+        "meaning": [
+            "수평면에 직각인",
+            " 수직의"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 216,
+        "voca": "federal",
+        "meaning": [
+            "연방의"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 217,
+        "voca": "preach",
+        "meaning": [
+            "설교하다"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 218,
+        "voca": "torture",
+        "meaning": [
+            "고문"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 219,
+        "voca": "compel",
+        "meaning": [
+            "억지로 -시키다"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 220,
+        "voca": "diabetes",
+        "meaning": [
+            "당뇨병"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 221,
+        "voca": "contemporary",
+        "meaning": [
+            "현대의"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 222,
+        "voca": "prevail",
+        "meaning": [
+            "이기다",
+            " 극복하다",
+            " 압도하다 우세하다",
+            " 보급되다"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 223,
+        "voca": "chronic",
+        "meaning": [
+            "만성의"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 224,
+        "voca": "estate",
+        "meaning": [
+            "토지"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 225,
+        "voca": "nasty",
+        "meaning": [
+            "불쾌한"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 226,
+        "voca": "simultaneous",
+        "meaning": [
+            "동시에 일어나는(존재하는)"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 227,
+        "voca": "screw",
+        "meaning": [
+            "나사"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 228,
+        "voca": "fluid",
+        "meaning": [
+            "유동성의"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 229,
+        "voca": "deprive",
+        "meaning": [
+            "빼앗다"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 230,
+        "voca": "patrol",
+        "meaning": [
+            "순회"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 231,
+        "voca": "sentiment",
+        "meaning": [
+            "정서"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 232,
+        "voca": "inquire",
+        "meaning": [
+            "묻다"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 233,
+        "voca": "enforce",
+        "meaning": [
+            "실시하다"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 234,
+        "voca": "breed",
+        "meaning": [
+            "기르다"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 235,
+        "voca": "impose",
+        "meaning": [
+            "부과하다"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 236,
+        "voca": "stitch",
+        "meaning": [
+            "한 바늘"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 237,
+        "voca": "vital",
+        "meaning": [
+            "생명의",
+            " 생명에 관한",
+            " 생명유지에 필요한",
+            " 살아 있는"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 238,
+        "voca": "immense",
+        "meaning": [
+            "무한한"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 239,
+        "voca": "sculpture",
+        "meaning": [
+            "조각 조각하다"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 240,
+        "voca": "consent",
+        "meaning": [
+            "승낙하다"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 241,
+        "voca": "rear",
+        "meaning": [
+            "뒤"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 242,
+        "voca": "gross",
+        "meaning": [
+            "총계의"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 243,
+        "voca": "convention",
+        "meaning": [
+            "관례"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 244,
+        "voca": "phase",
+        "meaning": [
+            "국면"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 245,
+        "voca": "amplify",
+        "meaning": [
+            "확대하다"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 246,
+        "voca": "sniff",
+        "meaning": [
+            "코를 킁킁거리다"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 247,
+        "voca": "hence",
+        "meaning": [
+            "그러므로"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 248,
+        "voca": "wagon",
+        "meaning": [
+            "짐마차"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 249,
+        "voca": "weave",
+        "meaning": [
+            "짜다"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 250,
+        "voca": "scatter",
+        "meaning": [
+            "뿔뿔이 흩어 버리다"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 251,
+        "voca": "rally",
+        "meaning": [
+            "규합하다"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 252,
+        "voca": "constrain",
+        "meaning": [
+            "강제하다"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 253,
+        "voca": "pitch",
+        "meaning": [
+            "던지다"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 254,
+        "voca": "discourse",
+        "meaning": [
+            "강연"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 255,
+        "voca": "shield",
+        "meaning": [
+            "방패"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 256,
+        "voca": "spite",
+        "meaning": [
+            "악의"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 257,
+        "voca": "glimpse",
+        "meaning": [
+            "흘끗 봄"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 258,
+        "voca": "draft",
+        "meaning": [
+            "초고"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 259,
+        "voca": "ideology",
+        "meaning": [
+            "공리"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 260,
+        "voca": "chamber",
+        "meaning": [
+            "방"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 261,
+        "voca": "cater",
+        "meaning": [
+            "음식물을 마련하다"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 262,
+        "voca": "divine",
+        "meaning": [
+            "신의"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 263,
+        "voca": "splash",
+        "meaning": [
+            "튀기다"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 264,
+        "voca": "facilitate",
+        "meaning": [
+            "쉽게하다"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 265,
+        "voca": "wander",
+        "meaning": [
+            "헤매다"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 266,
+        "voca": "outrage",
+        "meaning": [
+            "불법(적인 행위)"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 267,
+        "voca": "flee",
+        "meaning": [
+            "달아나다"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 268,
+        "voca": "distort",
+        "meaning": [
+            "찌그러뜨리다"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 269,
+        "voca": "comprise",
+        "meaning": [
+            "포함하다"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 270,
+        "voca": "reside",
+        "meaning": [
+            "거주하다"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 271,
+        "voca": "degrade",
+        "meaning": [
+            "지위를 낮추다"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 272,
+        "voca": "spill",
+        "meaning": [
+            "엎지르다"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 273,
+        "voca": "lump",
+        "meaning": [
+            "덩어리"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 274,
+        "voca": "retain",
+        "meaning": [
+            "보유하다"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 275,
+        "voca": "strain",
+        "meaning": [
+            "잡아당기다"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 276,
+        "voca": "ridiculous",
+        "meaning": [
+            "어리석은"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 277,
+        "voca": "glare",
+        "meaning": [
+            "번쩍이는 빛"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 278,
+        "voca": "stroke",
+        "meaning": [
+            "한번치기"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 279,
+        "voca": "conceive",
+        "meaning": [
+            "상상하다"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 280,
+        "voca": "undergo",
+        "meaning": [
+            "(영향 등을)받다"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 281,
+        "voca": "heir",
+        "meaning": [
+            "상속인"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 282,
+        "voca": "affiliate",
+        "meaning": [
+            "회원으로 가입시키다"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 283,
+        "voca": "fuse",
+        "meaning": [
+            "신관"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 284,
+        "voca": "trigger",
+        "meaning": [
+            "방아쇠 재빠른"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 285,
+        "voca": "recruit",
+        "meaning": [
+            "신병"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 286,
+        "voca": "span",
+        "meaning": [
+            "한 뼘"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 287,
+        "voca": "substantial",
+        "meaning": [
+            "실체의"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 288,
+        "voca": "bishop",
+        "meaning": [
+            "주교"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 289,
+        "voca": "veterinarian",
+        "meaning": [
+            "수의사"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 290,
+        "voca": "scope",
+        "meaning": [
+            "범위"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 291,
+        "voca": "resign",
+        "meaning": [
+            "사임하다"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 292,
+        "voca": "timber",
+        "meaning": [
+            "재목"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 293,
+        "voca": "prosper",
+        "meaning": [
+            "번영하다"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 294,
+        "voca": "abort",
+        "meaning": [
+            "유산하다"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 295,
+        "voca": "knot",
+        "meaning": [
+            "매듭(=tie)"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 296,
+        "voca": "refine",
+        "meaning": [
+            "정제정련하다"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 297,
+        "voca": "rage",
+        "meaning": [
+            "격노"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 298,
+        "voca": "subscribe",
+        "meaning": [
+            "서명승락하다"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 299,
+        "voca": "shelter",
+        "meaning": [
+            "피난처"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 300,
+        "voca": "tenant",
+        "meaning": [
+            "차지인"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 301,
+        "voca": "compound",
+        "meaning": [
+            "성분 등을 혼합하다"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 302,
+        "voca": "extraordinary",
+        "meaning": [
+            "이상한"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 303,
+        "voca": "retail",
+        "meaning": [
+            "소매"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 304,
+        "voca": "inflate",
+        "meaning": [
+            "부풀게 하다"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 305,
+        "voca": "dine",
+        "meaning": [
+            "저녁식사를 하다"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 306,
+        "voca": "slight",
+        "meaning": [
+            "약간의"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 307,
+        "voca": "judicial",
+        "meaning": [
+            "사법의"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 308,
+        "voca": "virtue",
+        "meaning": [
+            "덕",
+            " 덕행",
+            " 선",
+            " 선행"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 309,
+        "voca": "panel",
+        "meaning": [
+            "판벽널"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 310,
+        "voca": "sophisticated",
+        "meaning": [
+            "물정에 닳고 닳은"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 311,
+        "voca": "tempt",
+        "meaning": [
+            "유혹하다"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 312,
+        "voca": "vague",
+        "meaning": [
+            "막연한"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 313,
+        "voca": "terrace",
+        "meaning": [
+            "계단모양의 뜰(광장)"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 314,
+        "voca": "induce",
+        "meaning": [
+            "꾀다"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 315,
+        "voca": "parallel",
+        "meaning": [
+            "평행의"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 316,
+        "voca": "assault",
+        "meaning": [
+            "습격"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 317,
+        "voca": "gasoline",
+        "meaning": [
+            "가솔린"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 318,
+        "voca": "suite",
+        "meaning": [
+            "수행원"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 319,
+        "voca": "terminate",
+        "meaning": [
+            "끝내다"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 320,
+        "voca": "simulate",
+        "meaning": [
+            "흉내내다"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 321,
+        "voca": "verse",
+        "meaning": [
+            "시의 한 줄",
+            " 시구  일련의 시구"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 322,
+        "voca": "furnish",
+        "meaning": [
+            "공급하다"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 323,
+        "voca": "imply",
+        "meaning": [
+            "함축하다"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 324,
+        "voca": "keen",
+        "meaning": [
+            "날카로운"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 325,
+        "voca": "component",
+        "meaning": [
+            "구성하는 성분"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 326,
+        "voca": "restrict",
+        "meaning": [
+            "제한하다"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 327,
+        "voca": "gulf",
+        "meaning": [
+            "만"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 328,
+        "voca": "counterpart",
+        "meaning": [
+            "부본"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 329,
+        "voca": "compensate",
+        "meaning": [
+            "배상하다"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 330,
+        "voca": "rational",
+        "meaning": [
+            "합리적인"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 331,
+        "voca": "vivid",
+        "meaning": [
+            "발랄한",
+            " 약동적인",
+            " 힘찬",
+            " 생기있는"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 332,
+        "voca": "caption",
+        "meaning": [
+            "표제"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 333,
+        "voca": "authentic",
+        "meaning": [
+            "진짜의"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 334,
+        "voca": "wicked",
+        "meaning": [
+            "사악한"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 335,
+        "voca": "predator",
+        "meaning": [
+            "약탈자"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 336,
+        "voca": "substitute",
+        "meaning": [
+            "대용하다 대신하다 대리(인)"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 337,
+        "voca": "ethical",
+        "meaning": [
+            "도덕상의"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 338,
+        "voca": "lease",
+        "meaning": [
+            "임대차"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 339,
+        "voca": "vocation",
+        "meaning": [
+            "천직",
+            " 사명 직업",
+            " 생업",
+            " 장사  적성",
+            " 소질",
+            " 재능"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 340,
+        "voca": "flip",
+        "meaning": [
+            "튀기다 홱 움직이다 튀기기"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 341,
+        "voca": "dispute",
+        "meaning": [
+            "논쟁하다"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 342,
+        "voca": "moderate",
+        "meaning": [
+            "절제하는"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 343,
+        "voca": "spectacle",
+        "meaning": [
+            "광경"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 344,
+        "voca": "acquaint",
+        "meaning": [
+            "알리다"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 345,
+        "voca": "spouse",
+        "meaning": [
+            "배우자"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 346,
+        "voca": "warehouse",
+        "meaning": [
+            "창고"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 347,
+        "voca": "restrain",
+        "meaning": [
+            "제지하다"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 348,
+        "voca": "furious",
+        "meaning": [
+            "노하여 펄펄뛰는"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 349,
+        "voca": "executive",
+        "meaning": [
+            "집행의"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 350,
+        "voca": "modify",
+        "meaning": [
+            "변경하다"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 351,
+        "voca": "warrior",
+        "meaning": [
+            "병사"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 352,
+        "voca": "contradict",
+        "meaning": [
+            "반박하다"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 353,
+        "voca": "manipulate",
+        "meaning": [
+            "(손으로)다루다"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 354,
+        "voca": "deposit",
+        "meaning": [
+            "예금"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 355,
+        "voca": "scarce",
+        "meaning": [
+            "부족한"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 356,
+        "voca": "norm",
+        "meaning": [
+            "표준"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 357,
+        "voca": "rid",
+        "meaning": [
+            "면하게하다"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 358,
+        "voca": "literal",
+        "meaning": [
+            "문자의"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 359,
+        "voca": "elaborate",
+        "meaning": [
+            "공들인"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 360,
+        "voca": "coordinate",
+        "meaning": [
+            "동격의"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 361,
+        "voca": "drain",
+        "meaning": [
+            "배수하다"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 362,
+        "voca": "vice",
+        "meaning": [
+            "악덕",
+            "  비행",
+            " 타락 행위"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 363,
+        "voca": "steep",
+        "meaning": [
+            "가파른 -에 담그다 잠기다 담그기"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 364,
+        "voca": "oblige",
+        "meaning": [
+            "(의무를)별수없이 -하게하다"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 365,
+        "voca": "intervene",
+        "meaning": [
+            "사이에 들다"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 366,
+        "voca": "prejudice",
+        "meaning": [
+            "편견",
+            " 선입관"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 367,
+        "voca": "thread",
+        "meaning": [
+            "실"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 368,
+        "voca": "premier",
+        "meaning": [
+            "국무 총리",
+            " 수상"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 369,
+        "voca": "guardian",
+        "meaning": [
+            "보호자"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 370,
+        "voca": "explicit",
+        "meaning": [
+            "명백한"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 371,
+        "voca": "formula",
+        "meaning": [
+            "공식"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 372,
+        "voca": "roar",
+        "meaning": [
+            "으르렁거리다 으르렁소리"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 373,
+        "voca": "swift",
+        "meaning": [
+            "빠른"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 374,
+        "voca": "ethnic",
+        "meaning": [
+            "인종의"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 375,
+        "voca": "creek",
+        "meaning": [
+            "시내"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 376,
+        "voca": "yield",
+        "meaning": [
+            "산출하다"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 377,
+        "voca": "turnover",
+        "meaning": [
+            "전복"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 378,
+        "voca": "metropolitan",
+        "meaning": [
+            "수도권(의)"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 379,
+        "voca": "therapy",
+        "meaning": [
+            "치료법"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 380,
+        "voca": "peasant",
+        "meaning": [
+            "농부"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 381,
+        "voca": "dual",
+        "meaning": [
+            "둘의"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 382,
+        "voca": "extract",
+        "meaning": [
+            "뽑아내다"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 383,
+        "voca": "lone",
+        "meaning": [
+            "혼자의"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 384,
+        "voca": "erect",
+        "meaning": [
+            "똑바로 선"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 385,
+        "voca": "seize",
+        "meaning": [
+            "붙잡다"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 386,
+        "voca": "infer",
+        "meaning": [
+            "추론하다"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 387,
+        "voca": "infect",
+        "meaning": [
+            "감염시키다"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 388,
+        "voca": "tease",
+        "meaning": [
+            "괴롭히다"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 389,
+        "voca": "conserve",
+        "meaning": [
+            "보존하다"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 390,
+        "voca": "haunt",
+        "meaning": [
+            "자주가다"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 391,
+        "voca": "supervise",
+        "meaning": [
+            "감독하다"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 392,
+        "voca": "cathedral",
+        "meaning": [
+            "대성당"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 393,
+        "voca": "pave",
+        "meaning": [
+            "(도로를)포장하다"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 394,
+        "voca": "tremendous",
+        "meaning": [
+            "무서운"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 395,
+        "voca": "naive",
+        "meaning": [
+            "소박한"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 396,
+        "voca": "underlie",
+        "meaning": [
+            "-의 밑에 있다"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 397,
+        "voca": "adverse",
+        "meaning": [
+            "거꾸로의"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 398,
+        "voca": "blast",
+        "meaning": [
+            "돌풍"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 399,
+        "voca": "merge",
+        "meaning": [
+            "합병하다"
+        ],
+        "difficulty": 2
+    },
+    {
+        "num": 400,
+        "voca": "polish",
+        "meaning": [
+            "닦다",
+            " 갈다",
+            " 윤내다"
+        ],
+        "difficulty": 2
+    }
+]

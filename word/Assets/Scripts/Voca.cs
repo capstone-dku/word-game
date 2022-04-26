@@ -6,10 +6,10 @@ public class Voca
 {
     public int num;
     public string voca;
-    public string meaning;
+    public string[] meaning;
     public int difficulty;
 
-    public Voca(int num, string voca, string meaning, int difficulty)
+    public Voca(int num, string voca, string[] meaning, int difficulty)
     {
         this.num = num;
         this.voca = voca;

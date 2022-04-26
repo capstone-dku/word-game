@@ -95,9 +95,9 @@ public class VocaStudy : MonoBehaviour
         // 테스트용 단어 세트
         // 테스트하고나서 지우기
         List<Voca> voca = new List<Voca>();
-        voca.Add(new Voca(0, "A", "에이", 0));
-        voca.Add(new Voca(1, "B", "비", 0));
-        voca.Add(new Voca(2, "C", "씨", 0));
+        voca.Add(new Voca(0, "A", new string[]{"에이"}, 0));
+        voca.Add(new Voca(1, "B", new string[]{"비"}, 0));
+        voca.Add(new Voca(2, "C", new string[]{"씨"}, 0));
         
         panelStudy.SetActive(true);
         panelStudyConfirm.gameObject.SetActive(false);
@@ -117,7 +117,7 @@ public class VocaStudy : MonoBehaviour
             {
                 textStudy.text = vocaList[j].voca;
                 yield return new WaitForSeconds(2.0f);
-                textStudy.text = vocaList[j].meaning;
+                textStudy.text = vocaList[j].meaning[0];
                 yield return new WaitForSeconds(2.0f);
                 textStudy.text = "";
                 yield return null;

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Newtonsoft.Json;
+using System.IO;
 
 class word
 {
@@ -21,11 +22,25 @@ class word
 
 public class VocaTest : MonoBehaviour
 {
-    word w1 = new word(1,"apple", new string[]{"사과"}, 0);
-
+    List<word> data = new List<word>();
+    VocaSelector vs = new VocaSelector();
     private void Start()
     {
-        string jdata = JsonConvert.SerializeObject(w1);
+        List<Voca> voca = vs.SelectVoca(3,1);
+        print(voca[3].meaning[0]);
+    }
+
+    public void json_save()
+    {
+        string jdata = JsonConvert.SerializeObject(data);
+        File.WriteAllText(Application.dataPath + "/word_database.json", jdata);
+    }
+
+    public void json_load()
+    {
+        string jdata = File.ReadAllText(Application.dataPath + "/word_database.json");
         print(jdata);
+        data = JsonConvert.DeserializeObject<List<word>>(jdata);
+        print(data[0].mean);
     }
 }
