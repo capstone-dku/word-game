@@ -20,11 +20,8 @@ public class PanelQuiz : MonoBehaviour
     {
         List<int> random = new List<int>();
         textVoca.text = vocaList[currentIndex].voca;
-        for (int i = 0; i < textButton.Length; i++)
-        {
-            int n = Random.Range(0, vocaList.Count - 1);
-            random.Add(n);
-            textButton[i].text = vocaList[n].meaning;
-        }
+        int rnd = Random.Range(0, textButton.Length-1);
+        textButton[rnd].text = vocaList[currentIndex].meaning[0];
+
     }
 }

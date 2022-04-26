@@ -97,16 +97,13 @@ public class VocaStudy : MonoBehaviour
     /// </summary>
     public void Study(int difficulty, int setNumber)
     {
-        // TODO: vocaSelector 구현 후 함수 바꾸기
-        //List<Voca> voca = vocaSelector.SelectVoca(difficulty, setNumber);
-        
-        // 테스트용 단어 세트
-        // 테스트하고나서 지우기
+        // 정상작동 확인
+        // 이후 
+        // List<Voca> voca = vocaSelector.SelectVoca(difficulty, setNumber);
+
         List<Voca> voca = new List<Voca>();
-        voca.Add(new Voca(0, "A", new string[]{"에이"}, 0));
-        voca.Add(new Voca(1, "B", new string[]{"비"}, 0));
-        voca.Add(new Voca(2, "C", new string[]{"씨"}, 0));
-        
+        voca.Add(new Voca(0, "a", new string[]{"A","에이","에에이이"},0));
+
         panelStudy.SetActive(true);
         panelStudyConfirm.gameObject.SetActive(false);
         panelDifficulty.SetActive(false);
@@ -131,7 +128,7 @@ public class VocaStudy : MonoBehaviour
                 textVocaCount.text = (j + 1).ToString() + " / " + vocaList.Count.ToString();
                 textStudy.text = vocaList[j].voca;
                 yield return new WaitForSeconds(2.0f);
-                textStudy.text = vocaList[j].meaning[0];
+                textStudy.text = vocaList[j].meaning[0] + vocaList[j].meaning[1] + vocaList[j].meaning[2];
                 yield return new WaitForSeconds(2.0f);
                 textStudy.text = "";
                 yield return null;
