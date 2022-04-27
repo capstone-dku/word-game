@@ -9,7 +9,10 @@ public class VocaSelector : MonoBehaviour
     const int BEGINNER = 800;
     const int INTERMEDIATE = 1800;
     const int ADVANCED = 400;
-    const int TOEIC = 2660;     
+    const int TOEIC = 2660;
+
+    private List<Voca> vocaList = null;
+
     // TODO: 특정 difficulty, level의 단어를 단어장 json 파일에서 가져온다.
     public List<Voca> SelectVoca(int difficulty, int level)
     {
