@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Text;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -20,10 +21,19 @@ public class VocaStudy : MonoBehaviour
     [SerializeField] private Text textStudy; // 깜빡이 학습 단어 UI텍스트
     [SerializeField] private Text textVocaCount; // 깜빡이 학습 단어 갯수 UI텍스트
     [SerializeField] private Text textStudyCount; // 깜빡이 학습 회차 UI텍스트
-    [SerializeField] private Button buttonStartQuiz;
+    [SerializeField] private Button buttonStartQuiz; // 퀴즈 시작 버튼
+
+    [SerializeField] private PanelQuiz panelQuiz; // 퀴즈 패널창
+
+    [SerializeField] private PanelVocaList panelVocaList; // 보카 리스트 패널 창
+
+    [SerializeField] private GameObject panelResult; // 결과창
+
+
+    private WaitForSeconds TEST_WAIT = new WaitForSeconds(0.1f);
+    private WaitForSeconds wait = new WaitForSeconds(2.0f);
 
     private List<Voca> vocaList;
-    [SerializeField] private PanelQuiz panelQuiz;
 
     private void Start()
     {
@@ -97,12 +107,7 @@ public class VocaStudy : MonoBehaviour
     /// </summary>
     public void Study(int difficulty, int setNumber)
     {
-        // 정상작동 확인
-        // 이후 
-        // List<Voca> voca = vocaSelector.SelectVoca(difficulty, setNumber);
-
-        List<Voca> voca = new List<Voca>();
-        voca.Add(new Voca(0, "a", new string[]{"A","에이","에에이이"},0));
+        List<Voca> voca = vocaSelector.SelectVoca(difficulty, setNumber);
 
         panelStudy.SetActive(true);
         panelStudyConfirm.gameObject.SetActive(false);
@@ -119,7 +124,8 @@ public class VocaStudy : MonoBehaviour
         textStudy.text = "학습이 시작됩니다.";
         textStudyCount.text = "";
         textVocaCount.text = "";
-        yield return new WaitForSeconds(2.0f);
+        yield return wait;
+        StringBuilder sb = new StringBuilder();
         for (int i = 1; i <= 3; i++)
         {
             textStudyCount.text = i.ToString() + "회차";
@@ -127,16 +133,29 @@ public class VocaStudy : MonoBehaviour
             {
                 textVocaCount.text = (j + 1).ToString() + " / " + vocaList.Count.ToString();
                 textStudy.text = vocaList[j].voca;
-                yield return new WaitForSeconds(2.0f);
-                textStudy.text = vocaList[j].meaning[0] + vocaList[j].meaning[1] + vocaList[j].meaning[2];
-                yield return new WaitForSeconds(2.0f);
+                yield return wait;
+                sb.Clear();
+                if (vocaList[j].meaning.Length >= 2)
+                {
+                    for (int k = 0; k < vocaList[j].meaning.Length; k++)
+                    {
+                        sb.Append(vocaList[j].meaning[k]);
+                        sb.Append("\n");
+                    }
+                }
+                else
+                {
+                    sb.Append(vocaList[j].meaning[0]);
+                }
+                textStudy.text = sb.ToString();
+                yield return wait;
                 textStudy.text = "";
                 yield return null;
             }
         }
 
         textStudy.text = "학습이 종료되었습니다.";
-        yield return new WaitForSeconds(2.0f);
+        yield return TEST_WAIT;
         textStudy.text = "퀴즈가 시작됩니다.";
         
         buttonStartQuiz.gameObject.SetActive(true);
@@ -152,9 +171,15 @@ public class VocaStudy : MonoBehaviour
         panelQuiz.Init(this.vocaList);
         panelQuiz.StartQuiz();
     }
-
-    public void OnButtonClickQuiz(int num)
+    public void OnQuizFinished(int answerCount, bool[] answer, List<Voca> vocaList)
     {
+        float rate = answerCount / 20;
+        panelVocaList.gameObject.SetActive(true);
+        panelVocaList.Init(vocaList, answer);
+        panelQuiz.gameObject.SetActive(false);
 
+        panelResult.SetActive(true);
     }
+
+
 }
