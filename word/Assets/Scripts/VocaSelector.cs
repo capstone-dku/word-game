@@ -16,6 +16,7 @@ public class VocaSelector : MonoBehaviour
     public List<Voca> toeicVoca = null;
 
     // TODO: 특정 difficulty, level의 단어를 단어장 json 파일에서 가져온다.
+
     public List<Voca> SelectVoca(int difficulty, int level)
     {
         List<Voca> voca;
@@ -112,7 +113,28 @@ public class VocaSelector : MonoBehaviour
         //불러오기
         
         VocaTicket vt = new VocaTicket(10);
-        vtm.sum+=200;
+        int tempSum = 0;
+        
+        switch(difficulty){
+            case 0:
+                tempSum = vtlist[level].sum;
+                vtlist[level] = vt;
+                break;
+            case 1:
+                tempSum = vtlist[level+((BEGINNER)/20)].sum;
+                vtlist[level+((BEGINNER)/20)] = vt;
+                break;
+            case 2:
+                tempSum = vtlist[level+((BEGINNER+INTERMEDIATE)/20)].sum;
+                vtlist[level+((BEGINNER+INTERMEDIATE)/20)] = vt;
+                break;
+            case 3:
+                tempSum = vtlist[level+((BEGINNER+INTERMEDIATE+ADVANCED)/20)].sum;
+                vtlist[level+((BEGINNER+INTERMEDIATE+ADVANCED)/20)] = vt;
+                break;
+        }
+
+        vtm.sum += 200 - tempSum;
         
         jdata = JsonConvert.SerializeObject(vtlist);
         File.WriteAllText(Application.dataPath + "/VocaTicket.json", jdata);
@@ -135,9 +157,11 @@ public class VocaSelector : MonoBehaviour
 
         List<Voca> voca = new List<Voca>();
         int __max = BEGINNER+INTERMEDIATE+ADVANCED+TOEIC;
+        
         for(int i=0;i<num;i++){
             int t = Random.Range(0, vtm.sum-1);
             int j;
+            
             for(j=0;t>-1;j++){ // 서치
                 t-=vtlist[j].sum;
                 if(t<0){
@@ -145,6 +169,7 @@ public class VocaSelector : MonoBehaviour
                     break;
                 }
             }
+            
             int k;
             for(k=0;t>-1;k++){
                 t-=vtlist[j].ticket[k];
@@ -152,17 +177,20 @@ public class VocaSelector : MonoBehaviour
                     break;
                 }
             }
+            print(j);
+            print(k);
+            
             if(j<BEGINNER/20){
                 voca.Add(beginnerVoca[j*20+k]);
             }
             else if(j<(BEGINNER+INTERMEDIATE)/20){
-                voca.Add(intermediateVoca[(j-BEGINNER)*20+k]);
+                voca.Add(intermediateVoca[(j-(BEGINNER/20))*20+k]);
             }
             else if(j<(BEGINNER+INTERMEDIATE+ADVANCED)/20){
-                voca.Add(advancedVoca[(j-BEGINNER-INTERMEDIATE)*20+k]);
+                voca.Add(advancedVoca[(j-(BEGINNER+INTERMEDIATE)/20)*20+k]);
             }
             else if(j<(BEGINNER+INTERMEDIATE+ADVANCED)/20){
-                voca.Add(toeicVoca[(j-BEGINNER)*20+k]);
+                voca.Add(toeicVoca[(j-(BEGINNER+INTERMEDIATE+ADVANCED)/20)*20+k]);
             }
         }
         return voca;

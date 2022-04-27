@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Newtonsoft.Json;
 using System.IO;
+using System.Diagnostics;
 
 class word
 {
@@ -24,10 +25,24 @@ public class VocaTest : MonoBehaviour
 {
     List<word> data = new List<word>();
     VocaSelector vs = new VocaSelector();
+    Stopwatch watch = new Stopwatch();
     private void Start()
     {
-        List<Voca> voca = vs.SelectVoca(3,1);
-        print(voca[3].meaning[0]);
+        List<Voca> voca;
+        int[] t = new int[5]{5,5,5,5,5};
+        watch.Start();
+
+        vs.JsonLoad();
+        vs.AddVocaTicket(1,0);
+        voca = vs.FindVocaTicket(5);
+        vs.SaveVocaTicket(voca,t);
+
+        watch.Stop();
+        UnityEngine.Debug.Log(watch.ElapsedMilliseconds+" ms");
+
+        for(int i=0;i<voca.Count;i++){
+            print(voca[i].voca);
+        }
     }
 
     public void json_save()
