@@ -17,9 +17,11 @@ public class VocaTicket
             
     }
     
-    public void ChangeTicket(int num, int t){
-        sum += t - ticket[num];
-        ticket[num] = 10;
+    public int ChangeTicket(int num, int t){ // 티켓 총 변화량 반환
+        int temp = t-ticket[num];
+        sum += temp;
+        ticket[num] = t;
+        return temp;
     }
 }
 
@@ -32,4 +34,9 @@ public class VocaTicketMeta
         offset = new int[4]{b, i , a, t};
         sum = 0;
     }
+
+    public void AddTicket(int t){
+        sum+=t;
+    }
+
 }
