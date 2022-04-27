@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Text;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -98,11 +99,7 @@ public class VocaStudy : MonoBehaviour
     public void Study(int difficulty, int setNumber)
     {
         // 정상작동 확인
-        // 이후 
-        // List<Voca> voca = vocaSelector.SelectVoca(difficulty, setNumber);
-
-        List<Voca> voca = new List<Voca>();
-        voca.Add(new Voca(0, "a", new string[]{"A","에이","에에이이"},0));
+        List<Voca> voca = vocaSelector.SelectVoca(difficulty, setNumber);
 
         panelStudy.SetActive(true);
         panelStudyConfirm.gameObject.SetActive(false);
@@ -120,6 +117,7 @@ public class VocaStudy : MonoBehaviour
         textStudyCount.text = "";
         textVocaCount.text = "";
         yield return new WaitForSeconds(2.0f);
+        StringBuilder sb = new StringBuilder();
         for (int i = 1; i <= 3; i++)
         {
             textStudyCount.text = i.ToString() + "회차";
@@ -128,7 +126,20 @@ public class VocaStudy : MonoBehaviour
                 textVocaCount.text = (j + 1).ToString() + " / " + vocaList.Count.ToString();
                 textStudy.text = vocaList[j].voca;
                 yield return new WaitForSeconds(2.0f);
-                textStudy.text = vocaList[j].meaning[0] + vocaList[j].meaning[1] + vocaList[j].meaning[2];
+                sb.Clear();
+                if (vocaList[j].meaning.Length >= 2)
+                {
+                    for (int k = 0; k < vocaList[j].meaning.Length; k++)
+                    {
+                        sb.Append(vocaList[j].meaning[k]);
+                        sb.Append("\n");
+                    }
+                }
+                else
+                {
+                    sb.Append(vocaList[j].meaning[0]);
+                }
+                textStudy.text = sb.ToString();
                 yield return new WaitForSeconds(2.0f);
                 textStudy.text = "";
                 yield return null;
