@@ -25,7 +25,7 @@ public class VocaTicket
 
 public class VocaTicketMeta
 {
-    public int offset[];
+    public int[] offset;
     public int sum;
     public VocaTicketMeta(int b, int i, int a, int t)
     {

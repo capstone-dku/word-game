@@ -4,13 +4,12 @@ using UnityEngine;
 using Newtonsoft.Json;
 using System.IO;
 
-const int BEGINNER = 800;
-const int INTERMEDIATE = 1800;
-const int ADVANCED = 400;
-const int TOEIC = 2660;
-
 public class VocaSelector : MonoBehaviour
 {    
+    const int BEGINNER = 800;
+    const int INTERMEDIATE = 1800;
+    const int ADVANCED = 400;
+    const int TOEIC = 2660;     
     // TODO: 특정 difficulty, level의 단어를 단어장 json 파일에서 가져온다.
     public List<Voca> SelectVoca(int difficulty, int level)
     {
@@ -58,7 +57,7 @@ public class VocaSelector : MonoBehaviour
     /// 티켓파일 초기화 파일생성해주지만 만들어진 상태로 파일 넣어주는게 나을것 같아요.
     /// </summary>
     public void InitVocaTicket(){
-        List<VocaTicket> vtlist;
+        List<VocaTicket> vtlist = new List<VocaTicket>();
         for(int i=0;i<BEGINNER/20;i++){
             VocaTicket vt = new VocaTicket(0);
             vtlist.Add(vt);
@@ -87,6 +86,8 @@ public class VocaSelector : MonoBehaviour
     /// </summary>
     public void AddVocaTicket(int difficulty, int level)
     {
+        List<VocaTicket> vtlist;
+        VocaTicketMeta vtm;
         if(!File.Exists(Application.dataPath + "/VocaTicket.json")){
             InitVocaTicket();
         }
@@ -94,13 +95,13 @@ public class VocaSelector : MonoBehaviour
         string jdata = File.ReadAllText(Application.dataPath + "/VocaTicket.json");
         vtlist = JsonConvert.DeserializeObject<List<VocaTicket>>(jdata);
         jdata = File.ReadAllText(Application.dataPath + "/VocaTicketMeta.json");
-        vtm = JsonConvert.DeserializeObject<VocaTicketMeta>jdata);
+        vtm = JsonConvert.DeserializeObject<VocaTicketMeta>(jdata);
         //불러오기
         
-        VocaTicekt vt = new VocaTicekt(10);
+        VocaTicket vt = new VocaTicket(10);
         vtm.sum+=200;
         
-        string jdata = JsonConvert.SerializeObject(vtlist);
+        jdata = JsonConvert.SerializeObject(vtlist);
         File.WriteAllText(Application.dataPath + "/VocaTicket.json", jdata);
         jdata = JsonConvert.SerializeObject(vtm);
         File.WriteAllText(Application.dataPath + "/VocaTicketMeta.json", jdata);
@@ -110,14 +111,16 @@ public class VocaSelector : MonoBehaviour
     /// <summary>
     /// 학습한 단어를 찾음
     /// </summary>
-    public List<Voca> FindVocaTicket(int num);
+    public List<Voca> FindVocaTicket(int num)
     {
+        List<VocaTicket> vtlist;
+        VocaTicketMeta vtm;
         string jdata = File.ReadAllText(Application.dataPath + "/VocaTicket.json");
         vtlist = JsonConvert.DeserializeObject<List<VocaTicket>>(jdata);
         jdata = File.ReadAllText(Application.dataPath + "/VocaTicketMeta.json");
-        vtm = JsonConvert.DeserializeObject<VocaTicketMeta>jdata);
+        vtm = JsonConvert.DeserializeObject<VocaTicketMeta>(jdata);
 
-        List<Voca> voca;
+        List<Voca> voca = new List<Voca>();
         for(int i=0;i<num;i++){
             int t = Random.Range(0, vtm.sum-1);
 
