@@ -10,6 +10,7 @@ public class VocaSelector : MonoBehaviour
     const int INTERMEDIATE = 1800;
     const int ADVANCED = 400;
     const int TOEIC = 2660;
+    private const int VOCA_PER_SET = 20;
 
     private List<Voca> vocaList = null;
 
@@ -26,10 +27,19 @@ public class VocaSelector : MonoBehaviour
     /// </summary>
     public int GetVocaSetCount(int difficulty)
     {
-        int count = 0;
-        
-
-        return count;
+        switch (difficulty)
+        {
+            case 0: 
+                return BEGINNER / VOCA_PER_SET;
+            case 1:
+                return INTERMEDIATE / VOCA_PER_SET;
+            case 2:
+                return ADVANCED / VOCA_PER_SET;
+            case 3:
+                return TOEIC / VOCA_PER_SET;
+            default:
+                return 0;
+        }
     }
 
     public List<Voca> JsonLoad(int difficulty)
