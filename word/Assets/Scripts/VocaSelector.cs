@@ -10,6 +10,8 @@ public class VocaSelector : MonoBehaviour
     const int INTERMEDIATE = 1800;
     const int ADVANCED = 400;
     const int TOEIC = 2660;
+
+    const int VOCA_PER_SET = 20;
     
     public List<Voca> beginnerVoca = null;
     public List<Voca> intermediateVoca = null;
