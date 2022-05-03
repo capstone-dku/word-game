@@ -29,14 +29,21 @@ public class VocaStudy : MonoBehaviour
 
     [SerializeField] private GameObject panelResult; // 결과창
 
+    // 테스트용인지 아닌지 확인하기 위한 변수
+    public bool TEST_MODE;
+    private WaitForSeconds DelayTime; // 테스트모드일경우 깜빡이 학습 대기시간이 줄어듬
 
-    private WaitForSeconds TEST_WAIT = new WaitForSeconds(0.1f);
-    private WaitForSeconds wait = new WaitForSeconds(2.0f);
-
-    private List<Voca> vocaList;
+    private List<Voca> currentVocaList;
+    private int currentDifficulty;
+    private int currentSetNumber;
 
     private void Start()
     {
+        if (TEST_MODE)
+            DelayTime = new WaitForSeconds(0.1f);
+        else
+            DelayTime = new WaitForSeconds(2.0f);
+
         for (int i = 0; i < 4; i++)
         {
             InitPanelVocaSet(i);
@@ -107,55 +114,58 @@ public class VocaStudy : MonoBehaviour
     /// </summary>
     public void Study(int difficulty, int setNumber)
     {
-        List<Voca> voca = vocaSelector.SelectVoca(difficulty, setNumber);
+        // 학습할 단어를 불러온다.
+        currentVocaList = vocaSelector.SelectVoca(difficulty, setNumber);
+        this.currentDifficulty = difficulty;
+        this.currentSetNumber = setNumber;
 
         panelStudy.SetActive(true);
         panelStudyConfirm.gameObject.SetActive(false);
         panelDifficulty.SetActive(false);
         panelVocaSet[difficulty].gameObject.SetActive(false);
-        StartCoroutine(ShowVoca(voca));
+        StartCoroutine(ShowVoca());
 
     }
 
-    IEnumerator ShowVoca(List<Voca> vocaList)
+    IEnumerator ShowVoca()
     {
-        this.vocaList = vocaList;
         buttonStartQuiz.gameObject.SetActive(false);
         textStudy.text = "학습이 시작됩니다.";
         textStudyCount.text = "";
         textVocaCount.text = "";
-        yield return wait;
+        
+        yield return DelayTime;
         StringBuilder sb = new StringBuilder();
         for (int i = 1; i <= 3; i++)
         {
             textStudyCount.text = i.ToString() + "회차";
-            for (int j = 0; j < vocaList.Count; j++)
+            for (int j = 0; j < currentVocaList.Count; j++)
             {
-                textVocaCount.text = (j + 1).ToString() + " / " + vocaList.Count.ToString();
-                textStudy.text = vocaList[j].voca;
-                yield return wait;
+                textVocaCount.text = (j + 1).ToString() + " / " + currentVocaList.Count.ToString();
+                textStudy.text = currentVocaList[j].voca;
+                yield return DelayTime;
                 sb.Clear();
-                if (vocaList[j].meaning.Length >= 2)
+                if (currentVocaList[j].meaning.Length >= 2)
                 {
-                    for (int k = 0; k < vocaList[j].meaning.Length; k++)
+                    for (int k = 0; k < currentVocaList[j].meaning.Length; k++)
                     {
-                        sb.Append(vocaList[j].meaning[k]);
+                        sb.Append(currentVocaList[j].meaning[k]);
                         sb.Append("\n");
                     }
                 }
                 else
                 {
-                    sb.Append(vocaList[j].meaning[0]);
+                    sb.Append(currentVocaList[j].meaning[0]);
                 }
                 textStudy.text = sb.ToString();
-                yield return wait;
+                yield return DelayTime;
                 textStudy.text = "";
                 yield return null;
             }
         }
 
         textStudy.text = "학습이 종료되었습니다.";
-        yield return TEST_WAIT;
+        yield return DelayTime;
         textStudy.text = "퀴즈가 시작됩니다.";
         
         buttonStartQuiz.gameObject.SetActive(true);
@@ -168,18 +178,51 @@ public class VocaStudy : MonoBehaviour
         buttonStartQuiz.gameObject.SetActive(false);
         panelStudy.gameObject.SetActive(false);
         panelQuiz.gameObject.SetActive(true);
-        panelQuiz.Init(this.vocaList);
+        panelQuiz.Init(this.currentVocaList);
         panelQuiz.StartQuiz();
     }
-    public void OnQuizFinished(int answerCount, bool[] answer, List<Voca> vocaList)
+    public void OnQuizFinished(int answerCount, bool[] answer)
     {
         float rate = answerCount / 20;
         panelVocaList.gameObject.SetActive(true);
-        panelVocaList.Init(vocaList, answer);
+        panelVocaList.Init(currentVocaList, answer);
         panelQuiz.gameObject.SetActive(false);
+        
+        
 
+        // TODO: https://github.com/capstone-dku/word-game/issues/5
+        // 1. 결과창을 보여준다.
         panelResult.SetActive(true);
+        // 2. 획득한 별에 따라 사용자에게 티켓을 지급한다.
+
+        // 3. 획득한 별 갯수를 저장한다.
+        
+        
+
+        // 학습한 단어 저장 및 세트 해금
+        // 1. 학습한 단어를 저장한다.
+        vocaSelector.AddVocaTicket(currentDifficulty, currentSetNumber);
+        // 퀴즈 정답에 따라 티켓을 다르게 저장한다.
+        int[] tickets = new int[20];
+        for (int i = 0; i < tickets.Length; i++)
+        {
+            tickets[i] = answer[i] == true ? 10 : 30;
+        }
+        vocaSelector.SaveVocaTicket(currentVocaList, tickets);
+        // 2.다음 세트를 해금한다.
+
+        // 3. 해금된 정보를 저장한다.
+
+
+
+
     }
 
+    private void StudyFinished()
+    {
+        currentVocaList = null;
+        currentDifficulty = 0;
+        currentSetNumber = 0;
+    }
 
 }
