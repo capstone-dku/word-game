@@ -74,7 +74,7 @@ public class PanelQuiz : MonoBehaviour
         if (currentIndex >= vocaList.Count - 1)
         {
             Debug.Log("퀴즈 끝");
-            vocaStudy.OnQuizFinished(answerCount, answer, vocaList);
+            vocaStudy.OnQuizFinished(answerCount, answer);
         }
         else
         {
