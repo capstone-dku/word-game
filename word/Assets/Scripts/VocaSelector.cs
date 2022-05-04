@@ -18,6 +18,9 @@ public class VocaSelector : MonoBehaviour
     public List<Voca> advancedVoca = null;
     public List<Voca> toeicVoca = null;
 
+    public List<VocaTicket> vtlist = null;
+    public List<VocaTicketMeta> vtm = null;
+
     // TODO: 특정 difficulty, level의 단어를 단어장 json 파일에서 가져온다.
 
     public List<Voca> SelectVoca(int difficulty, int level)
