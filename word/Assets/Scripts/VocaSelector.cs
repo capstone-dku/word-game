@@ -86,7 +86,7 @@ public class VocaSelector : MonoBehaviour
     /// 티켓파일 초기화 파일생성해주지만 만들어진 상태로 파일 넣어주는게 나을것 같아요.
     /// </summary>
     public void InitVocaTicket(){
-        List<VocaTicket> vtlist = new List<VocaTicket>();
+        vtlist = new List<VocaTicket>();
         for(int i=0;i<BEGINNER/20;i++){
             VocaTicket vt = new VocaTicket(0);
             vtlist.Add(vt);
@@ -103,7 +103,7 @@ public class VocaSelector : MonoBehaviour
             VocaTicket vt = new VocaTicket(0);
             vtlist.Add(vt);
         }
-        VocaTicketMeta vtm = new VocaTicketMeta(BEGINNER,INTERMEDIATE,ADVANCED,TOEIC);
+        vtm = new VocaTicketMeta(BEGINNER,INTERMEDIATE,ADVANCED,TOEIC);
         string jdata = JsonConvert.SerializeObject(vtlist);
         File.WriteAllText(Application.dataPath + "/VocaTicket.json", jdata);
         jdata = JsonConvert.SerializeObject(vtm);
@@ -115,16 +115,15 @@ public class VocaSelector : MonoBehaviour
     /// </summary>
     public void AddVocaTicket(int difficulty, int level)
     {
-        List<VocaTicket> vtlist;
-        VocaTicketMeta vtm;
         if(!File.Exists(Application.dataPath + "/VocaTicket.json")){
             InitVocaTicket();
         }
-
-        string jdata = File.ReadAllText(Application.dataPath + "/VocaTicket.json");
-        vtlist = JsonConvert.DeserializeObject<List<VocaTicket>>(jdata);
-        jdata = File.ReadAllText(Application.dataPath + "/VocaTicketMeta.json");
-        vtm = JsonConvert.DeserializeObject<VocaTicketMeta>(jdata);
+        if(vtlist == null){
+            string jdata = File.ReadAllText(Application.dataPath + "/VocaTicket.json");
+            vtlist = JsonConvert.DeserializeObject<List<VocaTicket>>(jdata);
+            jdata = File.ReadAllText(Application.dataPath + "/VocaTicketMeta.json");
+            vtm = JsonConvert.DeserializeObject<VocaTicketMeta>(jdata);
+        }
         //불러오기
         
         VocaTicket vt = new VocaTicket(10);
@@ -163,12 +162,12 @@ public class VocaSelector : MonoBehaviour
     /// </summary>
     public List<Voca> FindVocaTicket(int num) // 몇개를 반환할 것인지를 인자로
     {
-        List<VocaTicket> vtlist;
-        VocaTicketMeta vtm;
-        string jdata = File.ReadAllText(Application.dataPath + "/VocaTicket.json");
-        vtlist = JsonConvert.DeserializeObject<List<VocaTicket>>(jdata);
-        jdata = File.ReadAllText(Application.dataPath + "/VocaTicketMeta.json");
-        vtm = JsonConvert.DeserializeObject<VocaTicketMeta>(jdata);
+        if(vtlist == null){
+            string jdata = File.ReadAllText(Application.dataPath + "/VocaTicket.json");
+            vtlist = JsonConvert.DeserializeObject<List<VocaTicket>>(jdata);
+            jdata = File.ReadAllText(Application.dataPath + "/VocaTicketMeta.json");
+            vtm = JsonConvert.DeserializeObject<VocaTicketMeta>(jdata);
+        }
 
         List<Voca> voca = new List<Voca>();
         int __max = BEGINNER+INTERMEDIATE+ADVANCED+TOEIC;
@@ -216,16 +215,16 @@ public class VocaSelector : MonoBehaviour
     /// </summary>
     public void SaveVocaTicket(List<Voca> voca, int[] newTicket) // newTicket은 순서대로 새로 부여할티켓
     {
-        List<VocaTicket> vtlist;
-        VocaTicketMeta vtm;
         if(!File.Exists(Application.dataPath + "/VocaTicket.json")){
             InitVocaTicket();
         }
 
-        string jdata = File.ReadAllText(Application.dataPath + "/VocaTicket.json");
-        vtlist = JsonConvert.DeserializeObject<List<VocaTicket>>(jdata);
-        jdata = File.ReadAllText(Application.dataPath + "/VocaTicketMeta.json");
-        vtm = JsonConvert.DeserializeObject<VocaTicketMeta>(jdata);
+        if(vtlist == null){
+            string jdata = File.ReadAllText(Application.dataPath + "/VocaTicket.json");
+            vtlist = JsonConvert.DeserializeObject<List<VocaTicket>>(jdata);
+            jdata = File.ReadAllText(Application.dataPath + "/VocaTicketMeta.json");
+            vtm = JsonConvert.DeserializeObject<VocaTicketMeta>(jdata);
+        }
         //불러오기
          if(beginnerVoca == null){
             JsonLoad();
