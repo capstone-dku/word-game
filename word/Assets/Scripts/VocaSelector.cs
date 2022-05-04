@@ -19,7 +19,7 @@ public class VocaSelector : MonoBehaviour
     public List<Voca> toeicVoca = null;
 
     public List<VocaTicket> vtlist = null;
-    public List<VocaTicketMeta> vtm = null;
+    public VocaTicketMeta vtm = null;
 
     // TODO: 특정 difficulty, level의 단어를 단어장 json 파일에서 가져온다.
 
@@ -115,11 +115,12 @@ public class VocaSelector : MonoBehaviour
     /// </summary>
     public void AddVocaTicket(int difficulty, int level)
     {
+        string jdata;
         if(!File.Exists(Application.dataPath + "/VocaTicket.json")){
             InitVocaTicket();
         }
         if(vtlist == null){
-            string jdata = File.ReadAllText(Application.dataPath + "/VocaTicket.json");
+            jdata = File.ReadAllText(Application.dataPath + "/VocaTicket.json");
             vtlist = JsonConvert.DeserializeObject<List<VocaTicket>>(jdata);
             jdata = File.ReadAllText(Application.dataPath + "/VocaTicketMeta.json");
             vtm = JsonConvert.DeserializeObject<VocaTicketMeta>(jdata);
@@ -215,12 +216,13 @@ public class VocaSelector : MonoBehaviour
     /// </summary>
     public void SaveVocaTicket(List<Voca> voca, int[] newTicket) // newTicket은 순서대로 새로 부여할티켓
     {
+        string jdata;
         if(!File.Exists(Application.dataPath + "/VocaTicket.json")){
             InitVocaTicket();
         }
 
         if(vtlist == null){
-            string jdata = File.ReadAllText(Application.dataPath + "/VocaTicket.json");
+            jdata = File.ReadAllText(Application.dataPath + "/VocaTicket.json");
             vtlist = JsonConvert.DeserializeObject<List<VocaTicket>>(jdata);
             jdata = File.ReadAllText(Application.dataPath + "/VocaTicketMeta.json");
             vtm = JsonConvert.DeserializeObject<VocaTicketMeta>(jdata);
