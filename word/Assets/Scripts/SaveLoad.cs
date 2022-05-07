@@ -12,6 +12,9 @@ public class UserData
     // 사용자의 단어 학습 별 갯수
     public int[][] stars = new int[4][];
     public int[][] vocaSet = new int[4][];
+    public int[] coin = new int[3];
+    public int[] items = new int[300];
+    public int[] purchasable = new int[300];
 
     public UserData()
     {
@@ -21,6 +24,18 @@ public class UserData
             // 대충 크게만 선언해줘도 상관은 없을 것 같습니다
             stars[i] = new int[150];
             vocaSet[i] = new int[150];
+            for(int j=0; j<75; j++){
+                stars[i][j*2];=0;
+                stars[i][j*2+1]=0;
+                vocaSet[i][j*2]=0;
+                vocaSet[i][j*2+1]=0;
+            }
+        }
+        coin= new int[3]{0,0,0};
+        itmes = new int[300];
+        for(int j=0; j<150; j++){
+            itmes[j*2] = 0;
+            items[j*2+1] = 0;
         }
     }
 }
