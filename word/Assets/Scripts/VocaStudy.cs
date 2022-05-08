@@ -27,7 +27,7 @@ public class VocaStudy : MonoBehaviour
 
     [SerializeField] private PanelVocaList panelVocaList; // 보카 리스트 패널 창
 
-    [SerializeField] private GameObject panelResult; // 결과창
+    [SerializeField] private PanelResult panelResult; // 결과창
 
     // 테스트용인지 아닌지 확인하기 위한 변수
     public bool TEST_MODE;
@@ -183,7 +183,6 @@ public class VocaStudy : MonoBehaviour
     }
     public void OnQuizFinished(int answerCount, bool[] answer)
     {
-        float rate = answerCount / 20;
         panelVocaList.gameObject.SetActive(true);
         panelVocaList.Init(currentVocaList, answer);
         panelQuiz.gameObject.SetActive(false);
@@ -192,23 +191,39 @@ public class VocaStudy : MonoBehaviour
 
         // TODO: https://github.com/capstone-dku/word-game/issues/5
         // 1. 결과창을 보여준다.
-        panelResult.SetActive(true);
+        panelResult.gameObject.SetActive(true);
+        // 저장되어있던 데이터와 별 갯수 비교
+        int savedStars = saveLoad.GetStars(currentDifficulty, currentSetNumber);
+        int stars = 0;
+        // 정답갯수 하드코드
+        // 획득한 별 계산
+        if (answerCount >= 20)
+            stars = 3;
+        else if (answerCount >= 12)
+            stars = 2;
+        else if (answerCount >= 6)
+            stars = 1;
+        panelResult.UpdateStars(stars);
+        // 지급할 티켓 계산
+        int ticket = stars - savedStars;
         // 2. 획득한 별에 따라 사용자에게 티켓을 지급한다.
-
+        Debug.Log("티켓 획득: " + ticket +"개");
+        saveLoad.SetTicket(ticket);
         // 3. 획득한 별 갯수를 저장한다.
-        
-        
+        saveLoad.SetStars(currentDifficulty, currentSetNumber, stars);
+        Debug.Log("별 갯수 저장: " + stars +"개");
+
 
         // 학습한 단어 저장 및 세트 해금
         // 1. 학습한 단어를 저장한다.
-        vocaSelector.AddVocaTicket(currentDifficulty, currentSetNumber);
-        // 퀴즈 정답에 따라 티켓을 다르게 저장한다.
-        int[] tickets = new int[20];
-        for (int i = 0; i < tickets.Length; i++)
+        vocaSelector.AddVocaWeight(currentDifficulty, currentSetNumber);
+        // 퀴즈 정답에 따라 가중치를 다르게 저장한다.
+        int[] weights = new int[20];
+        for (int i = 0; i < weights.Length; i++)
         {
-            tickets[i] = answer[i] == true ? 10 : 30;
+            weights[i] = answer[i] == true ? 10 : 30;
         }
-        vocaSelector.SaveVocaTicket(currentVocaList, tickets);
+        vocaSelector.SaveVocaWeight(currentVocaList, weights);
         // 2.다음 세트를 해금한다.
 
         // 3. 해금된 정보를 저장한다.
