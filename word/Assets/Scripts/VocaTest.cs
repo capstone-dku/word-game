@@ -33,9 +33,9 @@ public class VocaTest : MonoBehaviour
         watch.Start();
 
         vs.JsonLoad();
-        vs.AddVocaTicket(1,0);
-        voca = vs.FindVocaTicket(5);
-        vs.SaveVocaTicket(voca,t);
+        vs.AddVocaWeight(1,0);
+        voca = vs.FindVocaWeight(5);
+        vs.SaveVocaWeight(voca,t);
 
         watch.Stop();
         UnityEngine.Debug.Log(watch.ElapsedMilliseconds+" ms");

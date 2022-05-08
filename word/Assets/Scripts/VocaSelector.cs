@@ -18,8 +18,8 @@ public class VocaSelector : MonoBehaviour
     public List<Voca> advancedVoca = null;
     public List<Voca> toeicVoca = null;
 
-    public List<VocaTicket> vtlist = null;
-    public VocaTicketMeta vtm = null;
+    public List<VocaWeight> vtlist = null;
+    public VocaWeightMeta vtm = null;
 
     // TODO: 특정 difficulty, level의 단어를 단어장 json 파일에서 가져온다.
 
@@ -85,49 +85,49 @@ public class VocaSelector : MonoBehaviour
     /// <summary>
     /// 티켓파일 초기화 파일생성해주지만 만들어진 상태로 파일 넣어주는게 나을것 같아요.
     /// </summary>
-    public void InitVocaTicket(){
-        vtlist = new List<VocaTicket>();
+    public void InitVocaWeight(){
+        vtlist = new List<VocaWeight>();
         for(int i=0;i<BEGINNER/20;i++){
-            VocaTicket vt = new VocaTicket(0);
+            VocaWeight vt = new VocaWeight(0);
             vtlist.Add(vt);
         }
         for(int i=0;i<INTERMEDIATE/20;i++){
-            VocaTicket vt = new VocaTicket(0);
+            VocaWeight vt = new VocaWeight(0);
             vtlist.Add(vt);
         }
         for(int i=0;i<ADVANCED/20;i++){
-            VocaTicket vt = new VocaTicket(0);
+            VocaWeight vt = new VocaWeight(0);
             vtlist.Add(vt);
         }
         for(int i=0;i<TOEIC/20;i++){
-            VocaTicket vt = new VocaTicket(0);
+            VocaWeight vt = new VocaWeight(0);
             vtlist.Add(vt);
         }
-        vtm = new VocaTicketMeta(BEGINNER,INTERMEDIATE,ADVANCED,TOEIC);
+        vtm = new VocaWeightMeta(BEGINNER,INTERMEDIATE,ADVANCED,TOEIC);
         string jdata = JsonConvert.SerializeObject(vtlist);
-        File.WriteAllText(Application.dataPath + "/VocaTicket.json", jdata);
+        File.WriteAllText(Application.dataPath + "/VocaWeight.json", jdata);
         jdata = JsonConvert.SerializeObject(vtm);
-        File.WriteAllText(Application.dataPath + "/VocaTicketMeta.json", jdata);
+        File.WriteAllText(Application.dataPath + "/VocaWeightMeta.json", jdata);
     }
 
     /// <summary>
     /// 학습한 단어를 티켓과 함께 저장
     /// </summary>
-    public void AddVocaTicket(int difficulty, int level)
+    public void AddVocaWeight(int difficulty, int level)
     {
         string jdata;
-        if(!File.Exists(Application.dataPath + "/VocaTicket.json")){
-            InitVocaTicket();
+        if(!File.Exists(Application.dataPath + "/VocaWeight.json")){
+            InitVocaWeight();
         }
         if(vtlist == null){
-            jdata = File.ReadAllText(Application.dataPath + "/VocaTicket.json");
-            vtlist = JsonConvert.DeserializeObject<List<VocaTicket>>(jdata);
-            jdata = File.ReadAllText(Application.dataPath + "/VocaTicketMeta.json");
-            vtm = JsonConvert.DeserializeObject<VocaTicketMeta>(jdata);
+            jdata = File.ReadAllText(Application.dataPath + "/VocaWeight.json");
+            vtlist = JsonConvert.DeserializeObject<List<VocaWeight>>(jdata);
+            jdata = File.ReadAllText(Application.dataPath + "/VocaWeightMeta.json");
+            vtm = JsonConvert.DeserializeObject<VocaWeightMeta>(jdata);
         }
         //불러오기
         
-        VocaTicket vt = new VocaTicket(10);
+        VocaWeight vt = new VocaWeight(10);
         int tempSum = 0;
         
         switch(difficulty){
@@ -152,22 +152,22 @@ public class VocaSelector : MonoBehaviour
         vtm.sum += 200 - tempSum;
         
         jdata = JsonConvert.SerializeObject(vtlist);
-        File.WriteAllText(Application.dataPath + "/VocaTicket.json", jdata);
+        File.WriteAllText(Application.dataPath + "/VocaWeight.json", jdata);
         jdata = JsonConvert.SerializeObject(vtm);
-        File.WriteAllText(Application.dataPath + "/VocaTicketMeta.json", jdata);
+        File.WriteAllText(Application.dataPath + "/VocaWeightMeta.json", jdata);
         //저장
     }
 
     /// <summary>
-    /// 학습한 단어를 티켓에 비례하여 랜덤으로 찾음.
+    /// 학습한 단어를 가중치에 비례하여 랜덤으로 찾음.
     /// </summary>
-    public List<Voca> FindVocaTicket(int num) // 몇개를 반환할 것인지를 인자로
+    public List<Voca> FindVocaWeight(int num) // 몇개를 반환할 것인지를 인자로
     {
         if(vtlist == null){
-            string jdata = File.ReadAllText(Application.dataPath + "/VocaTicket.json");
-            vtlist = JsonConvert.DeserializeObject<List<VocaTicket>>(jdata);
-            jdata = File.ReadAllText(Application.dataPath + "/VocaTicketMeta.json");
-            vtm = JsonConvert.DeserializeObject<VocaTicketMeta>(jdata);
+            string jdata = File.ReadAllText(Application.dataPath + "/VocaWeight.json");
+            vtlist = JsonConvert.DeserializeObject<List<VocaWeight>>(jdata);
+            jdata = File.ReadAllText(Application.dataPath + "/VocaWeightMeta.json");
+            vtm = JsonConvert.DeserializeObject<VocaWeightMeta>(jdata);
         }
 
         List<Voca> voca = new List<Voca>();
@@ -187,7 +187,7 @@ public class VocaSelector : MonoBehaviour
             
             int k;
             for(k=0;t>-1;k++){
-                t-=vtlist[j].ticket[k];
+                t-=vtlist[j].weight[k];
                 if(t<0){
                     break;
                 }
@@ -212,50 +212,50 @@ public class VocaSelector : MonoBehaviour
     }
 
     /// <summary>
-    /// 단어에 새로운 티켓을 부여함. 
+    /// 단어에 새로운 가중치를부여함. 
     /// </summary>
-    public void SaveVocaTicket(List<Voca> voca, int[] newTicket) // newTicket은 순서대로 새로 부여할티켓
+    public void SaveVocaWeight(List<Voca> voca, int[] newWeight) // newWeight는 순서대로 새로 부여할 가중치
     {
         string jdata;
-        if(!File.Exists(Application.dataPath + "/VocaTicket.json")){
-            InitVocaTicket();
+        if(!File.Exists(Application.dataPath + "/VocaWeight.json")){
+            InitVocaWeight();
         }
 
         if(vtlist == null){
-            jdata = File.ReadAllText(Application.dataPath + "/VocaTicket.json");
-            vtlist = JsonConvert.DeserializeObject<List<VocaTicket>>(jdata);
-            jdata = File.ReadAllText(Application.dataPath + "/VocaTicketMeta.json");
-            vtm = JsonConvert.DeserializeObject<VocaTicketMeta>(jdata);
+            jdata = File.ReadAllText(Application.dataPath + "/VocaWeight.json");
+            vtlist = JsonConvert.DeserializeObject<List<VocaWeight>>(jdata);
+            jdata = File.ReadAllText(Application.dataPath + "/VocaWeightMeta.json");
+            vtm = JsonConvert.DeserializeObject<VocaWeightMeta>(jdata);
         }
         //불러오기
          if(beginnerVoca == null){
             JsonLoad();
         }
-        for(int i=0;i<newTicket.Length;i++){
+        for(int i=0;i<newWeight.Length;i++){
             int __temp;
             switch(voca[i].difficulty){
                 case 0:
-                    __temp = vtlist[(int)((voca[i].num-1)/20)].ChangeTicket((voca[i].num-1)%20, newTicket[i]);
-                    vtm.AddTicket(__temp);
+                    __temp = vtlist[(int)((voca[i].num-1)/20)].ChangeTicket((voca[i].num-1)%20, newWeight[i]);
+                    vtm.AddWeight(__temp);
                     break;
                 case 1:
-                    __temp = vtlist[(int)((voca[i].num-1+BEGINNER)/20)].ChangeTicket((voca[i].num-1)%20, newTicket[i]);
-                    vtm.AddTicket(__temp);
+                    __temp = vtlist[(int)((voca[i].num-1+BEGINNER)/20)].ChangeTicket((voca[i].num-1)%20, newWeight[i]);
+                    vtm.AddWeight(__temp);
                     break;
                 case 2:
-                    __temp = vtlist[(int)((voca[i].num-1+BEGINNER+INTERMEDIATE)/20)].ChangeTicket((voca[i].num-1)%20, newTicket[i]);
-                    vtm.AddTicket(__temp);
+                    __temp = vtlist[(int)((voca[i].num-1+BEGINNER+INTERMEDIATE)/20)].ChangeTicket((voca[i].num-1)%20, newWeight[i]);
+                    vtm.AddWeight(__temp);
                     break;
                 case 3:
-                    __temp = vtlist[(int)((voca[i].num-1+BEGINNER+INTERMEDIATE+ADVANCED)/20)].ChangeTicket((voca[i].num-1)%20, newTicket[i]);
-                    vtm.AddTicket(__temp);
+                    __temp = vtlist[(int)((voca[i].num-1+BEGINNER+INTERMEDIATE+ADVANCED)/20)].ChangeTicket((voca[i].num-1)%20, newWeight[i]);
+                    vtm.AddWeight(__temp);
                     break;
             }
         }
         jdata = JsonConvert.SerializeObject(vtlist);
-        File.WriteAllText(Application.dataPath + "/VocaTicket.json", jdata);
+        File.WriteAllText(Application.dataPath + "/VocaWeight.json", jdata);
         jdata = JsonConvert.SerializeObject(vtm);
-        File.WriteAllText(Application.dataPath + "/VocaTicketMeta.json", jdata);
+        File.WriteAllText(Application.dataPath + "/VocaWeightMeta.json", jdata);
         //저장
     }
 }
