@@ -1037,7 +1037,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_Sprite: {fileID: 21300000, guid: 28874524193a7df46946ca120372ea2c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -4595,7 +4595,7 @@ TilemapRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -1
+  m_SortingOrder: -2
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0.97, y: 0.91999996, z: 0}
   m_MaxChunkCount: 16
@@ -17371,11 +17371,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 2144715935}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e0a0e461f18e55d47b2b12dd8c333624, type: 3}
+  m_Script: {fileID: 11500000, guid: 9d377921af665024ab0b19ad1d55755e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vocaStudy: {fileID: 261400366}
-  textSetNumber: {fileID: 1717120500}
   emptyStars:
   - {fileID: 167381073}
   - {fileID: 971595790}
