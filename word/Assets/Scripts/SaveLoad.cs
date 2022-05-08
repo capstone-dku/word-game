@@ -48,7 +48,7 @@ public class SaveLoad : MonoBehaviour
 
     private void Awake()
     {
-        filePath = Application.persistentDataPath + "/data.json";
+        filePath = Application.dataPath + "/data.json";
     }
     private void Start()
     {
@@ -56,12 +56,14 @@ public class SaveLoad : MonoBehaviour
         {
             // 파일 데이터가 저장되어있을 때
             // 저장된 데이터를 불러온다.
+            Debug.Log("저장된 데이터 불러옴");
             currentData = LoadData();
         }
         else
         {
             // 저장된 데이터가 없을때
             // 새로 파일을 만들어 저장한다.
+            Debug.Log("새로 데이터 저장");
             UserData data = new UserData();
             SaveData(data);
         }
@@ -81,15 +83,6 @@ public class SaveLoad : MonoBehaviour
     public void SaveData(UserData data)
     {
         // TODO: 저장 기능 구현
-        /*
-        using(var fs = File.Open(filePath, FileMode.OpenOrCreate))
-        {
-            using (var bw = new BinaryWriter(fs))
-            {
-
-            }
-        }
-        */
         string jdata = JsonConvert.SerializeObject(currentData);
         File.WriteAllText(Application.dataPath + "/data.json", jdata);
     }
@@ -101,15 +94,6 @@ public class SaveLoad : MonoBehaviour
     {
         UserData data = null;
         // TODO: 불러오기 기능 
-        /*
-        using (var fs = File.OpenRead(filePath))
-        {
-            using (var br = new BinaryReader(fs))
-            {
-                return data;
-            }
-        }
-        */
         string jdata = File.ReadAllText(Application.dataPath + "/data.json");
         data = JsonConvert.DeserializeObject<UserData>(jdata);
         return data;
