@@ -10,11 +10,12 @@ public class UserData
 {
     // TODO: 저장할 데이터 변수들 추가
     // 사용자의 단어 학습 별 갯수
-    public int[][] stars = new int[4][];
-    public int[][] vocaSet = new int[4][];
-    public int[] coin = new int[3];
-    public int[] items = new int[300];
-    public int[] purchasable = new int[300];
+    public int[][] stars = new int[4][]; // 단어장[난이도][세트]의 별 갯수
+    public int[][] vocaSet = new int[4][]; // 
+    public int ticket = 0; // 사용자의 보유 티켓 수
+    public int[] coin = new int[3]; // 사용자의 보유 코인 수
+    public int[] items = new int[300]; // 가지고 있는 아이템 수
+    public int[] purchasable = new int[300]; // 구매할 수 있는 아이템 수
 
     public UserData()
     {
@@ -117,5 +118,20 @@ public class SaveLoad : MonoBehaviour
     public int GetStars(int difficulty, int set)
     {
         return currentData.stars[difficulty][set];
+    }
+
+    public void SetStars(int difficulty, int set, int stars)
+    {
+        currentData.stars[difficulty][set] = stars;
+    }
+
+    public int GetTicket()
+    {
+        return currentData.ticket;
+    }
+
+    public void SetTicket(int ticket)
+    {
+        currentData.ticket = ticket;
     }
 }
