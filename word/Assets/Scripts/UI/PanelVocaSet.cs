@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PanelVocaSet : MonoBehaviour
 {
+    [SerializeField] private SaveLoad saveLoad;
     [SerializeField] private Transform scrollViewContent; // 세트 선택 창 스크롤뷰 컨텐츠
     [SerializeField] private VocaSelector vocaSelector;
     [SerializeField][Range(0,3)] private int difficulty;
@@ -26,10 +27,8 @@ public class PanelVocaSet : MonoBehaviour
             bool locked = i <= 3 ? false : true;
             button.UpdateLocked(locked);
 
-            // TODO: SaveLoad.cs의 GetStars(별 갯수 불러오기 기능) 구현 후 함수 바꾸기
-            button.UpdateStars(0);
             // 사용자의 정답률만큼 별 갯수 갱신
-            //button.UpdateStars(saveLoad.GetStars(diff, i));
+            button.UpdateStars(saveLoad.GetStars(difficulty, i));
 
 
         }
