@@ -235,19 +235,19 @@ public class VocaSelector : MonoBehaviour
             int __temp;
             switch(voca[i].difficulty){
                 case 0:
-                    __temp = vtlist[(int)((voca[i].num-1)/20)].ChangeTicket((voca[i].num-1)%20, newWeight[i]);
+                    __temp = vtlist[(int)((voca[i].num-1)/20)].ChangeWeight((voca[i].num-1)%20, newWeight[i]);
                     vtm.AddWeight(__temp);
                     break;
                 case 1:
-                    __temp = vtlist[(int)((voca[i].num-1+BEGINNER)/20)].ChangeTicket((voca[i].num-1)%20, newWeight[i]);
+                    __temp = vtlist[(int)((voca[i].num-1+BEGINNER)/20)].ChangeWeight((voca[i].num-1)%20, newWeight[i]);
                     vtm.AddWeight(__temp);
                     break;
                 case 2:
-                    __temp = vtlist[(int)((voca[i].num-1+BEGINNER+INTERMEDIATE)/20)].ChangeTicket((voca[i].num-1)%20, newWeight[i]);
+                    __temp = vtlist[(int)((voca[i].num-1+BEGINNER+INTERMEDIATE)/20)].ChangeWeight((voca[i].num-1)%20, newWeight[i]);
                     vtm.AddWeight(__temp);
                     break;
                 case 3:
-                    __temp = vtlist[(int)((voca[i].num-1+BEGINNER+INTERMEDIATE+ADVANCED)/20)].ChangeTicket((voca[i].num-1)%20, newWeight[i]);
+                    __temp = vtlist[(int)((voca[i].num-1+BEGINNER+INTERMEDIATE+ADVANCED)/20)].ChangeWeight((voca[i].num-1)%20, newWeight[i]);
                     vtm.AddWeight(__temp);
                     break;
             }
