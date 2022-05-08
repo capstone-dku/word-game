@@ -25,16 +25,16 @@ public class UserData
             stars[i] = new int[150];
             vocaSet[i] = new int[150];
             for(int j=0; j<75; j++){
-                stars[i][j*2];=0;
+                stars[i][j*2]=0;
                 stars[i][j*2+1]=0;
                 vocaSet[i][j*2]=0;
                 vocaSet[i][j*2+1]=0;
             }
         }
         coin= new int[3]{0,0,0};
-        itmes = new int[300];
+        items = new int[300];
         for(int j=0; j<150; j++){
-            itmes[j*2] = 0;
+            items[j*2] = 0;
             items[j*2+1] = 0;
         }
     }
