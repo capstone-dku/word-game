@@ -1,7 +1,91 @@
 fileFormatVersion: 2
 guid: 6c32ec3b5d6e4084e9dbb62a14e7b226
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 5764311113514893786
+    second: alphabet_box_green_0
+  - first:
+      213: -783024090268118900
+    second: alphabet_box_green_1
+  - first:
+      213: 7219663980114829925
+    second: alphabet_box_green_2
+  - first:
+      213: -121303284264073331
+    second: alphabet_box_green_3
+  - first:
+      213: 7748175083095356381
+    second: alphabet_box_green_4
+  - first:
+      213: 2686190822885175317
+    second: alphabet_box_green_5
+  - first:
+      213: -6424100710701447997
+    second: alphabet_box_green_6
+  - first:
+      213: 3714388094590244447
+    second: alphabet_box_green_7
+  - first:
+      213: 5053139827816536940
+    second: alphabet_box_green_8
+  - first:
+      213: -1418193831037513631
+    second: alphabet_box_green_9
+  - first:
+      213: 2279387285257781073
+    second: alphabet_box_green_10
+  - first:
+      213: -6312512491866358920
+    second: alphabet_box_green_11
+  - first:
+      213: -1312927804675494445
+    second: alphabet_box_green_12
+  - first:
+      213: -5526559223510583655
+    second: alphabet_box_green_13
+  - first:
+      213: 3072664296643823094
+    second: alphabet_box_green_14
+  - first:
+      213: -7288240461169150705
+    second: alphabet_box_green_15
+  - first:
+      213: 4824389124964598677
+    second: alphabet_box_green_16
+  - first:
+      213: 5154157819894407578
+    second: alphabet_box_green_17
+  - first:
+      213: -1391576311288645894
+    second: alphabet_box_green_18
+  - first:
+      213: 8958202858345458401
+    second: alphabet_box_green_19
+  - first:
+      213: -671432653879084356
+    second: alphabet_box_green_20
+  - first:
+      213: -1678808856719327233
+    second: alphabet_box_green_21
+  - first:
+      213: -1214281137767903998
+    second: alphabet_box_green_22
+  - first:
+      213: 651304166226772647
+    second: alphabet_box_green_23
+  - first:
+      213: 8550333783139940557
+    second: alphabet_box_green_24
+  - first:
+      213: 6455809852833899511
+    second: alphabet_box_green_25
+  - first:
+      213: -3432056532040323144
+    second: alphabet_box_green_26
+  - first:
+      213: -6403322497374250493
+    second: alphabet_box_green_27
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -41,7 +125,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -75,9 +159,633 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: alphabet_box_green_0
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 496
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad144e7ca62feff40800000000000000
+      internalID: 5764311113514893786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alphabet_box_green_1
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 496
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c80def01db32225f0800000000000000
+      internalID: -783024090268118900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alphabet_box_green_2
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 496
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5626d647326613460800000000000000
+      internalID: 7219663980114829925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alphabet_box_green_3
+      rect:
+        serializedVersion: 2
+        x: 496
+        y: 496
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d870a5f3e4b015ef0800000000000000
+      internalID: -121303284264073331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alphabet_box_green_4
+      rect:
+        serializedVersion: 2
+        x: 656
+        y: 496
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd37e6dbf2c078b60800000000000000
+      internalID: 7748175083095356381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alphabet_box_green_5
+      rect:
+        serializedVersion: 2
+        x: 816
+        y: 496
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5103cf44254474520800000000000000
+      internalID: 2686190822885175317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alphabet_box_green_6
+      rect:
+        serializedVersion: 2
+        x: 976
+        y: 496
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c44e41a07209d6a0800000000000000
+      internalID: -6424100710701447997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alphabet_box_green_7
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 336
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f56ddf7da482c8330800000000000000
+      internalID: 3714388094590244447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alphabet_box_green_8
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 336
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6b126596eb502640800000000000000
+      internalID: 5053139827816536940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alphabet_box_green_9
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 336
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 160db5e7930915ce0800000000000000
+      internalID: -1418193831037513631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alphabet_box_green_10
+      rect:
+        serializedVersion: 2
+        x: 496
+        y: 336
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15ff453c8a202af10800000000000000
+      internalID: 2279387285257781073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alphabet_box_green_11
+      rect:
+        serializedVersion: 2
+        x: 656
+        y: 336
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87bf61275537568a0800000000000000
+      internalID: -6312512491866358920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alphabet_box_green_12
+      rect:
+        serializedVersion: 2
+        x: 816
+        y: 336
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3dd659a2e1b87cde0800000000000000
+      internalID: -1312927804675494445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alphabet_box_green_13
+      rect:
+        serializedVersion: 2
+        x: 976
+        y: 336
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9963e7ccaa7bd43b0800000000000000
+      internalID: -5526559223510583655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alphabet_box_green_14
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 176
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f50b7be5eb44aa20800000000000000
+      internalID: 3072664296643823094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alphabet_box_green_15
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 176
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0532625ae7fada90800000000000000
+      internalID: -7288240461169150705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alphabet_box_green_16
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 176
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 593c5c3395ca3f240800000000000000
+      internalID: 4824389124964598677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alphabet_box_green_17
+      rect:
+        serializedVersion: 2
+        x: 496
+        y: 176
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a91ab13ba3f378740800000000000000
+      internalID: 5154157819894407578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alphabet_box_green_18
+      rect:
+        serializedVersion: 2
+        x: 656
+        y: 176
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af6bacfb7b020bce0800000000000000
+      internalID: -1391576311288645894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alphabet_box_green_19
+      rect:
+        serializedVersion: 2
+        x: 816
+        y: 176
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1eae19d790ee15c70800000000000000
+      internalID: 8958202858345458401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alphabet_box_green_20
+      rect:
+        serializedVersion: 2
+        x: 976
+        y: 176
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cba70f60f879ea6f0800000000000000
+      internalID: -671432653879084356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alphabet_box_green_21
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 16
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ffff6715d3ca3b8e0800000000000000
+      internalID: -1678808856719327233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alphabet_box_green_22
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 16
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20d03ed1db1062fe0800000000000000
+      internalID: -1214281137767903998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alphabet_box_green_23
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 16
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a2cdac30b5e90900800000000000000
+      internalID: 651304166226772647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alphabet_box_green_24
+      rect:
+        serializedVersion: 2
+        x: 496
+        y: 16
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc8f31f2643e8a670800000000000000
+      internalID: 8550333783139940557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alphabet_box_green_25
+      rect:
+        serializedVersion: 2
+        x: 656
+        y: 16
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f3a1a75bd4a79950800000000000000
+      internalID: 6455809852833899511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alphabet_box_green_26
+      rect:
+        serializedVersion: 2
+        x: 816
+        y: 16
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8bf6da694c2ee50d0800000000000000
+      internalID: -3432056532040323144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alphabet_box_green_27
+      rect:
+        serializedVersion: 2
+        x: 976
+        y: 16
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30a9db96d14d227a0800000000000000
+      internalID: -6403322497374250493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
