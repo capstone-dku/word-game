@@ -207,6 +207,7 @@ public class VocaStudy : MonoBehaviour
         panelResult.UpdateStars(stars);
         // 지급할 티켓 계산
         int ticket = stars - savedStars;
+        if (ticket < 0) ticket = 0;
         // 2. 획득한 별에 따라 사용자에게 티켓을 지급한다.
         Debug.Log("티켓 획득: " + ticket + "개");
         saveLoad.AddTicket(ticket);
