@@ -171,7 +171,7 @@ public class VocaSelector : MonoBehaviour
         }
 
         List<Voca> voca = new List<Voca>();
-        int __max = BEGINNER+INTERMEDIATE+ADVANCED+TOEIC;
+        //int __max = BEGINNER+INTERMEDIATE+ADVANCED+TOEIC;
         
         for(int i=0;i<num;i++){
             int t = Random.Range(0, vtm.sum-1);

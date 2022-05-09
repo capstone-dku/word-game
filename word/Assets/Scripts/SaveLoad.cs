@@ -93,7 +93,10 @@ public class SaveLoad : MonoBehaviour
     {
         // TODO: 저장 기능 구현
         string jdata = JsonConvert.SerializeObject(currentData);
-        File.WriteAllText(Application.dataPath + "/data.json", jdata);
+        byte[] bytes = System.Text.Encoding.UTF8.GetBytes(jdata);
+        string format = System.Convert.ToBase64String(bytes);
+
+        File.WriteAllText(Application.dataPath + "/data.json", format);
     }
     /// <summary>
     /// 데이터를 불러온다.
@@ -104,7 +107,9 @@ public class SaveLoad : MonoBehaviour
         UserData data = null;
         // TODO: 불러오기 기능 
         string jdata = File.ReadAllText(Application.dataPath + "/data.json");
-        data = JsonConvert.DeserializeObject<UserData>(jdata);
+        byte[] bytes = System.Convert.FromBase64String(jdata);
+        string reformat = System.Text.Encoding.UTF8.GetString(bytes);
+        data = JsonConvert.DeserializeObject<UserData>(reformat);
         return data;
     }
 
