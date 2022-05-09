@@ -20,9 +20,12 @@ public class VocaSelector : MonoBehaviour
 
     public List<VocaWeight> vtlist = null;
     public VocaWeightMeta vtm = null;
-
+    
+    private void Awake()
+    {
+        JsonLoad();
+    }
     // TODO: 특정 difficulty, level의 단어를 단어장 json 파일에서 가져온다.
-
     public List<Voca> SelectVoca(int difficulty, int level)
     {
         List<Voca> voca;
@@ -169,7 +172,6 @@ public class VocaSelector : MonoBehaviour
             jdata = File.ReadAllText(Application.dataPath + "/VocaWeightMeta.json");
             vtm = JsonConvert.DeserializeObject<VocaWeightMeta>(jdata);
         }
-
         List<Voca> voca = new List<Voca>();
         //int __max = BEGINNER+INTERMEDIATE+ADVANCED+TOEIC;
         

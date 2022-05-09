@@ -59,21 +59,18 @@ public class PanelQuiz : MonoBehaviour
     {
         if (idx == answerIndex)
         {
-            Debug.Log("정답");
             imageCorrect.gameObject.SetActive(true);
             answerCount++;
             answer[currentIndex] = true;
         }
         else
         {
-            Debug.Log("오답");
             imageWrong.gameObject.SetActive(true);
             answer[currentIndex] = false;
         }
 
         if (currentIndex >= vocaList.Count - 1)
         {
-            Debug.Log("퀴즈 끝");
             vocaStudy.OnQuizFinished(answerCount, answer);
         }
         else
