@@ -181,13 +181,14 @@ public class VocaStudy : MonoBehaviour
         panelQuiz.Init(this.currentVocaList);
         panelQuiz.StartQuiz();
     }
+
     public void OnQuizFinished(int answerCount, bool[] answer)
     {
         panelVocaList.gameObject.SetActive(true);
         panelVocaList.Init(currentVocaList, answer);
         panelQuiz.gameObject.SetActive(false);
-        
-        
+
+
 
         // TODO: https://github.com/capstone-dku/word-game/issues/5
         // 1. 결과창을 보여준다.
@@ -195,7 +196,7 @@ public class VocaStudy : MonoBehaviour
         // 저장되어있던 데이터와 별 갯수 비교
         int savedStars = saveLoad.GetStars(currentDifficulty, currentSetNumber);
         int stars = 0;
-        // 정답갯수 하드코드
+        // FIX? 정답갯수 하드코드
         // 획득한 별 계산
         if (answerCount >= 20)
             stars = 3;
@@ -207,11 +208,11 @@ public class VocaStudy : MonoBehaviour
         // 지급할 티켓 계산
         int ticket = stars - savedStars;
         // 2. 획득한 별에 따라 사용자에게 티켓을 지급한다.
-        Debug.Log("티켓 획득: " + ticket +"개");
-        saveLoad.SetTicket(ticket);
+        Debug.Log("티켓 획득: " + ticket + "개");
+        saveLoad.AddTicket(ticket);
         // 3. 획득한 별 갯수를 저장한다.
         saveLoad.SetStars(currentDifficulty, currentSetNumber, stars);
-        Debug.Log("별 갯수 저장: " + stars +"개");
+        Debug.Log("별 갯수 저장: " + stars + "개");
 
 
         // 학습한 단어 저장 및 세트 해금
@@ -223,14 +224,21 @@ public class VocaStudy : MonoBehaviour
         {
             weights[i] = answer[i] == true ? 10 : 30;
         }
+
         vocaSelector.SaveVocaWeight(currentVocaList, weights);
         // 2.다음 세트를 해금한다.
-
+        // (별 1개 이상일 경우 해금)
+        bool clear = stars > 0;
+        saveLoad.LockVocaSet(currentDifficulty, currentSetNumber+1, !clear);
         // 3. 해금된 정보를 저장한다.
 
 
 
+        saveLoad.SaveData();
 
+        // 세트선택 패널의 버튼의 별갯수와 해금정보를 업데이트한다.
+        panelVocaSet[currentDifficulty].UpdateButtonStars(currentSetNumber);
+        panelVocaSet[currentDifficulty].UpdateButtonLocked(currentSetNumber + 1);
     }
 
     private void StudyFinished()

@@ -33,7 +33,7 @@ public class PanelStudyConfirm : MonoBehaviour
     public void UpdateSetNumber(int num)
     {
         setNumber = num;
-        textSetNumber.text = num.ToString();
+        textSetNumber.text = (num+1).ToString();
     }
 
     public void OnButtonClickedConfirm()

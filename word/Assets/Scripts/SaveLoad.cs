@@ -12,6 +12,7 @@ public class UserData
     // 사용자의 단어 학습 별 갯수
     public int[][] stars = new int[4][]; // 단어장[난이도][세트]의 별 갯수
     public int[][] vocaSet = new int[4][]; // 
+    public bool[][] vocaSetLocked = new bool[4][];
     public int ticket = 0; // 사용자의 보유 티켓 수
     public int[] coin = new int[3]; // 사용자의 보유 코인 수
     public int[] items = new int[300]; // 가지고 있는 아이템 수
@@ -25,12 +26,19 @@ public class UserData
             // 대충 크게만 선언해줘도 상관은 없을 것 같습니다
             stars[i] = new int[150];
             vocaSet[i] = new int[150];
+            vocaSetLocked[i] = new bool[150];
             for(int j=0; j<75; j++){
                 stars[i][j*2]=0;
                 stars[i][j*2+1]=0;
                 vocaSet[i][j*2]=0;
                 vocaSet[i][j*2+1]=0;
+                vocaSetLocked[i][j * 2] = true;
+                vocaSetLocked[i][j * 2+1] = true;
             }
+            // 단어 세트 처음 3개는 언락되어있음
+            vocaSetLocked[i][0] = false;
+            vocaSetLocked[i][1] = false;
+            vocaSetLocked[i][2] = false;
         }
         coin= new int[3]{0,0,0};
         items = new int[300];
@@ -43,16 +51,14 @@ public class UserData
  
 public class SaveLoad : MonoBehaviour
 {
-    private UserData currentData;
+    private static UserData currentData;
     private string filePath;
 
     private void Awake()
     {
         filePath = Application.dataPath + "/data.json";
-    }
-    private void Start()
-    {
-        if(File.Exists(filePath))
+        currentData = new UserData();
+        if (File.Exists(filePath))
         {
             // 파일 데이터가 저장되어있을 때
             // 저장된 데이터를 불러온다.
@@ -67,6 +73,9 @@ public class SaveLoad : MonoBehaviour
             UserData data = new UserData();
             SaveData(data);
         }
+    }
+    private void Start()
+    {
     }
     
     /// <summary>
@@ -117,5 +126,20 @@ public class SaveLoad : MonoBehaviour
     public void SetTicket(int ticket)
     {
         currentData.ticket = ticket;
+    }
+
+    public void AddTicket(int ticket)
+    {
+        currentData.ticket += ticket;
+    }
+
+    public bool IsVocaSetLocked(int difficulty, int set)
+    {
+        return currentData.vocaSetLocked[difficulty][set];
+    }
+
+    public void LockVocaSet(int difficulty, int set, bool lockOrUnlock)
+    {
+        currentData.vocaSetLocked[difficulty][set] = lockOrUnlock;
     }
 }
