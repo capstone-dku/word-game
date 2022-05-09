@@ -204,17 +204,18 @@ public class VocaStudy : MonoBehaviour
             stars = 2;
         else if (answerCount >= 6)
             stars = 1;
-        panelResult.UpdateStars(stars);
-        // 지급할 티켓 계산
-        int ticket = stars - savedStars;
-        if (ticket < 0) ticket = 0;
-        // 2. 획득한 별에 따라 사용자에게 티켓을 지급한다.
-        Debug.Log("티켓 획득: " + ticket + "개");
-        saveLoad.AddTicket(ticket);
-        // 3. 획득한 별 갯수를 저장한다.
-        saveLoad.SetStars(currentDifficulty, currentSetNumber, stars);
-        Debug.Log("별 갯수 저장: " + stars + "개");
-
+        if (savedStars < stars)
+        {
+            panelResult.UpdateStars(stars);
+            // 지급할 티켓 계산
+            int ticket = stars - savedStars;
+            // 2. 획득한 별에 따라 사용자에게 티켓을 지급한다.
+            Debug.Log("티켓 획득: " + ticket + "개");
+            saveLoad.AddTicket(ticket);
+            // 3. 획득한 별 갯수를 저장한다.
+            saveLoad.SetStars(currentDifficulty, currentSetNumber, stars);
+            Debug.Log("별 갯수 저장: " + stars + "개");
+        }
 
         // 학습한 단어 저장 및 세트 해금
         // 1. 학습한 단어를 저장한다.
