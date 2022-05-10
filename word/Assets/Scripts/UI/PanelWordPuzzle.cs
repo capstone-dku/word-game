@@ -1,6 +1,8 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Text;
+using UnityEditor.EditorTools;
 using UnityEngine;
 using UnityEngine.UI;
 using Random = UnityEngine.Random;
@@ -13,6 +15,8 @@ public enum ALPHABET
 public class PanelWordPuzzle : MonoBehaviour
 {
     [SerializeField] private VocaSelector vocaSelector;
+    [SerializeField] private GameObject panelCorrect;
+    [SerializeField] private GameObject panelWrong;
 
     public List<Sprite[]> sprites = new List<Sprite[]>();
     public Sprite[] spriteRed;
@@ -22,6 +26,7 @@ public class PanelWordPuzzle : MonoBehaviour
     public Sprite[] spriteGrey;
 
     public ButtonWordPuzzle[] buttonWordPuzzles;
+    private bool[] visited;
     private Tuple<int, int>[] direction = new Tuple<int, int>[]
     {
         // (Y, X)
@@ -37,9 +42,13 @@ public class PanelWordPuzzle : MonoBehaviour
     [SerializeField] private Text textMeaingWord;
     private List<Voca> vocaList;
     private Voca currentVoca;
-    private string currentString;
-    private bool complete = false;
-    private int time;
+    private StringBuilder sb;
+    private int currentIndex;
+    private bool complete = false; // 버튼에 정답 단어가 완성되었는지
+    private bool running = false; // 현재 퀴즈 시간이 흘러가고 있는지
+    private Coroutine puzzleCoroutine = null;
+    [Header("퀴즈 제한 시간")][SerializeField] private int time;
+    private int currentTime;
 
     private void Start()
     {
@@ -50,24 +59,42 @@ public class PanelWordPuzzle : MonoBehaviour
         sprites.Add(spriteGrey);
 
         List<Voca> vocaList = vocaSelector.FindVocaWeight(5);
+        visited = new bool[buttonWordPuzzles.Length];
+        sb = new StringBuilder();
         Init(vocaList);
     }
 
     public void Init(List<Voca> vocaList)
     {
         this.vocaList = vocaList;
-        time = 60;
+        Clear();
+
+        // TEST
+        StartGame();
+    }
+
+    public void Clear()
+    {
         for (int i = 0; i < HEIGHT * WIDTH; i++)
         {
             buttonWordPuzzles[i].Init(i);
+            visited[i] = false;
         }
-        
 
+        sb.Clear();
+        currentTime = time;
+
+        complete = false;
+        running = false;
+        panelCorrect.SetActive(false);
+        panelWrong.SetActive(false);
         UpdateSprites();
-        MakePuzzle(vocaList[0]);
-        StartPuzzle();
     }
 
+    public void StartGame()
+    {
+        StartCoroutine(StartPuzzle(0));
+    }
     public void UpdateSprites()
     {
         int color = Random.Range(0, sprites.Count);
@@ -109,7 +136,8 @@ public class PanelWordPuzzle : MonoBehaviour
             complete = true;
             return;
         }
-        ALPHABET alphabet = (ALPHABET)Enum.Parse(typeof(ALPHABET), voca[depth].ToString());
+        
+        ALPHABET alphabet = (ALPHABET)Enum.Parse(typeof(ALPHABET), char.ToLower(voca[depth]).ToString());
         buttonWordPuzzles[y * WIDTH + x].alphabet = alphabet;
         // 랜덤으로 다음 위치 선정
         List<int> random = new List<int>() { 0, 1, 2, 3 };
@@ -122,7 +150,7 @@ public class PanelWordPuzzle : MonoBehaviour
             random.RemoveAt(rnd);
             ny = y + next.Item1;
             nx = x + next.Item2;
-            if (CanPlaceAlphabet(ny, nx) && complete == false)
+            if (CanPlaceAlphabet(ny, nx) && visited[ny*WIDTH+nx] == false && complete == false)
             {
                 found = true;
                 PlaceAlphabet(voca, ny, nx, depth + 1, length);
@@ -132,13 +160,13 @@ public class PanelWordPuzzle : MonoBehaviour
         if (found == false)
         {
             buttonWordPuzzles[y * WIDTH + x].alphabet = ALPHABET.Empty;
-            PlaceAlphabet(voca, y, x, depth, length);
+            visited[y * WIDTH + x] = true;
+            if(CanPlaceAlphabet(y,x))
+                PlaceAlphabet(voca, y, x, depth, length);
         }
     }
 
-
-
-private bool CanPlaceAlphabet(int y, int x)
+    private bool CanPlaceAlphabet(int y, int x)
     {
         if (y < 0 || y >= HEIGHT) return false;
         if (x < 0 || x >= WIDTH) return false;
@@ -146,19 +174,29 @@ private bool CanPlaceAlphabet(int y, int x)
         return true;
     }
 
-    public void StartPuzzle()
+    IEnumerator StartPuzzle(int index, bool wait=false, float waitTime=1.0f)
     {
-
-        StartCoroutine(Puzzle());
+        if(wait)
+            yield return new WaitForSeconds(waitTime);
+        puzzleCoroutine = StartCoroutine(Puzzle(index));
     }
 
-    IEnumerator Puzzle()
+    IEnumerator Puzzle(int index)
     {
-        while (time >= 0)
+        Clear();
+        running = true;
+        currentIndex = index;
+        MakePuzzle(vocaList[index]);
+        while (currentTime > 0)
         {
-            time--;
-            textRemainTime.text = (time / 60).ToString() + " : " + (time % 60).ToString();
+            currentTime--;
+            textRemainTime.text = (currentTime / 60).ToString() + " : " + (currentTime % 60).ToString();
             yield return new WaitForSeconds(1.0f);
+        }
+
+        if (currentTime <= 0 && running)
+        {
+            OnPuzzleFinished(false);
         }
         yield return null;
     }
@@ -170,19 +208,70 @@ private bool CanPlaceAlphabet(int y, int x)
             // 클릭 취소
             button.SetColor(Color.white);
             button.clicked = false;
-            currentString.Remove(currentString.Length - 1);
+            sb.Length = sb.Length - 1;
         }
         else
         {
             // 클릭
             button.SetColor(Color.gray);
             button.clicked = true;
-            currentString += Enum.GetName(typeof(ALPHABET), button.alphabet);
+            sb.Append(Enum.GetName(typeof(ALPHABET), button.alphabet));
         }
-        Debug.Log(currentString);
-        if (currentString == currentVoca.voca)
+        Debug.Log(sb.ToString());
+        if (sb.Length == currentVoca.voca.Length)
         {
-            Debug.Log("정답");
+            string s = sb.ToString();
+            if (s.Equals(currentVoca.voca.ToLower()))
+            {
+                OnPuzzleFinished(true);
+            }
+            else
+            {
+                OnPuzzleFinished(false);
+            }
         }
+    }
+
+    public void OnPuzzleFinished(bool correct)
+    {
+        if (correct)
+        {
+            // 맞았을때
+            panelCorrect.SetActive(true);
+        }
+        else
+        {
+            // 틀렸을때
+            panelWrong.SetActive(true);
+
+        }
+
+        // 버튼 색 및 플래그 초기화
+        for (int i = 0; i < buttonWordPuzzles.Length; i++)
+        {
+            buttonWordPuzzles[i].SetColor(Color.white);
+            buttonWordPuzzles[i].clicked = false;
+        }
+        // 스트링 초기화
+        sb.Clear();
+        // 코루틴 정지
+        running = false;
+        StopCoroutine(puzzleCoroutine);
+        // 다음 보카로 넘어감
+        currentIndex++;
+        if (currentIndex >= vocaList.Count)
+        {
+            // 퀴즈 완전히 끝났을때
+            
+            // 보상 지급
+            
+            // 정답, 오답 단어 가중치 변경
+
+            // 데이터 저장
+
+
+            return;
+        }
+        puzzleCoroutine = StartCoroutine(StartPuzzle(currentIndex, true));
     }
 }

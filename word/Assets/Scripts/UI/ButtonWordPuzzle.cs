@@ -15,6 +15,7 @@ public class ButtonWordPuzzle : MonoBehaviour
         this.index = index;
         this.alphabet = ALPHABET.Empty;
         this.clicked = false;
+        this.image.color = Color.white;
     }
 
     public void UpdateSprite(Sprite sprite)
