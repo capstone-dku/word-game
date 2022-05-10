@@ -22,15 +22,17 @@ public class PanelWordPuzzle : MonoBehaviour
     public Sprite[] spriteGrey;
 
     public ButtonWordPuzzle[] buttonWordPuzzles;
+    private bool[] visited;
+    private Stack<Tuple<int, int>> stack = new Stack<Tuple<int, int>>();
     private Tuple<int, int>[] direction = new Tuple<int, int>[]
     {
         // (Y, X)
-        new Tuple<int, int>(1,0),  // UP
-        new Tuple<int, int>(0,1),  // RIGHT
-        new Tuple<int, int>(0,-1), // LEFT
-        new Tuple<int, int>(-1,0)  // DOWN
+        new Tuple<int, int>(1, 0), // UP
+        new Tuple<int, int>(0, 1), // RIGHT
+        new Tuple<int, int>(0, -1), // LEFT
+        new Tuple<int, int>(-1, 0) // DOWN
     };
-    
+
     private const int WIDTH = 4;
     private const int HEIGHT = 6;
     [SerializeField] private Text textRemainTime;
@@ -42,10 +44,7 @@ public class PanelWordPuzzle : MonoBehaviour
 
     private void Start()
     {
-        for (int i = 0; i < HEIGHT * WIDTH; i++)
-        {
-            buttonWordPuzzles[i].Init(i);
-        }
+        visited = new bool[buttonWordPuzzles.Length];
         sprites.Add(spriteRed);
         sprites.Add(spriteBlue);
         sprites.Add(spritePurple);
@@ -63,7 +62,11 @@ public class PanelWordPuzzle : MonoBehaviour
         for (int i = 0; i < HEIGHT * WIDTH; i++)
         {
             buttonWordPuzzles[i].Init(i);
+            visited[i] = false;
         }
+        stack.Clear();
+        
+
         UpdateSprites();
         MakePuzzle(vocaList[0]);
         StartPuzzle();
@@ -86,15 +89,46 @@ public class PanelWordPuzzle : MonoBehaviour
 
         int y = Random.Range(0, HEIGHT);
         int x = Random.Range(0, WIDTH);
+
+
         PlaceAlphabet(voca.voca, y, x, 0, length);
+        
         /*
-        for (int i = 0; i < WIDTH * HEIGHT; i++)
+        stack.Push(new Tuple<int, int>(y, x));
+        int depth = 0;
+        while (stack.Count > 0)
         {
-            if(buttonWordPuzzles[i].alphabet == ALPHABET.Empty)
-                buttonWordPuzzles[i].alphabet = (ALPHABET)Random.Range(0, (int)ALPHABET.Length);
-        }
-        */
-        UpdateSprites();
+            var t = stack.Peek();
+            y = t.Item1;
+            x = t.Item2;
+            stack.Pop();
+            // 랜덤으로 다음 위치 선정
+            List<int> random = new List<int>() { 0, 1, 2, 3 };
+            int ny = y, nx = x;
+            while (random.Count > 0)
+            {
+                int rnd = Random.Range(0, random.Count);
+                Tuple<int, int> next = direction[rnd];
+                random.RemoveAt(rnd);
+                ny = y + next.Item1;
+                nx = x + next.Item2;
+                if (ny > 0 && ny < HEIGHT && nx > 0 && nx < WIDTH)
+                {
+                    ALPHABET alphabet = (ALPHABET)Enum.Parse(typeof(ALPHABET), char.ToUpper(voca.voca[depth]).ToString());
+                    buttonWordPuzzles[y * WIDTH + x].alphabet = alphabet;
+                    depth++;
+                    stack.Push(new Tuple<int, int>(ny, nx));
+                }
+            }
+            /*
+            for (int i = 0; i < WIDTH * HEIGHT; i++)
+            {
+                if(buttonWordPuzzles[i].alphabet == ALPHABET.Empty)
+                    buttonWordPuzzles[i].alphabet = (ALPHABET)Random.Range(0, (int)ALPHABET.Length);
+            }
+            */
+            UpdateSprites();
+        
     }
 
     private void PlaceAlphabet(string voca, int y, int x, int depth, int length)
@@ -105,11 +139,17 @@ public class PanelWordPuzzle : MonoBehaviour
             Debug.Log("단어 완성");
             return;
         }
-        
-
+        if (complete)
+        {
+            return;
+        }
+        visited[y * WIDTH + x] = true;
+        ALPHABET alphabet = (ALPHABET)Enum.Parse(typeof(ALPHABET), char.ToUpper(voca[depth]).ToString());
+        buttonWordPuzzles[y * WIDTH + x].alphabet = alphabet;
         // 랜덤으로 다음 위치 선정
         List<int> random = new List<int>() { 0, 1, 2, 3 };
         int ny = y, nx = x;
+        bool found = false;
         while (random.Count > 0)
         {
             int rnd = Random.Range(0, random.Count);
@@ -117,16 +157,23 @@ public class PanelWordPuzzle : MonoBehaviour
             random.RemoveAt(rnd);
             ny = y + next.Item1;
             nx = x + next.Item2;
-            ALPHABET alphabet = (ALPHABET)Enum.Parse(typeof(ALPHABET), char.ToUpper(voca[depth]).ToString());
-            buttonWordPuzzles[y * WIDTH + x].alphabet = alphabet;
             if (CanPlaceAlphabet(ny, nx) && complete == false)
-                PlaceAlphabet(voca, ny, nx, depth+1, length);
-            else
-                buttonWordPuzzles[y * WIDTH + x].alphabet = ALPHABET.Empty;
+            {
+                found = true;
+                PlaceAlphabet(voca, ny, nx, depth + 1, length);
+            }
+        }
+
+        if (found == false)
+        {
+            buttonWordPuzzles[y * WIDTH + x].alphabet = ALPHABET.Empty;
+            PlaceAlphabet(voca, y, x, depth, length);
         }
     }
 
-    private bool CanPlaceAlphabet(int y, int x)
+
+
+private bool CanPlaceAlphabet(int y, int x)
     {
         if (y < 0 || y >= HEIGHT) return false;
         if (x < 0 || x >= WIDTH) return false;
