@@ -139,7 +139,7 @@ public class PanelWordPuzzle : MonoBehaviour
         
         ALPHABET alphabet = (ALPHABET)Enum.Parse(typeof(ALPHABET), char.ToLower(voca[depth]).ToString());
         buttonWordPuzzles[y * WIDTH + x].alphabet = alphabet;
-        // 랜덤으로 다음 위치 선정
+        // 랜덤으로 다음 노드 선정
         List<int> random = new List<int>() { 0, 1, 2, 3 };
         int ny = y, nx = x;
         bool found = false;
@@ -150,6 +150,7 @@ public class PanelWordPuzzle : MonoBehaviour
             random.RemoveAt(rnd);
             ny = y + next.Item1;
             nx = x + next.Item2;
+            // 무작위로 선정된 다음 노드를 탐색한다.
             if (CanPlaceAlphabet(ny, nx) && visited[ny*WIDTH+nx] == false && complete == false)
             {
                 found = true;
@@ -159,6 +160,8 @@ public class PanelWordPuzzle : MonoBehaviour
 
         if (found == false)
         {
+            // 현재 노드에서 더 이상 탐색할 노드가 없을때
+            // 이전의 노드로 돌아간다.
             buttonWordPuzzles[y * WIDTH + x].alphabet = ALPHABET.Empty;
             visited[y * WIDTH + x] = true;
             if(CanPlaceAlphabet(y,x))
