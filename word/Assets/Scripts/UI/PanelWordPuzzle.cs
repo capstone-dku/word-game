@@ -7,7 +7,7 @@ using Random = UnityEngine.Random;
 
 public enum ALPHABET
 {
-    A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z,Length, Empty
+    a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z,Length, Empty
 }
 
 public class PanelWordPuzzle : MonoBehaviour
@@ -22,8 +22,6 @@ public class PanelWordPuzzle : MonoBehaviour
     public Sprite[] spriteGrey;
 
     public ButtonWordPuzzle[] buttonWordPuzzles;
-    private bool[] visited;
-    private Stack<Tuple<int, int>> stack = new Stack<Tuple<int, int>>();
     private Tuple<int, int>[] direction = new Tuple<int, int>[]
     {
         // (Y, X)
@@ -39,12 +37,12 @@ public class PanelWordPuzzle : MonoBehaviour
     [SerializeField] private Text textMeaingWord;
     private List<Voca> vocaList;
     private Voca currentVoca;
+    private string currentString;
     private bool complete = false;
     private int time;
 
     private void Start()
     {
-        visited = new bool[buttonWordPuzzles.Length];
         sprites.Add(spriteRed);
         sprites.Add(spriteBlue);
         sprites.Add(spritePurple);
@@ -62,9 +60,7 @@ public class PanelWordPuzzle : MonoBehaviour
         for (int i = 0; i < HEIGHT * WIDTH; i++)
         {
             buttonWordPuzzles[i].Init(i);
-            visited[i] = false;
         }
-        stack.Clear();
         
 
         UpdateSprites();
@@ -84,67 +80,36 @@ public class PanelWordPuzzle : MonoBehaviour
 
     private void MakePuzzle(Voca voca)
     {
+        currentVoca = voca;
         int length = voca.voca.Length;
         Debug.Log(voca.voca.ToString() + "퍼즐 만들기");
 
         int y = Random.Range(0, HEIGHT);
         int x = Random.Range(0, WIDTH);
 
-
+        // 정답 단어를 배치한다.
         PlaceAlphabet(voca.voca, y, x, 0, length);
-        
-        /*
-        stack.Push(new Tuple<int, int>(y, x));
-        int depth = 0;
-        while (stack.Count > 0)
+        // 정답 단어 이외의 칸을 임의의 알파벳으로 만든다.
+        for (int i = 0; i < WIDTH * HEIGHT; i++)
         {
-            var t = stack.Peek();
-            y = t.Item1;
-            x = t.Item2;
-            stack.Pop();
-            // 랜덤으로 다음 위치 선정
-            List<int> random = new List<int>() { 0, 1, 2, 3 };
-            int ny = y, nx = x;
-            while (random.Count > 0)
-            {
-                int rnd = Random.Range(0, random.Count);
-                Tuple<int, int> next = direction[rnd];
-                random.RemoveAt(rnd);
-                ny = y + next.Item1;
-                nx = x + next.Item2;
-                if (ny > 0 && ny < HEIGHT && nx > 0 && nx < WIDTH)
-                {
-                    ALPHABET alphabet = (ALPHABET)Enum.Parse(typeof(ALPHABET), char.ToUpper(voca.voca[depth]).ToString());
-                    buttonWordPuzzles[y * WIDTH + x].alphabet = alphabet;
-                    depth++;
-                    stack.Push(new Tuple<int, int>(ny, nx));
-                }
-            }
-            /*
-            for (int i = 0; i < WIDTH * HEIGHT; i++)
-            {
-                if(buttonWordPuzzles[i].alphabet == ALPHABET.Empty)
-                    buttonWordPuzzles[i].alphabet = (ALPHABET)Random.Range(0, (int)ALPHABET.Length);
-            }
-            */
-            UpdateSprites();
-        
+            if (buttonWordPuzzles[i].alphabet == ALPHABET.Empty)
+                buttonWordPuzzles[i].alphabet = (ALPHABET)Random.Range(0, (int)ALPHABET.Length);
+        }
+        // 만든 알파벳으로 버튼 스프라이트를 갱신한다.
+        UpdateSprites();
+
+        textMeaingWord.text = voca.meaning[0];
+
     }
 
     private void PlaceAlphabet(string voca, int y, int x, int depth, int length)
     {
-        if (depth >= length)
+        if (depth >= length || complete)
         {
             complete = true;
-            Debug.Log("단어 완성");
             return;
         }
-        if (complete)
-        {
-            return;
-        }
-        visited[y * WIDTH + x] = true;
-        ALPHABET alphabet = (ALPHABET)Enum.Parse(typeof(ALPHABET), char.ToUpper(voca[depth]).ToString());
+        ALPHABET alphabet = (ALPHABET)Enum.Parse(typeof(ALPHABET), voca[depth].ToString());
         buttonWordPuzzles[y * WIDTH + x].alphabet = alphabet;
         // 랜덤으로 다음 위치 선정
         List<int> random = new List<int>() { 0, 1, 2, 3 };
@@ -200,6 +165,24 @@ private bool CanPlaceAlphabet(int y, int x)
 
     public void OnButtonClickAlphabet(ButtonWordPuzzle button)
     {
-
+        if (button.clicked)
+        {
+            // 클릭 취소
+            button.SetColor(Color.white);
+            button.clicked = false;
+            currentString.Remove(currentString.Length - 1);
+        }
+        else
+        {
+            // 클릭
+            button.SetColor(Color.gray);
+            button.clicked = true;
+            currentString += Enum.GetName(typeof(ALPHABET), button.alphabet);
+        }
+        Debug.Log(currentString);
+        if (currentString == currentVoca.voca)
+        {
+            Debug.Log("정답");
+        }
     }
 }
