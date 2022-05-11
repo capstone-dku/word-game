@@ -21652,6 +21652,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   vocaSelector: {fileID: 261400368}
+  panelCorrect: {fileID: 2015644711}
+  panelWrong: {fileID: 1784298694}
   spriteRed:
   - {fileID: -4232864020097900446, guid: 09a60f6cd388d214daea7fd76e47bc79, type: 3}
   - {fileID: -6248293951271422630, guid: 09a60f6cd388d214daea7fd76e47bc79, type: 3}
@@ -21824,3 +21826,4 @@ MonoBehaviour:
   - {fileID: 1551908125}
   textRemainTime: {fileID: 1932216147}
   textMeaingWord: {fileID: 861267262}
+  time: 0
