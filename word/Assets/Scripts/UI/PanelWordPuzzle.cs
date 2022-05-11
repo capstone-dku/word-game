@@ -51,7 +51,7 @@ public class PanelWordPuzzle : MonoBehaviour
     private int vocaSuccess; // 성공 횟수 저장
     private int[] vocaWeight; // 단어들 가중치 변화 후 값 저장
     private Coroutine puzzleCoroutine = null;
-    [Header("퀴즈 제한 시간")][SerializeField] private int time;
+    [Header("퀴즈 제한 시간")][Range(1,60)][SerializeField] private int time;
     private int currentTime;
 
 
