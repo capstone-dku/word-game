@@ -10,5 +10,8 @@ https://docs.google.com/spreadsheets/d/1SsVtkQfFlHefgEJ3ecUjyx5WSpaNnFgYGiFllcvQ
 
 ## 개발 일지  
 2022-04-28 테스트  
+깜빡이 단어학습, 단어 데이터시트 연동, 퀴즈 결과에 따라 학습한 단어 가중치 저장 
 https://www.youtube.com/watch?v=PLIkiA75H-Q  
 
+2022-05-10 테스트
+워드 퍼즐, 보상 지급, 사용자 데이터 저장
