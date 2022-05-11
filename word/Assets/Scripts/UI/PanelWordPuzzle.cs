@@ -36,6 +36,8 @@ public class PanelWordPuzzle : MonoBehaviour
     [SerializeField] private Text textRemainTime;
     [SerializeField] private Text textMeaingWord;
     private List<Voca> vocaList;
+    private bool[] vocaSuccess;
+    private int[] vocaWeight;
     private Voca currentVoca;
     private string currentString;
     private bool complete = false;
@@ -50,6 +52,8 @@ public class PanelWordPuzzle : MonoBehaviour
         sprites.Add(spriteGrey);
 
         List<Voca> vocaList = vocaSelector.FindVocaWeight(5);
+        vocaSuccess = new bool[]{ false, false, false, false, false};
+        vocaWeight = new int[]{0,0,0,0,0};
         Init(vocaList);
     }
 
@@ -184,5 +188,16 @@ private bool CanPlaceAlphabet(int y, int x)
         {
             Debug.Log("정답");
         }
+    }
+
+    public void OnPuzzleFinished(int num, bool suc){ // 몇번째 보카가 끝났는지, 성공여부
+        int weight= vocaSelector.getVocaWeight(vocaList[num]);
+        if(suc){
+            weight = (int)(weight/2);
+        }
+        else{
+            weight = weight*2;
+        }
+        vocaWeight[num] = weight;        
     }
 }

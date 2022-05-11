@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 public class ButtonWordPuzzle : MonoBehaviour
 {
@@ -27,4 +28,9 @@ public class ButtonWordPuzzle : MonoBehaviour
         image.color = color;
     }
     
+    /*
+    private void OnPointerDonw(PointerEventData eventData){
+        Debug.Log("OnpointerDown");
+    }
+    */
 }
