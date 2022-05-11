@@ -212,6 +212,33 @@ public class VocaSelector : MonoBehaviour
         }
         return voca;
     }
+    /// <summary>
+    /// 단어의 가중치를 불러옴.
+    /// </summary>
+    public int getVocaWeight(Voca voca) // newWeight는 순서대로 새로 부여할 가중치
+    {
+        if(vtlist == null){
+            string jdata = File.ReadAllText(Application.dataPath + "/VocaWeight.json");
+            vtlist = JsonConvert.DeserializeObject<List<VocaWeight>>(jdata);
+            jdata = File.ReadAllText(Application.dataPath + "/VocaWeightMeta.json");
+            vtm = JsonConvert.DeserializeObject<VocaWeightMeta>(jdata);
+        }
+        switch(voca.difficulty){
+            case 0:
+                return vtlist[(int)((voca.num-1)/20)].weight;
+                break;
+            case 1:
+                return vtlist[(int)((voca.num-1+BEGINNER)/20)].weight;
+                break;
+            case 2:
+                return vtlist[(int)((voca.num-1+BEGINNER+INTERMEDIATE)/20)].weight;
+                break;
+            case 3:
+                return vtlist[(int)((voca.num-1+BEGINNER+INTERMEDIATE+ADVANCED)/20)].weight;
+                break;
+        }
+        
+    }
 
     /// <summary>
     /// 단어에 새로운 가중치를부여함. 
