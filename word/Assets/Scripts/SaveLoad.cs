@@ -14,7 +14,7 @@ public class UserData
     public int[][] vocaSet = new int[4][]; // 
     public bool[][] vocaSetLocked = new bool[4][];
     public int ticket = 0; // 사용자의 보유 티켓 수
-    public int[] coin = new int[3]; // 사용자의 보유 코인 수
+    public int[] coin = new int[3]; // 사용자의 보유 코인 수 
     public int[] items = new int[300]; // 가지고 있는 아이템 수
     public int[] purchasable = new int[300]; // 구매할 수 있는 아이템 수
 
@@ -146,5 +146,15 @@ public class SaveLoad : MonoBehaviour
     public void LockVocaSet(int difficulty, int set, bool lockOrUnlock)
     {
         currentData.vocaSetLocked[difficulty][set] = lockOrUnlock;
+    }
+
+    public void AddCoin(int type, int num)
+    {
+        currentData.coin[type] += num;
+    }
+
+    public int GetCoin(int type)
+    {
+        return currentData.coin[type];
     }
 }
