@@ -223,21 +223,22 @@ public class VocaSelector : MonoBehaviour
             jdata = File.ReadAllText(Application.dataPath + "/VocaWeightMeta.json");
             vtm = JsonConvert.DeserializeObject<VocaWeightMeta>(jdata);
         }
+        int w = 0;
         switch(voca.difficulty){
             case 0:
-                return vtlist[(int)((voca.num-1)/20)].weight;
+                w = vtlist[(int)((voca.num-1)/20)].weight[(voca.num-1)%20];
                 break;
             case 1:
-                return vtlist[(int)((voca.num-1+BEGINNER)/20)].weight;
+                w = vtlist[(int)((voca.num-1+BEGINNER)/20)].weight[(voca.num-1)%20];
                 break;
             case 2:
-                return vtlist[(int)((voca.num-1+BEGINNER+INTERMEDIATE)/20)].weight;
+                w = vtlist[(int)((voca.num-1+BEGINNER+INTERMEDIATE)/20)].weight[(voca.num-1)%20];
                 break;
             case 3:
-                return vtlist[(int)((voca.num-1+BEGINNER+INTERMEDIATE+ADVANCED)/20)].weight;
+                w =vtlist[(int)((voca.num-1+BEGINNER+INTERMEDIATE+ADVANCED)/20)].weight[(voca.num-1)%20];
                 break;
         }
-        
+        return w;
     }
 
     /// <summary>
