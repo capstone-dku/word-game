@@ -17,6 +17,7 @@ public class PanelWordPuzzle : MonoBehaviour
     [SerializeField] private VocaSelector vocaSelector;
     [SerializeField] private GameObject panelCorrect;
     [SerializeField] private GameObject panelWrong;
+    [SerializeField] private SaveLoad saveLoad;
 
     public List<Sprite[]> sprites = new List<Sprite[]>();
     public Sprite[] spriteRed;
@@ -47,7 +48,7 @@ public class PanelWordPuzzle : MonoBehaviour
     private int currentIndex; // 현재 퍼즐판에 출제된 단어의 인덱스
     private bool complete = false; // 버튼에 정답 단어가 완성되었는지
     private bool running = false; // 현재 퀴즈 시간이 흘러가고 있는지
-    private bool[] vocaSuccess; // 성공 여부 저장
+    private int vocaSuccess; // 성공 횟수 저장
     private int[] vocaWeight; // 단어들 가중치 변화 후 값 저장
     private Coroutine puzzleCoroutine = null;
     [Header("퀴즈 제한 시간")][SerializeField] private int time;
@@ -64,7 +65,7 @@ public class PanelWordPuzzle : MonoBehaviour
 
         List<Voca> vocaList = vocaSelector.FindVocaWeight(5);
 
-        vocaSuccess = new bool[]{ false, false, false, false, false};
+        vocaSuccess = 0;
         vocaWeight = new int[]{0,0,0,0,0};
 
         visited = new bool[buttonWordPuzzles.Length];
@@ -252,6 +253,7 @@ public class PanelWordPuzzle : MonoBehaviour
             // 맞았을때
             weight = (int)(weight/2);
             panelCorrect.SetActive(true);
+            vocaSuccess+=1;
         }
         else
         {
@@ -260,7 +262,7 @@ public class PanelWordPuzzle : MonoBehaviour
             panelWrong.SetActive(true);
 
         }
-        vocaWeight[currentIndex] = weight;        
+        vocaWeight[currentIndex] = weight;      
 
         // 버튼 색 및 플래그 초기화
         for (int i = 0; i < buttonWordPuzzles.Length; i++)
@@ -280,12 +282,12 @@ public class PanelWordPuzzle : MonoBehaviour
             // 퀴즈 완전히 끝났을때
             
             // 보상 지급
-            
+            saveLoad.AddCoin(0,50+(vocaSuccess*50));
+            saveLoad.AddCoin(1,25+(vocaSuccess*25));
             // 정답, 오답 단어 가중치 변경
             vocaSelector.SaveVocaWeight(vocaList, vocaWeight);
             // 데이터 저장
-
-
+            saveLoad.SaveData();
             return;
         }
         puzzleCoroutine = StartCoroutine(StartPuzzle(currentIndex, true));

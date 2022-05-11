@@ -21654,6 +21654,7 @@ MonoBehaviour:
   vocaSelector: {fileID: 261400368}
   panelCorrect: {fileID: 2015644711}
   panelWrong: {fileID: 1784298694}
+  saveLoad: {fileID: 0}
   spriteRed:
   - {fileID: -4232864020097900446, guid: 09a60f6cd388d214daea7fd76e47bc79, type: 3}
   - {fileID: -6248293951271422630, guid: 09a60f6cd388d214daea7fd76e47bc79, type: 3}
