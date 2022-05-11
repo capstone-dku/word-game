@@ -41,20 +41,14 @@ public class PanelWordPuzzle : MonoBehaviour
     [SerializeField] private Text textRemainTime;
     [SerializeField] private Text textMeaingWord;
 
-    private List<Voca> vocaList;
-    private bool[] vocaSuccess;
-    private int[] vocaWeight;
-    private Voca currentVoca;
-    private string currentString;
-    private bool complete = false;
-    private int time;
-
     private List<Voca> vocaList; // 퍼즐판에 출제될 단어 리스트
     private Voca currentVoca; // 현재 퍼즐판에 출제된 단어
     private StringBuilder sb; // 사용자가 클릭한 단어
     private int currentIndex; // 현재 퍼즐판에 출제된 단어의 인덱스
     private bool complete = false; // 버튼에 정답 단어가 완성되었는지
     private bool running = false; // 현재 퀴즈 시간이 흘러가고 있는지
+    private bool[] vocaSuccess; // 성공 여부 저장
+    private int[] vocaWeight; // 단어들 가중치 변화 후 값 저장
     private Coroutine puzzleCoroutine = null;
     [Header("퀴즈 제한 시간")][SerializeField] private int time;
     private int currentTime;
