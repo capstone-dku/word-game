@@ -8,6 +8,7 @@ public class BuildingBlueprint : MonoBehaviour
 {
     public GridMap gridMap;
     public Building buildingObject;
+    public BUILDING building;
     [SerializeField] private Button buttonBuildOk;
     [SerializeField] private Button buttonBuildCancel;
     private void Awake()

@@ -6,14 +6,19 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.Tilemaps;
 
+public enum BUILDING{
+    None,
+    House,
+    School,
+}
 public class GridMap : MonoBehaviour
 {
     public Tilemap tilemap;
-
+    public SaveLoad saveLoad;
     private TileBase[] allTiles;
 
-    public int[,] buildingMap;
-    public GameObject buildingPrefab;
+    private Dictionary<Vector3, BUILDING> buildings;
+    public List<GameObject> buildingPrefabs;
     public Transform gridTransform;
     private int width;
     private int height;
@@ -23,17 +28,29 @@ public class GridMap : MonoBehaviour
         Vector3Int size = tilemap.size;
         width = size.x;
         height = size.y;
-        buildingMap = new int[width, height];
+        buildings = new Dictionary<Vector3, BUILDING>();
         BoundsInt bounds = tilemap.cellBounds;
         allTiles = tilemap.GetTilesBlock(bounds);
-        for (int i = 0; i < bounds.size.x; i++)
+        foreach (Vector3Int position in tilemap.cellBounds.allPositionsWithin)
         {
-            for (int j = 0; j < bounds.size.y; j++)
+            if (tilemap.GetTile(position) != null)
             {
-                TileBase tile = allTiles[i + j * bounds.size.x];
-                if (tile != null)
+                Debug.Log(tilemap.GetTile(position).name);
+                Vector3 cellPosition = tilemap.GetCellCenterWorld(position);
+                BUILDING building = saveLoad.GetBuilding(cellPosition);
+                if (building > 0)
                 {
-                    buildingMap[i, j] = 0;
+                    if (buildings.ContainsKey(cellPosition))
+                    {
+                        buildings[cellPosition] = building;
+                    }
+                    else
+                    {
+                        buildings.Add(cellPosition, building);
+                    }
+
+                    Instantiate(buildingPrefabs[(int)buildings[cellPosition]], cellPosition, new Quaternion(),
+                        this.transform);
                 }
             }
         }
@@ -80,17 +97,20 @@ public class GridMap : MonoBehaviour
         Vector3Int cellPos = tilemap.WorldToCell(pos);
         cellPos.x += 1;
         cellPos.y += 1;
-        if (buildingMap[cellPos.x, cellPos.y] != 0)
+        if (buildings[cellPos] != BUILDING.None)
             return false;
         else 
-            return false;
+            return true;
     }
 
     public void OnBuild(BuildingBlueprint bb)
     {
         Instantiate(bb.buildingObject, bb.transform.position, bb.transform.localRotation, this.transform);
         Vector3Int cellPos = tilemap.WorldToCell(bb.transform.position);
-        buildingMap[cellPos.x, cellPos.y] = 1;
+        buildings[cellPos] = BUILDING.House;
         Destroy(bb.gameObject);
+
+        saveLoad.Build(cellPos, bb.building);
+        saveLoad.SaveData();
     }
 }
