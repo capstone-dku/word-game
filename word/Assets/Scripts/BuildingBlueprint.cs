@@ -4,6 +4,13 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
+public enum BUILDING
+{
+    None,
+    House,
+    School,
+    APT,
+}
 public class BuildingBlueprint : MonoBehaviour
 {
     public GridMap gridMap;
