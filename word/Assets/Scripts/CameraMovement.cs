@@ -26,7 +26,11 @@ public class CameraMovement : MonoBehaviour
             eventData.position = Input.mousePosition;
             List<RaycastResult> results = new List<RaycastResult>();
             raycaster.Raycast(eventData, results);
-            if (results.Count <= 0)
+
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            RaycastHit hit;
+            Physics.Raycast(ray, out hit);
+            if (results.Count <= 0 && hit.transform == null)
             {
                 diff = Camera.main.ScreenToWorldPoint(Input.mousePosition) - Camera.main.transform.position;
                 if (drag == false)
