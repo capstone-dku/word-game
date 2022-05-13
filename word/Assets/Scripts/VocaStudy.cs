@@ -10,6 +10,7 @@ public class VocaStudy : MonoBehaviour
 {
     [SerializeField] private SaveLoad saveLoad;
     [SerializeField] private VocaSelector vocaSelector;
+    [SerializeField] private PanelItem panelItem;
 
     [SerializeField] private GameObject panelDifficulty; // 난이도 선택 패널창
 
@@ -212,6 +213,7 @@ public class VocaStudy : MonoBehaviour
             // 2. 획득한 별에 따라 사용자에게 티켓을 지급한다.
             Debug.Log("티켓 획득: " + ticket + "개");
             saveLoad.AddTicket(ticket);
+            panelItem.UpdateTicket(saveLoad.GetTicket());
             // 3. 획득한 별 갯수를 저장한다.
             saveLoad.SetStars(currentDifficulty, currentSetNumber, stars);
             Debug.Log("별 갯수 저장: " + stars + "개");

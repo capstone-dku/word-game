@@ -51,6 +51,7 @@ public class UserData
  
 public class SaveLoad : MonoBehaviour
 {
+    [SerializeField] private PanelItem panelItem;
     private static UserData currentData;
     private string filePath;
 
@@ -73,6 +74,12 @@ public class SaveLoad : MonoBehaviour
             UserData data = new UserData();
             SaveData(data);
         }
+
+        for (int i = 0; i < currentData.coin.Length; i++)
+        {
+            panelItem.UpdateCoin(i, GetCoin(i));
+        }
+        panelItem.UpdateTicket(GetTicket());
     }
     private void Start()
     {
@@ -157,4 +164,5 @@ public class SaveLoad : MonoBehaviour
     {
         return currentData.coin[type];
     }
+    
 }

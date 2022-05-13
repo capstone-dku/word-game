@@ -15,6 +15,7 @@ public enum ALPHABET
 public class PanelWordPuzzle : MonoBehaviour
 {
     [SerializeField] private VocaSelector vocaSelector;
+    [SerializeField] private PanelItem panelItem;
     [SerializeField] private GameObject panelCorrect;
     [SerializeField] private GameObject panelWrong;
     [SerializeField] private SaveLoad saveLoad;
@@ -284,6 +285,8 @@ public class PanelWordPuzzle : MonoBehaviour
             // 보상 지급
             saveLoad.AddCoin(0,50+(vocaSuccess*50));
             saveLoad.AddCoin(1,25+(vocaSuccess*25));
+            panelItem.UpdateCoin(0, saveLoad.GetCoin(0));
+            panelItem.UpdateCoin(1, saveLoad.GetCoin(1));
             // 정답, 오답 단어 가중치 변경
             vocaSelector.SaveVocaWeight(vocaList, vocaWeight);
             // 데이터 저장
