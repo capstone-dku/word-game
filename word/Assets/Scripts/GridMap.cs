@@ -6,11 +6,6 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.Tilemaps;
 
-public enum BUILDING{
-    None,
-    House,
-    School,
-}
 public class GridMap : MonoBehaviour
 {
     public Tilemap tilemap;
@@ -38,6 +33,11 @@ public class GridMap : MonoBehaviour
                 Debug.Log(tilemap.GetTile(position).name);
                 Vector3 cellPosition = tilemap.GetCellCenterWorld(position);
                 BUILDING building = saveLoad.GetBuilding(cellPosition);
+
+                // cellPosition = 타일의 좌표값
+                // building = 타일에 건설되어있는 건물의 id (BuildingBlueprint의 enum) 
+                //
+                //
                 if (building > 0)
                 {
                     if (buildings.ContainsKey(cellPosition))
