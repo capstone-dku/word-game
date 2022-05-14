@@ -51,6 +51,8 @@ public class PanelWordPuzzle : MonoBehaviour
     private bool running = false; // 현재 퀴즈 시간이 흘러가고 있는지
     private int vocaSuccess; // 성공 횟수 저장
     private int[] vocaWeight; // 단어들 가중치 변화 후 값 저장
+    private bool globalClick = false;
+    private int lastIndex = -1;
     private Coroutine puzzleCoroutine = null;
     [Header("퀴즈 제한 시간")][Range(1,60)][SerializeField] private int time;
     private int currentTime;
@@ -75,6 +77,39 @@ public class PanelWordPuzzle : MonoBehaviour
         Init(vocaList);
     }
 
+    void Update()
+    {
+        if(Input.GetMouseButton(0)){//누르고 있을 때 >> 단어 체크
+            //globalClick=true;
+        }
+        else if(Input.GetMouseButtonUp(0)){//방금 땟을 때
+            if(sb.Length>0){
+                string s = sb.ToString();
+                if (s.Equals(currentVoca.voca.ToLower()))
+                {
+                    OnPuzzleFinished(true);
+                    globalClick=false;
+                }
+                else
+                {
+                    OnPuzzleFinished(false);
+                }
+            }
+        }
+        else{//땟을 경우
+            if(globalClick==true){
+                globalClick=false;
+                sb.Clear();
+                sb.Length = 0;
+                for (int i = 0; i < HEIGHT * WIDTH; i++)
+                {
+                    buttonWordPuzzles[i].clicked = false;
+                    buttonWordPuzzles[i].SetColor(Color.white);
+                }
+            }
+        }
+    }
+
     public void Init(List<Voca> vocaList)
     {
         this.vocaList = vocaList;
@@ -88,7 +123,7 @@ public class PanelWordPuzzle : MonoBehaviour
     {
         for (int i = 0; i < HEIGHT * WIDTH; i++)
         {
-            buttonWordPuzzles[i].Init(i);
+            buttonWordPuzzles[i].Init(i, this);
             visited[i] = false;
         }
 
@@ -217,31 +252,42 @@ public class PanelWordPuzzle : MonoBehaviour
 
     public void OnButtonClickAlphabet(ButtonWordPuzzle button)
     {
-        if (button.clicked)
-        {
-            // 클릭 취소
-            button.SetColor(Color.white);
-            button.clicked = false;
-            sb.Length = sb.Length - 1;
-        }
-        else
-        {
-            // 클릭
-            button.SetColor(Color.gray);
-            button.clicked = true;
-            sb.Append(Enum.GetName(typeof(ALPHABET), button.alphabet));
-        }
+        globalClick = true;
+
+        // 클릭
+        button.SetColor(Color.gray);
+        button.clicked = true;
+        sb.Append(Enum.GetName(typeof(ALPHABET), button.alphabet));
+        lastIndex = button.index;
+
         Debug.Log(sb.ToString());
-        if (sb.Length == currentVoca.voca.Length)
+    }
+
+    public void OnButtonDragAlphabet(ButtonWordPuzzle button){
+        if((globalClick == true) && (button.clicked == false))
         {
-            string s = sb.ToString();
-            if (s.Equals(currentVoca.voca.ToLower()))
-            {
-                OnPuzzleFinished(true);
+            int __x = lastIndex%4;
+            int __y = lastIndex/4;
+            int __bx = button.index%4;
+            int __by = button.index/4;
+            bool validCheck = false;
+
+            if((Math.Abs(__x-__bx)==1)&&(__y==__by)){
+                validCheck = true;
             }
-            else
+            else if((Math.Abs(__y-__by)==1)&&(__x==__bx)){
+                validCheck = true;
+            }
+            
+            if(validCheck)
             {
-                OnPuzzleFinished(false);
+                // 클릭
+                button.SetColor(Color.gray);
+                button.clicked = true;
+                sb.Append(Enum.GetName(typeof(ALPHABET), button.alphabet));
+                lastIndex = button.index;
+
+                Debug.Log(sb.ToString());
             }
         }
     }
@@ -294,5 +340,9 @@ public class PanelWordPuzzle : MonoBehaviour
             return;
         }
         puzzleCoroutine = StartCoroutine(StartPuzzle(currentIndex, true));
+    }
+
+    public string aaa(){
+        return "aaa";
     }
 }
