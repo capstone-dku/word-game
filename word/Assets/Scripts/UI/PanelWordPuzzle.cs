@@ -157,11 +157,16 @@ public class PanelWordPuzzle : MonoBehaviour
         int length = voca.voca.Length;
         Debug.Log(voca.voca.ToString() + "퍼즐 만들기");
 
-        int y = Random.Range(0, HEIGHT);
-        int x = Random.Range(0, WIDTH);
+        int y;
+        int x;
 
         // 정답 단어를 배치한다.
-        PlaceAlphabet(voca.voca, y, x, 0, length);
+        while(complete==false)
+        {
+            y = Random.Range(0, HEIGHT);
+            x = Random.Range(0, WIDTH);
+            PlaceAlphabet(voca.voca, y, x, 0, length, 0);
+        }
         // 정답 단어 이외의 칸을 임의의 알파벳으로 만든다.
         for (int i = 0; i < WIDTH * HEIGHT; i++)
         {
@@ -175,8 +180,12 @@ public class PanelWordPuzzle : MonoBehaviour
 
     }
 
-    private void PlaceAlphabet(string voca, int y, int x, int depth, int length)
+    private void PlaceAlphabet(string voca, int y, int x, int depth, int length, int stack)
     {
+        if(stack>1000){
+            return;
+        }
+
         if (depth >= length || complete)
         {
             complete = true;
@@ -187,6 +196,7 @@ public class PanelWordPuzzle : MonoBehaviour
         buttonWordPuzzles[y * WIDTH + x].alphabet = alphabet;
         // 랜덤으로 다음 노드 선정
         List<int> random = new List<int>() { 0, 1, 2, 3 };
+
         int ny = y, nx = x;
         bool found = false;
         while (random.Count > 0)
@@ -200,7 +210,7 @@ public class PanelWordPuzzle : MonoBehaviour
             if (CanPlaceAlphabet(ny, nx) && visited[ny*WIDTH+nx] == false && complete == false)
             {
                 found = true;
-                PlaceAlphabet(voca, ny, nx, depth + 1, length);
+                PlaceAlphabet(voca, ny, nx, depth + 1, length, stack+1);
             }
         }
 
@@ -211,7 +221,7 @@ public class PanelWordPuzzle : MonoBehaviour
             buttonWordPuzzles[y * WIDTH + x].alphabet = ALPHABET.Empty;
             visited[y * WIDTH + x] = true;
             if(CanPlaceAlphabet(y,x))
-                PlaceAlphabet(voca, y, x, depth, length);
+                PlaceAlphabet(voca, y, x, depth, length, stack+1);
         }
     }
 
