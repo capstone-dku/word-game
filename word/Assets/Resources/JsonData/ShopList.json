@@ -1,0 +1,34 @@
+﻿[
+    {
+        "id": 1,
+        "name": "학교",
+        "coin0": 0,
+        "coin1": 0,
+        "coin2": 0,
+        "unlock": 0
+    },
+    {
+        "id": 2,
+        "name": "워드퍼즐",
+        "coin0": 0,
+        "coin1": 0,
+        "coin2": 0,
+        "unlock": 0
+    },
+    {
+        "id": 3,
+        "name": "가로세로",
+        "coin0": 100,
+        "coin1": 50,
+        "coin2": 0,
+        "unlock": 0
+    },
+    {
+        "id": 4,
+        "name": "단어쌍카드",
+        "coin0": 0,
+        "coin1": 100,
+        "coin2": 50,
+        "unlock": 0
+    }
+]
