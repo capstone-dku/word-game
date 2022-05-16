@@ -42,15 +42,15 @@ public class ShopManager : MonoBehaviour
     }
 
     /// 상점에 건물을 언락함 ///
-    public bool Unlock(int id){
-        unllockList[id] = true;
+    public void Unlock(int id){
+        unlockList[id] = true;
     }
     ///
 
     /// 분류별로 리스트를 불러옴 ///
     public List<PriseList> GetPriseListType(int type){
-        List<PriseList> pl = new List<PriseList>;
-        for(int i=0;i<priseList.Length;i++){
+        List<PriseList> pl = new List<PriseList>();
+        for(int i=0;i<priseList.Count;i++){
             if(priseList[i].type == type)
             {
                 pl.Add(priseList[i]);
