@@ -56,9 +56,11 @@ public class SaveLoad : MonoBehaviour
     [SerializeField] private PanelItem panelItem;
     private static UserData currentData;
     private string filePath;
+    public static SaveLoad Instance;
 
     private void Awake()
     {
+        Instance = this;
         filePath = Application.dataPath + "/data.json";
         currentData = new UserData();
         if (File.Exists(filePath))
@@ -160,6 +162,7 @@ public class SaveLoad : MonoBehaviour
     public void AddCoin(int type, int num)
     {
         currentData.coin[type] += num;
+        
     }
 
     public int GetCoin(int type)
