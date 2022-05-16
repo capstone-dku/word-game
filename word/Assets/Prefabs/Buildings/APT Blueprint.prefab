@@ -88,7 +88,7 @@ GameObject:
   - component: {fileID: 7382783701768502842}
   - component: {fileID: 4092872213343610166}
   m_Layer: 0
-  m_Name: Buidling Blueprint
+  m_Name: APT Blueprint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -125,6 +125,7 @@ MonoBehaviour:
   gridMap: {fileID: 0}
   buildingObject: {fileID: -7001634386164957621, guid: 842183fd02b1c114e8cba930812ba4aa, type: 3}
   building: 3
+  spriteRenderer: {fileID: 4254100030614890552}
   buttonBuildOk: {fileID: 5448324010333558325}
   buttonBuildCancel: {fileID: 4607246383407794043}
 --- !u!54 &7382783701768502842
