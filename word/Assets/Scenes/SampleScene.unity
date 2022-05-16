@@ -725,8 +725,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   building: 0
   buildingPrefabs:
-  - {fileID: 3958048617288940388, guid: fdf144e4d0616e24f9c01981ae091c5b, type: 3}
+  - {fileID: 0}
   - {fileID: 2361558546498692997, guid: 313e18af2a079de4682c60b4dd08494b, type: 3}
+  - {fileID: 719971455033715848, guid: 842183fd02b1c114e8cba930812ba4aa, type: 3}
   - {fileID: 719971455033715848, guid: 842183fd02b1c114e8cba930812ba4aa, type: 3}
   - {fileID: 719971455033715848, guid: 842183fd02b1c114e8cba930812ba4aa, type: 3}
   panelShop: {fileID: 1077976785}
@@ -4524,7 +4525,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 60
+  field of view: 88.2
   orthographic: 1
   orthographic size: 5
   m_Depth: -1

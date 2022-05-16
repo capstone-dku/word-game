@@ -442,6 +442,7 @@ MonoBehaviour:
   - {fileID: 8308521450857392716}
   - {fileID: 8308521450544958351}
   textName: {fileID: 5425035513860365791}
+  panelLocked: {fileID: 4579286698879919163}
 --- !u!1 &8308521450544958348
 GameObject:
   m_ObjectHideFlags: 0

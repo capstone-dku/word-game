@@ -11,11 +11,7 @@ public class PanelShop : MonoBehaviour
     public ButtonBuyBuilding buttonBuyBuildingPrefab;
     private List<ButtonBuyBuilding> buttons = new List<ButtonBuyBuilding>();
     
-
-    private void Start()
-    {
-        Init();
-    }
+    
     public void Init()
     {
         shopManager.GetPriseList();
@@ -23,8 +19,9 @@ public class PanelShop : MonoBehaviour
         {
             PriseList price = shopManager.priseList[i];
             ButtonBuyBuilding button = Instantiate(buttonBuyBuildingPrefab, transformContent);
-            button.UppdateBuilding(price);
+            button.Init();
             buttons.Add(button);
+            
         }
     }
 

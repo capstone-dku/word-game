@@ -53,5 +53,6 @@ public class CameraMovement : MonoBehaviour
         {
             Camera.main.transform.position = origin - diff;
         }
+        Camera.main.orthographicSize -= Input.mouseScrollDelta.y * 1f;
     }
 }

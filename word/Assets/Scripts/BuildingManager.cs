@@ -7,9 +7,11 @@ using UnityEngine;
 public enum BUILDING
 {
     None,
-    House,
     School,
-    APT,
+    WordPuzzle,
+    CrossWord,
+    WordCard,
+
 }
 [System.Serializable]
 public class BuildingData
@@ -51,5 +53,8 @@ public class BuildingManager : MonoBehaviour
     public void OnClickedBuild()
     {
         panelShop.gameObject.SetActive(true);
+        panelShop.Init();
+        panelShop.UpdateButton();
+
     }
 }

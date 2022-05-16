@@ -8,6 +8,7 @@ public class BuildingBlueprint : MonoBehaviour
 {
     public GridMap gridMap;
     public Building buildingObject;
+    public Sprite buildingSprite;
     public BUILDING building;
     private bool canBuild = false;
     [SerializeField] private SpriteRenderer spriteRenderer;
@@ -18,6 +19,7 @@ public class BuildingBlueprint : MonoBehaviour
         gridMap = GameObject.Find("Ground").GetComponent<GridMap>();
         buttonBuildOk.onClick.AddListener(OnClickBuild);
         buttonBuildCancel.onClick.AddListener(OnClickCancel);
+        buildingSprite = spriteRenderer.sprite;
     }
 
     private void OnMouseDrag()
