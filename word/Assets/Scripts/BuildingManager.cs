@@ -42,6 +42,7 @@ public class BuildingManager : MonoBehaviour
     [Header("list와 enum의 인덱스를 똑같이 맞춰주세요")]
     public BUILDING building;
     public List<GameObject> buildingPrefabs;
+    public List<BuildingBlueprint> blueprintPrefabs;
 
     public PanelShop panelShop;
     // Start is called before the first frame update
@@ -55,6 +56,12 @@ public class BuildingManager : MonoBehaviour
         panelShop.gameObject.SetActive(true);
         panelShop.Init();
         panelShop.UpdateButton();
+    }
 
+    public void OnClickedButton(int id)
+    {
+        panelShop.gameObject.SetActive(false);
+        BuildingBlueprint bb = Instantiate(blueprintPrefabs[id]);
+        
     }
 }

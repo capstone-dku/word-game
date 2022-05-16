@@ -11,10 +11,12 @@ public class ButtonBuyBuilding : MonoBehaviour
     [SerializeField] private Text[] textCoins;
     [SerializeField] private Text textName;
     [SerializeField] private GameObject panelLocked;
-
+    [SerializeField] private Button button;
     public void Init()
     {
         buildingManager = GameObject.Find("Building Manager").GetComponent<BuildingManager>();
+        button = GetComponent<Button>();
+        button.onClick.AddListener(OnClicked);
         Debug.Log(buildingManager);
     }
     public void UppdateBuilding(PriseList price)
@@ -39,5 +41,10 @@ public class ButtonBuyBuilding : MonoBehaviour
         
         GameObject go = buildingManager.GetPrefab((BUILDING)price.id);
         imageBuilding.sprite = go.GetComponentInChildren<SpriteRenderer>().sprite;
+    }
+
+    public void OnClicked()
+    {
+        buildingManager.OnClickedButton(price.id);
     }
 }

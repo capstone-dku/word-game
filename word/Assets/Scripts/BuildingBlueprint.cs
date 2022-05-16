@@ -20,6 +20,8 @@ public class BuildingBlueprint : MonoBehaviour
         buttonBuildOk.onClick.AddListener(OnClickBuild);
         buttonBuildCancel.onClick.AddListener(OnClickCancel);
         buildingSprite = spriteRenderer.sprite;
+
+        UpdateColor();
     }
 
     private void OnMouseDrag()
@@ -37,16 +39,7 @@ public class BuildingBlueprint : MonoBehaviour
         Vector3 pos = gridMap.GetNearTilePosition(worldPos);
         transform.position = pos;
 
-        if (gridMap.IsTileEmpty(pos))
-        {
-            canBuild = true;
-            spriteRenderer.color = Color.green;
-        }
-        else
-        {
-            canBuild = false;
-            spriteRenderer.color = Color.red;
-        }
+        UpdateColor();
     }
 
     public void OnClickBuild()
@@ -61,5 +54,19 @@ public class BuildingBlueprint : MonoBehaviour
     public void OnClickCancel()
     {
         Destroy(gameObject);
+    }
+
+    public void UpdateColor()
+    {
+        if (gridMap.IsTileEmpty(transform.position))
+        {
+            canBuild = true;
+            spriteRenderer.color = Color.green;
+        }
+        else
+        {
+            canBuild = false;
+            spriteRenderer.color = Color.red;
+        }
     }
 }
