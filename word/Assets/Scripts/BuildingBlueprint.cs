@@ -4,24 +4,20 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public enum BUILDING
-{
-    None,
-    House,
-    School,
-    APT,
-}
 public class BuildingBlueprint : MonoBehaviour
 {
     public GridMap gridMap;
     public Building buildingObject;
     public BUILDING building;
+    private bool canBuild = false;
+    [SerializeField] private SpriteRenderer spriteRenderer;
     [SerializeField] private Button buttonBuildOk;
     [SerializeField] private Button buttonBuildCancel;
     private void Awake()
     {
         gridMap = GameObject.Find("Ground").GetComponent<GridMap>();
         buttonBuildOk.onClick.AddListener(OnClickBuild);
+        buttonBuildCancel.onClick.AddListener(OnClickCancel);
     }
 
     private void OnMouseDrag()
@@ -38,10 +34,30 @@ public class BuildingBlueprint : MonoBehaviour
         worldPos.z = 0;
         Vector3 pos = gridMap.GetNearTilePosition(worldPos);
         transform.position = pos;
+
+        if (gridMap.IsTileEmpty(pos))
+        {
+            canBuild = true;
+            spriteRenderer.color = Color.green;
+        }
+        else
+        {
+            canBuild = false;
+            spriteRenderer.color = Color.red;
+        }
     }
 
     public void OnClickBuild()
     {
-        gridMap.OnBuild(this);
+        if (canBuild)
+        {
+            gridMap.OnBuild(this);
+
+        }
+    }
+
+    public void OnClickCancel()
+    {
+        Destroy(gameObject);
     }
 }
