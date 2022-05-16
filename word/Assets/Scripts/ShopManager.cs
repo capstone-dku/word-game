@@ -16,15 +16,20 @@ public class PriseList{ // 가격 리스트. id는 임의의 값이아니라
 
 public class ShopManager : MonoBehaviour
 {
-    private List<PriseList> priseList; //[id][coin_type]
+    public List<PriseList> priseList; //[id][coin_type]
     private bool[] unlockList;
 
+    private void Start()
+    {
+        GetPriseList();
+        Init(new bool[priseList.Count]);
+    }
     /// 생성시 초기화 ///
     public void Init(bool[] ul){
         unlockList = ul;
     }
     ///
-
+    
     /// 가격 리스트 불러오기 ///
     public void GetPriseList(){
         string jdata = File.ReadAllText(Application.dataPath + "/Resources/JsonData/ShopList.json");

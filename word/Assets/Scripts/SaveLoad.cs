@@ -159,10 +159,9 @@ public class SaveLoad : MonoBehaviour
         currentData.vocaSetLocked[difficulty][set] = lockOrUnlock;
     }
 
-    public void AddCoin(int type, int num)
+    public void AdjustCoin(int type, int num)
     {
         currentData.coin[type] += num;
-        
     }
 
     public int GetCoin(int type)

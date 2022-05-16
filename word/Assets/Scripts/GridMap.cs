@@ -1,41 +1,7 @@
-using System;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.EventSystems;
 using UnityEngine.Tilemaps;
 
-public enum BUILDING
-{
-    None,
-    House,
-    School,
-    APT,
-}
-[Serializable]
-public class BuildingData
-{
-    public float x;
-    public float y;
-    public float z;
-    public BUILDING building;
-
-    public BuildingData()
-    {
-        this.x = 0;
-        this.y = 0;
-        this.z = 0;
-        building = BUILDING.None;
-    }
-
-    public BuildingData(Vector3 position, BUILDING building)
-    {
-        this.x = position.x;
-        this.y = position.y;
-        this.z = position.z;
-        this.building = building;
-    }
-}
 public class GridMap : MonoBehaviour
 {
     public Tilemap tilemap;
@@ -44,10 +10,11 @@ public class GridMap : MonoBehaviour
 
 
     private List<BuildingData> buildingData;
-    public List<GameObject> buildingPrefabs;
     public Transform gridTransform;
     private int width;
     private int height;
+
+    [SerializeField]private BuildingManager buildingManager;
 
     private void Start()
     {
@@ -59,7 +26,8 @@ public class GridMap : MonoBehaviour
         for (int i = 0; i < buildingData.Count; i++)
         {
             Vector3 pos = new Vector3(buildingData[i].x, buildingData[i].y, buildingData[i].z);
-            Instantiate(buildingPrefabs[(int)buildingData[i].building], pos, new Quaternion(), this.transform);
+            GameObject prefab = buildingManager.GetPrefab((int)buildingData[i].building);
+            Instantiate(prefab, pos, new Quaternion(), this.transform);
         }
     }
 
