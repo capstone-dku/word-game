@@ -34,8 +34,11 @@ public class ShopManager : MonoBehaviour
     
     /// 구매 성공 및 실패시 반환///
     public bool BuyBuilding(int id, int[] coin){
-        if((unlockList[id] == true) && (priseList[id].coin0 <= coin[0]) && (priseList[id].coin1 <= coin[1]) && (priseList[id].coin1) <= coin[2]){
-            //돈깍기 함수 coin 인자 제거
+        SaveLoad.Instance.GetCoin()
+        if((unlockList[id] == true) && (priseList[id].coin0 <= SaveLoad.Instance.GetCoin(0)) && (priseList[id].coin1 <= SaveLoad.Instance.GetCoin(1)) && (priseList[id].coin1) <= SaveLoad.Instance.GetCoin(2)){
+            SaveLoad.Instance.AddCoin(0, -priseList[id].coin0);
+            SaveLoad.Instance.AddCoin(1, -priseList[id].coin1);
+            SaveLoad.Instance.AddCoin(2, -priseList[id].coin2);
             return true;
         }
         return false;
