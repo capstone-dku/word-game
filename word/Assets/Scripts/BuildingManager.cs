@@ -43,6 +43,7 @@ public class BuildingManager : MonoBehaviour
     public BUILDING building;
     public List<GameObject> buildingPrefabs;
     public List<BuildingBlueprint> blueprintPrefabs;
+    public ShopManager shopManager;
 
     public PanelShop panelShop;
     // Start is called before the first frame update
@@ -60,8 +61,11 @@ public class BuildingManager : MonoBehaviour
 
     public void OnClickedButton(int id)
     {
-        panelShop.gameObject.SetActive(false);
-        BuildingBlueprint bb = Instantiate(blueprintPrefabs[id]);
+        if (shopManager.BuyBuilding(id))
+        {
+            panelShop.gameObject.SetActive(false);
+            BuildingBlueprint bb = Instantiate(blueprintPrefabs[id]);
+        }
         
     }
 }
