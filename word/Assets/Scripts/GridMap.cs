@@ -26,7 +26,7 @@ public class GridMap : MonoBehaviour
         for (int i = 0; i < buildingData.Count; i++)
         {
             Vector3 pos = new Vector3(buildingData[i].x, buildingData[i].y, buildingData[i].z);
-            GameObject prefab = buildingManager.GetPrefab((int)buildingData[i].building);
+            GameObject prefab = buildingManager.GetPrefab(buildingData[i].building);
             Instantiate(prefab, pos, new Quaternion(), this.transform);
         }
     }

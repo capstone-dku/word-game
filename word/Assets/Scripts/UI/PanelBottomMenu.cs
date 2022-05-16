@@ -12,6 +12,7 @@ public class PanelBottomMenu : MonoBehaviour
 
     public VocaStudy vocaStudy;
     public VocaGame vocaGame;
+    public BuildingManager BuildingManager;
     public void OnClickedStudy()
     {
         vocaStudy.OnButtonClickedStudy();
@@ -24,7 +25,7 @@ public class PanelBottomMenu : MonoBehaviour
 
     public void OnClickedBuilding()
     {
-
+        BuildingManager.OnClickedBuild();
     }
 
     public void OnClickedMission()

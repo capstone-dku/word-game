@@ -37,10 +37,19 @@ public class BuildingData
 }
 public class BuildingManager : MonoBehaviour
 {
+    [Header("list와 enum의 인덱스를 똑같이 맞춰주세요")]
+    public BUILDING building;
     public List<GameObject> buildingPrefabs;
+
+    public PanelShop panelShop;
     // Start is called before the first frame update
-    public GameObject GetPrefab(int index)
+    public GameObject GetPrefab(BUILDING building)
     {
-        return buildingPrefabs[index];
+        return buildingPrefabs[(int)building];
+    }
+
+    public void OnClickedBuild()
+    {
+        panelShop.gameObject.SetActive(true);
     }
 }
