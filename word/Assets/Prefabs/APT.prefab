@@ -95,7 +95,7 @@ GameObject:
   - component: {fileID: 736495625805497976}
   - component: {fileID: -7001634386164957621}
   m_Layer: 0
-  m_Name: 'Buidling '
+  m_Name: APT
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

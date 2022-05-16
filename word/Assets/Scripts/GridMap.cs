@@ -5,13 +5,45 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.Tilemaps;
 
+public enum BUILDING
+{
+    None,
+    House,
+    School,
+    APT,
+}
+[Serializable]
+public class BuildingData
+{
+    public float x;
+    public float y;
+    public float z;
+    public BUILDING building;
+
+    public BuildingData()
+    {
+        this.x = 0;
+        this.y = 0;
+        this.z = 0;
+        building = BUILDING.None;
+    }
+
+    public BuildingData(Vector3 position, BUILDING building)
+    {
+        this.x = position.x;
+        this.y = position.y;
+        this.z = position.z;
+        this.building = building;
+    }
+}
 public class GridMap : MonoBehaviour
 {
     public Tilemap tilemap;
     public SaveLoad saveLoad;
     private TileBase[] allTiles;
 
-    private Dictionary<Vector3, BUILDING> buildings;
+
+    private List<BuildingData> buildingData;
     public List<GameObject> buildingPrefabs;
     public Transform gridTransform;
     private int width;
@@ -22,47 +54,13 @@ public class GridMap : MonoBehaviour
         Vector3Int size = tilemap.size;
         width = size.x;
         height = size.y;
-        buildings = new Dictionary<Vector3, BUILDING>();
-        BoundsInt bounds = tilemap.cellBounds;
-        allTiles = tilemap.GetTilesBlock(bounds);
-        foreach (Vector3Int position in tilemap.cellBounds.allPositionsWithin)
+        buildingData = saveLoad.GetBuildingData();
+
+        for (int i = 0; i < buildingData.Count; i++)
         {
-            if (tilemap.GetTile(position) != null)
-            {
-                Debug.Log(tilemap.GetTile(position).name);
-                Vector3 cellPosition = tilemap.GetCellCenterWorld(position);
-                BUILDING building = saveLoad.GetBuilding(cellPosition);
-
-                // cellPosition = 타일의 좌표값
-                // building = 타일에 건설되어있는 건물의 id (BuildingBlueprint의 enum) 
-                //
-                //
-                if (building > 0)
-                {
-                    if (buildings.ContainsKey(cellPosition))
-                    {
-                        buildings[cellPosition] = building;
-                    }
-                    else
-                    {
-                        buildings.Add(cellPosition, building);
-                    }
-
-                    Instantiate(buildingPrefabs[(int)buildings[cellPosition]], cellPosition, new Quaternion(),
-                        this.transform);
-                }
-            }
+            Vector3 pos = new Vector3(buildingData[i].x, buildingData[i].y, buildingData[i].z);
+            Instantiate(buildingPrefabs[(int)buildingData[i].building], pos, new Quaternion(), this.transform);
         }
-        /*
-        Debug.Log(tilemap.CellToWorld(tilemap.origin));
-        for (int i = 0; i < width; i++)
-        {
-            for (int j = 0; j < height; j++)
-            {
-                Vector3 pos = tilemap.CellToWorld(new Vector3Int(i, j, 0));
-                Instantiate(buildingPrefab, pos, new Quaternion(), gridTransform);
-            }
-        }*/
     }
 
     private void Update()
@@ -96,20 +94,24 @@ public class GridMap : MonoBehaviour
         Vector3Int cellPos = tilemap.WorldToCell(pos);
         cellPos.x += 1;
         cellPos.y += 1;
-        if (buildings[cellPos] != BUILDING.None)
-            return false;
-        else 
-            return true;
+        for (int i = 0; i < buildingData.Count; i++)
+        {
+            Vector3 v = new Vector3(buildingData[i].x, buildingData[i].y, buildingData[i].z);
+            if (pos.Equals(v))
+                return false;
+        }
+        return true;
     }
 
     public void OnBuild(BuildingBlueprint bb)
     {
         Instantiate(bb.buildingObject, bb.transform.position, bb.transform.localRotation, this.transform);
         Vector3Int cellPos = tilemap.WorldToCell(bb.transform.position);
-        buildings[cellPos] = BUILDING.House;
+        BuildingData bd = new BuildingData(bb.transform.position, bb.building);
+        buildingData.Add(bd);
         Destroy(bb.gameObject);
 
-        saveLoad.Build(cellPos, bb.building);
+        saveLoad.Build(bd);
         saveLoad.SaveData();
     }
 }
