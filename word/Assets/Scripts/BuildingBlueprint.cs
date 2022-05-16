@@ -17,6 +17,7 @@ public class BuildingBlueprint : MonoBehaviour
     {
         gridMap = GameObject.Find("Ground").GetComponent<GridMap>();
         buttonBuildOk.onClick.AddListener(OnClickBuild);
+        buttonBuildCancel.onClick.AddListener(OnClickCancel);
     }
 
     private void OnMouseDrag()
@@ -53,5 +54,10 @@ public class BuildingBlueprint : MonoBehaviour
             gridMap.OnBuild(this);
 
         }
+    }
+
+    public void OnClickCancel()
+    {
+        Destroy(gameObject);
     }
 }
