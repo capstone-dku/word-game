@@ -6552,7 +6552,7 @@ TilemapRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -2
+  m_SortingOrder: -4
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0.97, y: 0.91999996, z: 0}
   m_MaxChunkCount: 16
@@ -13269,7 +13269,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4254100029345173445, guid: 632c5eb7e206ff5458de8d1788c43943, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.64
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4254100029345173445, guid: 632c5eb7e206ff5458de8d1788c43943, type: 3}
       propertyPath: m_LocalPosition.z
@@ -13310,6 +13310,22 @@ PrefabInstance:
     - target: {fileID: 4254100029345173446, guid: 632c5eb7e206ff5458de8d1788c43943, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4254100030614890552, guid: 632c5eb7e206ff5458de8d1788c43943, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4254100030614890552, guid: 632c5eb7e206ff5458de8d1788c43943, type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4254100030614890552, guid: 632c5eb7e206ff5458de8d1788c43943, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4254100030614890552, guid: 632c5eb7e206ff5458de8d1788c43943, type: 3}
+      propertyPath: m_SortingOrder
+      value: -2
       objectReference: {fileID: 0}
     - target: {fileID: 6376714298219781078, guid: 632c5eb7e206ff5458de8d1788c43943, type: 3}
       propertyPath: building
