@@ -9,6 +9,8 @@ public class BuildingBlueprint : MonoBehaviour
     public GridMap gridMap;
     public Building buildingObject;
     public BUILDING building;
+    private bool canBuild = false;
+    [SerializeField] private SpriteRenderer spriteRenderer;
     [SerializeField] private Button buttonBuildOk;
     [SerializeField] private Button buttonBuildCancel;
     private void Awake()
@@ -31,10 +33,25 @@ public class BuildingBlueprint : MonoBehaviour
         worldPos.z = 0;
         Vector3 pos = gridMap.GetNearTilePosition(worldPos);
         transform.position = pos;
+
+        if (gridMap.IsTileEmpty(pos))
+        {
+            canBuild = true;
+            spriteRenderer.color = Color.green;
+        }
+        else
+        {
+            canBuild = false;
+            spriteRenderer.color = Color.red;
+        }
     }
 
     public void OnClickBuild()
     {
-        gridMap.OnBuild(this);
+        if (canBuild)
+        {
+            gridMap.OnBuild(this);
+
+        }
     }
 }
