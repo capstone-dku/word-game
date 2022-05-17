@@ -26,7 +26,7 @@ public class GridMap : MonoBehaviour
         for (int i = 0; i < buildingData.Count; i++)
         {
             Vector3 pos = new Vector3(buildingData[i].x, buildingData[i].y, buildingData[i].z);
-            GameObject prefab = buildingManager.GetPrefab(buildingData[i].building);
+            GameObject prefab = buildingManager.GetObjectPrefab(buildingData[i].id).gameObject;
             Instantiate(prefab, pos, new Quaternion(), this.transform);
         }
     }
@@ -75,7 +75,7 @@ public class GridMap : MonoBehaviour
     {
         Instantiate(bb.buildingObject, bb.transform.position, bb.transform.localRotation, this.transform);
         Vector3Int cellPos = tilemap.WorldToCell(bb.transform.position);
-        BuildingData bd = new BuildingData(bb.transform.position, bb.building);
+        BuildingData bd = new BuildingData(bb.transform.position, bb.buildingObject.id);
         buildingData.Add(bd);
         Destroy(bb.gameObject);
 

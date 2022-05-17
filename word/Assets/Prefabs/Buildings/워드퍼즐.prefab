@@ -7,6 +7,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -7001634386164957621, guid: 842183fd02b1c114e8cba930812ba4aa, type: 3}
+      propertyPath: id
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -7001634386164957621, guid: 842183fd02b1c114e8cba930812ba4aa, type: 3}
+      propertyPath: SpriteRenderer
+      value: 
+      objectReference: {fileID: 2361558545344348283}
     - target: {fileID: 719971453837691766, guid: 842183fd02b1c114e8cba930812ba4aa, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -25,7 +33,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 719971455033715848, guid: 842183fd02b1c114e8cba930812ba4aa, type: 3}
       propertyPath: m_Name
-      value: Green house
+      value: "\uC6CC\uB4DC\uD37C\uC990"
       objectReference: {fileID: 0}
     - target: {fileID: 719971455033715851, guid: 842183fd02b1c114e8cba930812ba4aa, type: 3}
       propertyPath: m_RootOrder
@@ -73,3 +81,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 842183fd02b1c114e8cba930812ba4aa, type: 3}
+--- !u!212 &2361558545344348283 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 719971453837691766, guid: 842183fd02b1c114e8cba930812ba4aa, type: 3}
+  m_PrefabInstance: {fileID: 2970170980416293645}
+  m_PrefabAsset: {fileID: 0}

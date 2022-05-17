@@ -88,7 +88,7 @@ GameObject:
   - component: {fileID: 7382783701768502842}
   - component: {fileID: 4092872213343610166}
   m_Layer: 0
-  m_Name: APT Blueprint
+  m_Name: Blueprint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -124,8 +124,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gridMap: {fileID: 0}
   buildingObject: {fileID: -7001634386164957621, guid: 842183fd02b1c114e8cba930812ba4aa, type: 3}
-  buildingSprite: {fileID: 21300000, guid: 28874524193a7df46946ca120372ea2c, type: 3}
-  building: 3
+  spriteTransform: {fileID: 4254100030614890553}
   spriteRenderer: {fileID: 4254100030614890552}
   buttonBuildOk: {fileID: 5448324010333558325}
   buttonBuildCancel: {fileID: 4607246383407794043}
@@ -169,7 +168,7 @@ GameObject:
   - component: {fileID: 4254100030614890553}
   - component: {fileID: 4254100030614890552}
   m_Layer: 0
-  m_Name: house_grey_level_6(1)
+  m_Name: "\uC2A4\uD504\uB77C\uC774\uD2B8"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

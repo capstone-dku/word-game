@@ -37,9 +37,7 @@ public class ButtonBuyBuilding : MonoBehaviour
         {
             panelLocked.SetActive(true);
         }
-
-        
-        GameObject go = buildingManager.GetPrefab((BUILDING)price.id);
+        Building go = buildingManager.GetObjectPrefab(price.id);
         imageBuilding.sprite = go.GetComponentInChildren<SpriteRenderer>().sprite;
     }
 

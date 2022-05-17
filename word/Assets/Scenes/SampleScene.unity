@@ -723,19 +723,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d17588510331fa4494fa2673b12c4fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  building: 0
   buildingPrefabs:
-  - {fileID: 0}
-  - {fileID: 2361558546498692997, guid: 313e18af2a079de4682c60b4dd08494b, type: 3}
-  - {fileID: 719971455033715848, guid: 842183fd02b1c114e8cba930812ba4aa, type: 3}
-  - {fileID: 719971455033715848, guid: 842183fd02b1c114e8cba930812ba4aa, type: 3}
-  - {fileID: 719971455033715848, guid: 842183fd02b1c114e8cba930812ba4aa, type: 3}
-  blueprintPrefabs:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 6376714298219781078, guid: 632c5eb7e206ff5458de8d1788c43943, type: 3}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: -7001634386164957621, guid: 842183fd02b1c114e8cba930812ba4aa, type: 3}
+  - {fileID: 4029904016872387910, guid: 313e18af2a079de4682c60b4dd08494b, type: 3}
+  - {fileID: 2433413404954012071, guid: fdf144e4d0616e24f9c01981ae091c5b, type: 3}
+  - {fileID: 7237071562179851472, guid: d7767f6c29797944384c12ca73dac92e, type: 3}
+  blueprintPrefabs: {fileID: 6376714298219781078, guid: 632c5eb7e206ff5458de8d1788c43943, type: 3}
   shopManager: {fileID: 681788922}
   panelShop: {fileID: 1077976785}
 --- !u!4 &100764792

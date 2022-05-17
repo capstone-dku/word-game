@@ -4,58 +4,56 @@ using System.Collections.Generic;
 using UnityEditor.EditorTools;
 using UnityEngine;
 
-public enum BUILDING
-{
-    None,
-    School,
-    WordPuzzle,
-    CrossWord,
-    WordCard,
-
-}
 [System.Serializable]
 public class BuildingData
 {
     public float x;
     public float y;
     public float z;
-    public BUILDING building;
+    public int id;
 
     public BuildingData()
     {
         this.x = 0;
         this.y = 0;
         this.z = 0;
-        building = BUILDING.None;
+        this.id = 0;
     }
 
-    public BuildingData(Vector3 position, BUILDING building)
+    public BuildingData(Vector3 position, int id)
     {
         this.x = position.x;
         this.y = position.y;
         this.z = position.z;
-        this.building = building;
+        this.id = id;
     }
 }
 public class BuildingManager : MonoBehaviour
 {
-    [Header("list와 enum의 인덱스를 똑같이 맞춰주세요")]
-    public BUILDING building;
-    public List<GameObject> buildingPrefabs;
-    public List<BuildingBlueprint> blueprintPrefabs;
+    public List<Building> buildingPrefabs;
+    public BuildingBlueprint blueprintPrefabs;
     public ShopManager shopManager;
 
     public PanelShop panelShop;
+    
     // Start is called before the first frame update
-    public GameObject GetPrefab(BUILDING building)
+    private void Start()
     {
-        return buildingPrefabs[(int)building];
+        panelShop.Init();
     }
-
+    public Building GetObjectPrefab(int id)
+    {
+        for (int i = 0; i < buildingPrefabs.Count; i++)
+        {
+            if (id == buildingPrefabs[i].id)
+                return buildingPrefabs[i];
+        }
+        return null;
+    }
+    
     public void OnClickedBuild()
     {
         panelShop.gameObject.SetActive(true);
-        panelShop.Init();
         panelShop.UpdateButton();
     }
 
@@ -63,8 +61,17 @@ public class BuildingManager : MonoBehaviour
     {
         if (shopManager.BuyBuilding(id))
         {
+            Debug.Log("true");
             panelShop.gameObject.SetActive(false);
-            BuildingBlueprint bb = Instantiate(blueprintPrefabs[id]);
+            BuildingBlueprint bb = Instantiate(blueprintPrefabs);
+            Building building = GetObjectPrefab(id);
+
+            bb.UpdateBuilding(building);
+        }
+        else
+        {
+            Debug.Log("false");
+
         }
         
     }

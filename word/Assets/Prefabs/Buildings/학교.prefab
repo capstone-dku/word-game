@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 719971453837691767}
   - component: {fileID: 719971453837691766}
   m_Layer: 0
-  m_Name: house_grey_level_6(1)
+  m_Name: "\uC2A4\uD504\uB77C\uC774\uD2B8"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -95,7 +95,7 @@ GameObject:
   - component: {fileID: 736495625805497976}
   - component: {fileID: -7001634386164957621}
   m_Layer: 0
-  m_Name: APT
+  m_Name: "\uD559\uAD50"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -157,3 +157,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b217923cdd045a345af079c044c0114b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  id: 0
+  spriteTransform: {fileID: 719971453837691767}
+  spriteRenderer: {fileID: 719971453837691766}

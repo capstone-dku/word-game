@@ -174,7 +174,7 @@ public class SaveLoad : MonoBehaviour
         currentData.buildingData.Add(buildingData);
     }
 
-    public BUILDING GetBuilding(Vector3 pos)
+    public int GetBuilding(Vector3 pos)
     {
         for (int i = 0; i < currentData.buildingData.Count; i++)
         {
@@ -182,11 +182,11 @@ public class SaveLoad : MonoBehaviour
                 currentData.buildingData[i].z);
             if (pos.Equals(p))
             {
-                return currentData.buildingData[i].building;
+                return currentData.buildingData[i].id;
             }
         }
 
-        return BUILDING.None;
+        return -1;
     }
 
     public List<BuildingData> GetBuildingData()

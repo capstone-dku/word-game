@@ -8,9 +8,8 @@ public class BuildingBlueprint : MonoBehaviour
 {
     public GridMap gridMap;
     public Building buildingObject;
-    public Sprite buildingSprite;
-    public BUILDING building;
     private bool canBuild = false;
+    [SerializeField] private Transform spriteTransform;
     [SerializeField] private SpriteRenderer spriteRenderer;
     [SerializeField] private Button buttonBuildOk;
     [SerializeField] private Button buttonBuildCancel;
@@ -19,7 +18,6 @@ public class BuildingBlueprint : MonoBehaviour
         gridMap = GameObject.Find("Ground").GetComponent<GridMap>();
         buttonBuildOk.onClick.AddListener(OnClickBuild);
         buttonBuildCancel.onClick.AddListener(OnClickCancel);
-        buildingSprite = spriteRenderer.sprite;
 
         UpdateColor();
     }
@@ -68,5 +66,12 @@ public class BuildingBlueprint : MonoBehaviour
             canBuild = false;
             spriteRenderer.color = Color.red;
         }
+    }
+
+    public void UpdateBuilding(Building building)
+    {
+        buildingObject = building;
+        spriteRenderer.sprite = building.spriteRenderer.sprite;
+        spriteTransform.position = building.spriteTransform.position;
     }
 }
