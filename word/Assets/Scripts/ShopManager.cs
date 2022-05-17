@@ -59,13 +59,6 @@ public class ShopManager : MonoBehaviour
     /// 구매 성공 및 실패시 반환///
     public bool BuyBuilding(int id)
     {
-        Debug.Log(priseList[id].id);
-        Debug.Log(priseList[id].name);
-        Debug.Log(priseList[id].coin0);
-        Debug.Log(priseList[id].coin1);
-        Debug.Log(priseList[id].coin2);
-        Debug.Log(priseList[id].unlock);
-        Debug.Log(priseList[id].type);
         if (unlockList[id] == false) return false;
         if (priseList[id].coin0 > SaveLoad.Instance.GetCoin(0)) return false;
         if (priseList[id].coin1 > SaveLoad.Instance.GetCoin(1)) return false;
