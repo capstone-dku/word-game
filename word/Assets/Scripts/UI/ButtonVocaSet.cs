@@ -55,8 +55,7 @@ public class ButtonVocaSet : MonoBehaviour
             objectLocked.SetActive(false);
         }
     }
-    public void OnButt
-        ()
+    public void OnClickedButton()
     {
         if (locked == false)
         {

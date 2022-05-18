@@ -43,7 +43,7 @@ public class VocaStudy : MonoBehaviour
         if (TEST_MODE)
             DelayTime = new WaitForSeconds(0.1f);
         else
-            DelayTime = new WaitForSeconds(2.0f);
+            DelayTime = new WaitForSeconds(1.0f);
 
         for (int i = 0; i < 4; i++)
         {
@@ -137,7 +137,7 @@ public class VocaStudy : MonoBehaviour
         
         yield return DelayTime;
         StringBuilder sb = new StringBuilder();
-        for (int i = 1; i <= 3; i++)
+        for (int i = 1; i <= 1; i++)
         {
             textStudyCount.text = i.ToString() + "회차";
             for (int j = 0; j < currentVocaList.Count; j++)
@@ -189,8 +189,7 @@ public class VocaStudy : MonoBehaviour
         panelVocaList.Init(currentVocaList, answer);
         panelQuiz.gameObject.SetActive(false);
 
-
-
+        
         // TODO: https://github.com/capstone-dku/word-game/issues/5
         // 1. 결과창을 보여준다.
         panelResult.gameObject.SetActive(true);

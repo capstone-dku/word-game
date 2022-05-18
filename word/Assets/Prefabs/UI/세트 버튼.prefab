@@ -521,7 +521,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: -1332070991287048467}
         m_TargetAssemblyTypeName: ButtonVocaSet, Assembly-CSharp
-        m_MethodName: OnButtonClicked
+        m_MethodName: OnClickedButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

@@ -2,7 +2,6 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Text;
-using UnityEditor.EditorTools;
 using UnityEngine;
 using UnityEngine.UI;
 using Random = UnityEngine.Random;
@@ -19,6 +18,7 @@ public class PanelWordPuzzle : MonoBehaviour
     [SerializeField] private GameObject panelCorrect;
     [SerializeField] private GameObject panelWrong;
     [SerializeField] private SaveLoad saveLoad;
+    [SerializeField] private PanelVocaList panelVocaList;
 
     public List<Sprite[]> sprites = new List<Sprite[]>();
     public Sprite[] spriteRed;
@@ -51,6 +51,7 @@ public class PanelWordPuzzle : MonoBehaviour
     private bool running = false; // 현재 퀴즈 시간이 흘러가고 있는지
     private int vocaSuccess; // 성공 횟수 저장
     private int[] vocaWeight; // 단어들 가중치 변화 후 값 저장
+    private bool[] answer;
     private bool globalClick = false;
     private int lastIndex = -1;
     private Coroutine puzzleCoroutine = null;
@@ -58,7 +59,7 @@ public class PanelWordPuzzle : MonoBehaviour
     private int currentTime;
 
 
-    private void Start()
+    private void Awake()
     {
         sprites.Add(spriteRed);
         sprites.Add(spriteBlue);
@@ -66,15 +67,11 @@ public class PanelWordPuzzle : MonoBehaviour
         sprites.Add(spriteGreen);
         sprites.Add(spriteGrey);
 
-        List<Voca> vocaList = vocaSelector.FindVocaWeight(5);
-
         vocaSuccess = 0;
-        vocaWeight = new int[]{0,0,0,0,0};
-
+        vocaWeight = new int[] { 0, 0, 0, 0, 0 };
+        
         visited = new bool[buttonWordPuzzles.Length];
         sb = new StringBuilder();
-
-        Init(vocaList);
     }
 
     void Update()
@@ -113,10 +110,8 @@ public class PanelWordPuzzle : MonoBehaviour
     public void Init(List<Voca> vocaList)
     {
         this.vocaList = vocaList;
+        answer = new bool[vocaList.Count];
         Clear();
-
-        // TEST
-        StartGame();
     }
 
     public void Clear()
@@ -125,6 +120,7 @@ public class PanelWordPuzzle : MonoBehaviour
         {
             buttonWordPuzzles[i].Init(i, this);
             visited[i] = false;
+            
         }
 
         sb.Clear();
@@ -311,15 +307,17 @@ public class PanelWordPuzzle : MonoBehaviour
             weight = (int)(weight/2);
             panelCorrect.SetActive(true);
             vocaSuccess+=1;
+            answer[currentIndex] = true;
         }
         else
         {
             // 틀렸을때
             weight = weight*2;
             panelWrong.SetActive(true);
-
+            answer[currentIndex] = false;
         }
-        vocaWeight[currentIndex] = weight;      
+        vocaWeight[currentIndex] = weight;
+        
 
         // 버튼 색 및 플래그 초기화
         for (int i = 0; i < buttonWordPuzzles.Length; i++)
@@ -347,6 +345,10 @@ public class PanelWordPuzzle : MonoBehaviour
             vocaSelector.SaveVocaWeight(vocaList, vocaWeight);
             // 데이터 저장
             saveLoad.SaveData();
+            gameObject.SetActive(false);
+            // 결과창
+            panelVocaList.gameObject.SetActive(true);
+            panelVocaList.Init(vocaList, answer);
             return;
         }
         puzzleCoroutine = StartCoroutine(StartPuzzle(currentIndex, true));

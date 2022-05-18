@@ -7,6 +7,4 @@ public class Building : MonoBehaviour
     public int id;
     public Transform spriteTransform;
     public SpriteRenderer spriteRenderer;
-
-    
 }

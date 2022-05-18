@@ -36,7 +36,6 @@ public class PanelQuiz : MonoBehaviour
         // 4개의 버튼 중 하나의 버튼을 정답으로 만듬
         answerIndex = Random.Range(0, textButton.Length);
         textButton[answerIndex].text = quiz.meaning[0];
-        textButton[answerIndex].gameObject.GetComponentInParent<Image>().color = Color.green;
         // 4개 버튼을 랜덤한 오답으로 만듬
         List<int> random = new List<int>();
         for (int i = 0; i < textButton.Length; i++)
@@ -51,7 +50,6 @@ public class PanelQuiz : MonoBehaviour
             }
             random.Add(rnd);
             textButton[i].text = vocaList[rnd].meaning[0];
-            textButton[i].gameObject.GetComponentInParent<Image>().color = Color.red;
         }
     }
 

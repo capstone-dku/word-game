@@ -13,6 +13,7 @@ public class PanelVocaList : MonoBehaviour
         this.vocaList = vocaList;
         for (int i = 0; i < vocaList.Count; i++)
         {
+            Debug.Log(answer[i]);
             PanelVoca pv = Instantiate(panelVoca, transformVocaListContent);
             pv.UpdatePanel(vocaList[i], answer[i]);
             instances.Add(pv.gameObject);
