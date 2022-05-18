@@ -5,7 +5,7 @@
 * [단어장](https://docs.google.com/spreadsheets/d/1VTE856Wbmat4eTHYIh3chUlXG4Jf2rTSrlLsHTojrWg/)  
 * [건물 및 아이템 가격표](https://docs.google.com/spreadsheets/d/1SsVtkQfFlHefgEJ3ecUjyx5WSpaNnFgYGiFllcvQ9bY/edit?usp=sharing)  
 * [플로우차트](https://github.com/capstone-dku/word-game/blob/main/flow-chart.png)
-* [최종 보고서](https://docs.google.com/document/d/1S_b3WEJdYQept-dEcVO_3g8SSH9oKovwPlb3ZFdD0HA/edit#)
+* [최종 보고서](https://docs.google.com/document/d/1S_b3WEJdYQept-dEcVO_3g8SSH9oKovwPlb3ZFdD0HA/edit?usp=sharing)
 
 ### 개발 일지  
 * [2022-04-28 테스트 플레이 영상](https://www.youtube.com/watch?v=PLIkiA75H-Q)  
