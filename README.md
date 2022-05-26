@@ -7,6 +7,7 @@
 * [플로우차트](https://github.com/capstone-dku/word-game/blob/main/flow-chart.png)
 * [최종 보고서](https://docs.google.com/document/d/1u4gv5S1_ORm3byx9y7wwRPNTrgZDQAC8YBGxl5kcBMo/edit?usp=sharing)
 
+
 ### 개발 일지  
 * [2022-04-28 테스트 플레이 영상](https://www.youtube.com/watch?v=PLIkiA75H-Q)  
 깜빡이 단어학습, 단어 데이터시트 연동, 퀴즈 결과에 따라 학습한 단어 가중치 저장  
