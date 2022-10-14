@@ -13,9 +13,12 @@ public enum ALPHABET
 
 public class PanelCrossWord : MonoBehaviour
 {
+    [SerializeField] private GameObject panelKeyboard;
     private const int VOCA_NUM = 5; // 퍼즐판 안에 몇개의 단어가 들어갈지
     private const int WIDTH = 15; // 퍼즐판의 크기
     private const int HEIGHT = 15; // 퍼즐판의 크기
+
+    private List<Voca> vocaList; // 퍼즐판에 출제될 단어 리스트
 
     public char[] wordPuzzle; // 퍼즐판. 0의 경우 비어 있음 이외의 경우 채워야하는 답으로 문자형태로 들어가있음.
     public int complete = 0;
@@ -24,7 +27,6 @@ public class PanelCrossWord : MonoBehaviour
     {
         this.vocaList = vocaList;
         
-        answer = new bool[vocaList.Count];
         Clear();
     }
 
@@ -156,9 +158,19 @@ public class PanelCrossWord : MonoBehaviour
                 buttonWordPuzzles[i].alphabet = (ALPHABET)Random.Range(0, (int)ALPHABET.Length);
         }
         //
-        UpdateSprites();
+    }
+    public void StartGame()
+    {
 
-        textMeaingWord.text = voca.meaning[0];
+    }
 
+    private void ShowKeyboard(bool show)
+    {
+        panelKeyboard.SetActive(show);
+    }
+
+    public void OnClickedKeyboard(GameObject button)
+    {
+        Debug.Log(button.name);
     }
 }
