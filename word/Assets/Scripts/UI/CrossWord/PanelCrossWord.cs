@@ -8,15 +8,17 @@ using Random = UnityEngine.Random;
 
 public class CWList
 {
-    Voca voca;
-    bool Row; // 0
-}
-
-public class CorrectList{
     int x; // 시작지점
     int y; // 시작지점
     int angle; // 각도 0 : 가로, 1 : 세로
     String voca; // 답
+    
+    public CWList(int x, int y, int angle, String voca){
+        this.x = x;
+        this.y = y;
+        this.angle = angle;
+        this.voca = voca;
+    }
 }
 
 public class PanelCrossWord : MonoBehaviour
@@ -27,16 +29,18 @@ public class PanelCrossWord : MonoBehaviour
     private const int VOCA_NUM = 10; // 퍼즐판 안에 몇개의 단어가 들어갈지 
     private const int WIDTH = 15; // 퍼즐판의 크기
     private const int HEIGHT = 15; // 퍼즐판의 크기
+    private const int VOCA_NUM2 = 20; // 유효체크할 단어의 개수
 
     private List<Voca> vocaList; // 퍼즐판에 출제될 단어 리스트
 
     public char[,] wordPuzzle; // 퍼즐판. 0의 경우 비어 있음 이외의 경우 채워야하는 답으로 문자형태로 들어가있음.
     public List<int> alPosition; // 퍼즐판에 배치된 알파벳의 위치를 담은 배열.
+    public List<CWList> cwList;
     public int complete = 0; // 몇개의 단어가 퍼즐판에 들어갔는지.
 
     private void Start()
     {
-        List<Voca> vl = vocaSelector.FindVocaWeight(20);
+        List<Voca> vl = vocaSelector.FindVocaWeight(VOCA_NUM2);
         Init(vl);
         MakePuzzle(vl);
     }
@@ -51,6 +55,7 @@ public class PanelCrossWord : MonoBehaviour
     {
         wordPuzzle = new char[WIDTH,HEIGHT];
         alPosition = new List<int>();
+        cwList = new List<CWList>();
         for(int i=0;i<WIDTH;i++){
             for(int j=0;j<HEIGHT;j++){
                 wordPuzzle[i,j]='0';
@@ -93,6 +98,7 @@ public class PanelCrossWord : MonoBehaviour
                         wordPuzzle[x+j,y] = vocaList[i].voca[j];
                         alPosition.Add((x+j)*HEIGHT+ y);
                     }
+                    cwList.Add(new CWList(x,y,0,vocaList[i].voca));
                 }
                 else{//세로
                     x = (int)(WIDTH/4)+Random.Range(0, (int)(WIDTH/2)); 
@@ -102,20 +108,20 @@ public class PanelCrossWord : MonoBehaviour
                         wordPuzzle[x,y+j] = vocaList[i].voca[j];
                         alPosition.Add((x)*HEIGHT+y+j);
                     }
+                    cwList.Add(new CWList(x,y,1,vocaList[i].voca));
                 }
                 complete+=1;
             }
             else{//두번 째 부터
                 len = vocaList[i].voca.Length;
                 bool suc = false;
-                for(int count = 0; (count < 10) && (suc == false); count++){//겹치는 부분 확인 count 횟수 만큼 검색 << 나중에 리팩토링
+                for(int count = 0; (count < 10) && (suc == false); count++){//겹치는 부분 확인 count 횟수 만큼 검색 << 나중에 리팩토링 << 똑같은 단어 2번 나올떄 있는거같음
                     int position = (int)Random.Range(0, alPosition.Count);
                     x = (int)(alPosition[position]/HEIGHT);
                     y = (int)(alPosition[position]%HEIGHT);
 
                     for(int j=0; j<len;j++){
                         if(wordPuzzle[x,y] == vocaList[i].voca[j]){
-                            Debug.Log("Word: "+wordPuzzle[x,y]+" Voca: "+vocaList[i].voca[j]);
                             bool checkValid = false;
                             int checkRow = 0;
                             int checkCol = 0;
@@ -160,7 +166,7 @@ public class PanelCrossWord : MonoBehaviour
                                 if(checkValid && (x-j>0) && (x+len-j<=WIDTH)){
                                     for(int k=0;k<len;k++){
                                         if(wordPuzzle[x-j+k,y]!= '0'){
-                                            if(wordPuzzle[x,y-j+k]!=vocaList[i].voca[k]){
+                                            if( 
                                                 checkValid = false;
                                             }
                                         }
@@ -204,6 +210,7 @@ public class PanelCrossWord : MonoBehaviour
                                     }
                                     suc = true;
                                     complete+=1;
+                                    cwList.Add(new CWList(x,y,0,vocaList[i].voca));
                                     Debug.Log("생성성공");  
                                 }
                                 else if(checkCol == 0){
@@ -213,6 +220,7 @@ public class PanelCrossWord : MonoBehaviour
                                     }
                                     suc = true;
                                     complete+=1;
+                                    cwList.Add(new CWList(x,y,1,vocaList[i].voca));
                                     Debug.Log("생성성공");  
                                 }
                                 else{
@@ -258,6 +266,11 @@ public class PanelCrossWord : MonoBehaviour
         }
         */
     }
+
+    public bool CheckAnswer(int x, int y){
+        
+    }
+
     public void StartGame()
     {
 
