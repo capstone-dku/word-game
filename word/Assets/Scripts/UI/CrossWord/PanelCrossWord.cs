@@ -166,7 +166,7 @@ public class PanelCrossWord : MonoBehaviour
                                 if(checkValid && (x-j>0) && (x+len-j<=WIDTH)){
                                     for(int k=0;k<len;k++){
                                         if(wordPuzzle[x-j+k,y]!= '0'){
-                                            if( 
+                                            if(wordPuzzle[x-j+k,y]!=vocaList[i].voca[k]){
                                                 checkValid = false;
                                             }
                                         }
@@ -267,8 +267,15 @@ public class PanelCrossWord : MonoBehaviour
         */
     }
 
-    public bool CheckAnswer(int x, int y){
-        
+    public void CheckAnswer(int x, int y){
+        for(var i=0; i<cwList.Count; i++){
+            if(cwList.x = x){
+                
+            }
+            if(cWList.y = y){
+
+            }
+        }
     }
 
     public void StartGame()
