@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.InteropServices;
 using System.Text;
 using UnityEngine;
 using UnityEngine.UI;
@@ -24,6 +25,13 @@ public class CWList
 
 public class PanelCrossWord : MonoBehaviour
 {
+    public List<Sprite[]> sprites = new List<Sprite[]>();
+    public Sprite[] spriteRed;
+    public Sprite[] spriteBlue;
+    public Sprite[] spritePurple;
+    public Sprite[] spriteGreen;
+    public Sprite[] spriteGrey;
+
     [SerializeField] private GameObject panelKeyboard;
     [SerializeField] private VocaSelector vocaSelector;
     [SerializeField] private SaveLoad saveLoad;
@@ -31,22 +39,36 @@ public class PanelCrossWord : MonoBehaviour
     private const int WIDTH = 15; // 퍼즐판의 크기
     private const int HEIGHT = 15; // 퍼즐판의 크기
     private const int VOCA_NUM2 = 20; // 유효체크할 단어의 개수
+    public Button[] buttonCrossWords;
 
     private List<Voca> vocaList; // 퍼즐판에 출제될 단어 리스트
 
-    public char[,] wordPuzzle; // 퍼즐판. 0의 경우 비어 있음 이외의 경우 채워야하는 답으로 문자형태로 들어가있음.
-    public List<int> alPosition; // 퍼즐판에 배치된 알파벳의 위치를 담은 배열.
-    public List<CWList> cwList;
-    public int complete = 0; // 몇개의 단어가 퍼즐판에 들어갔는지.
+    private char[,] wordPuzzle; // 퍼즐판. 0의 경우 비어 있음 이외의 경우 채워야하는 답으로 문자형태로 들어가있음.
+    private List<int> alPosition; // 퍼즐판에 배치된 알파벳의 위치를 담은 배열.
+    private List<CWList> cwList;
+    private int complete = 0; // 몇개의 단어가 퍼즐판에 들어갔는지.
 
     private void Start()
     {
+        sprites.Add(spriteRed);
+        sprites.Add(spriteBlue);
+        sprites.Add(spritePurple);
+        sprites.Add(spriteGreen);
+        sprites.Add(spriteGrey);
+
         char aa = 'a';
-        aa = (char)((int)aa-32); 
-        Debug.Log("A나와야함 : "+aa);
+        aa = (char)((int)aa - 32);
+        Debug.Log("A나와야함 : " + aa);
         List<Voca> vl = vocaSelector.FindVocaWeight(VOCA_NUM2);
         Init(vl);
         MakePuzzle(vl);
+
+        var buttonKeyboard = panelKeyboard.GetComponentsInChildren<Button>();
+        for (int i = 0; i < buttonKeyboard.Length; i++)
+        {
+            int idx = i;
+            buttonKeyboard[i].onClick.AddListener(() => OnClickedKeyboard(buttonKeyboard[idx].gameObject));
+        }
     }
 
     public void Init(List<Voca> vocaList)
@@ -289,6 +311,7 @@ public class PanelCrossWord : MonoBehaviour
                 if(wordPuzzle[i,j] != '0')
                 {
                     str = str + wordPuzzle[i,j] +"\t";
+                    Debug.Log(wordPuzzle[i,j]);
                 }
                 else{
                     str = str + "\t";
@@ -298,13 +321,13 @@ public class PanelCrossWord : MonoBehaviour
         }
         Debug.Log(str);
 
-        for(int i=0;i<WIDTH;i++)
+        for (int i=0;i<WIDTH;i++)
         {
             for(int j=0;j<HEIGHT;j++)
             {
                 if(wordPuzzle[i,j]!='0')
                 {
-                    wordPuzzle[i,j]='1';
+                    // wordPuzzle[i,j]='1';
                 }
             }
         }
@@ -325,6 +348,27 @@ public class PanelCrossWord : MonoBehaviour
             str=str+"\r\n";
         }
         Debug.Log(str);
+
+        // 워드 퍼즐판을 채운다.
+        int color = Random.Range(0, sprites.Count);
+        for (int i = 0; i < WIDTH; i++)
+        {
+            for (int j = 0; j < HEIGHT; j++)
+            {
+                if (wordPuzzle[i, j] != '0')
+                {
+                    int idx = wordPuzzle[i, j] - 'a';
+                    // 정답 표시
+                    // buttonCrossWords[j + i * HEIGHT].GetComponent<Image>().sprite = sprites[color][idx];
+                    buttonCrossWords[j + i * HEIGHT].GetComponent<Image>().sprite = sprites[color][26];
+
+                }
+                else
+                {
+                    buttonCrossWords[j + i * HEIGHT].GetComponent<Image>().sprite = sprites[color][27];
+                }
+            }
+        }
     }
 
     public void CheckAnswer(int x, int y)
@@ -347,7 +391,7 @@ public class PanelCrossWord : MonoBehaviour
                         {
                             if(wordPuzzle[cwList[i].x,cwList[i].y+j]>95)//소문자 일 경우
                             {
-                                wordPuzzle[cwList[i].x,cwList[i].y+j]=(char)((int)(wordPuzzle[cwList[i].x,cwList[i].y+j])-32); 
+                                wordPuzzle[cwList[i].x,cwList[i].y+j]=(char)((int)(wordPuzzle[cwList[i].x,cwList[i].y+j])-32);
                                 /*
                                     cwList[i].x , cwList[i].y+j 에 있는 패널이 수정 불가능 하다는 것을 시각적으로 표시해야함.
                                 */
@@ -383,6 +427,7 @@ public class PanelCrossWord : MonoBehaviour
                 }
             }
         }
+        
     }
 
     public void StartGame()
