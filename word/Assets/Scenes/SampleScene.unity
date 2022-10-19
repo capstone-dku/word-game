@@ -4015,7 +4015,7 @@ RectTransform:
   - {fileID: 1786819274}
   - {fileID: 446249248}
   m_Father: {fileID: 933292469}
-  m_RootOrder: 6
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -8895,7 +8895,7 @@ RectTransform:
   m_Children:
   - {fileID: 1301808858}
   m_Father: {fileID: 933292469}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -16769,7 +16769,7 @@ RectTransform:
   m_Children:
   - {fileID: 699464535}
   m_Father: {fileID: 933292469}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -30215,7 +30215,7 @@ GameObject:
   - component: {fileID: 911655379}
   - component: {fileID: 911655378}
   m_Layer: 5
-  m_Name: "\uAC8C\uC784 \uBC84\uD2BC"
+  m_Name: "\uAC00\uB85C\uC138\uB85C \uB0B1\uB9D0\uD37C\uC990 \uBC84\uD2BC"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -30286,7 +30286,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 911655379}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1275721336}
+        m_TargetAssemblyTypeName: PanelPlayGame, Assembly-CSharp
+        m_MethodName: OnClickedCrossWord
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &911655379
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31116,9 +31128,9 @@ RectTransform:
   - {fileID: 1795728935}
   - {fileID: 770206012}
   - {fileID: 453570812}
+  - {fileID: 166952039}
   - {fileID: 346575569}
   - {fileID: 643163448}
-  - {fileID: 166952039}
   m_Father: {fileID: 266737749}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -31429,6 +31441,8 @@ MonoBehaviour:
   - {fileID: -5858099233694746440, guid: 02adaa72ea0c2d94bba9643f30c5e477, type: 3}
   - {fileID: 6198132458206164251, guid: 02adaa72ea0c2d94bba9643f30c5e477, type: 3}
   - {fileID: -5793760909466436984, guid: 02adaa72ea0c2d94bba9643f30c5e477, type: 3}
+  panelCorrect: {fileID: 346575568}
+  panelWrong: {fileID: 643163447}
   panelKeyboard: {fileID: 1795728934}
   panelBoard: {fileID: 166952038}
   vocaSelector: {fileID: 261400368}
@@ -31670,6 +31684,7 @@ MonoBehaviour:
   - {fileID: 1963017363}
   - {fileID: 267545854}
   - {fileID: 361671335}
+  textRemainTime: {fileID: 1003169751}
 --- !u!114 &933292471
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -40382,7 +40397,7 @@ MonoBehaviour:
   buttonWordPuzzle: {fileID: 1586914147}
   vocaSelector: {fileID: 261400368}
   panelWordPuzzle: {fileID: 2146061821}
-  panelCrossWord: {fileID: 0}
+  panelCrossWord: {fileID: 933292470}
   panelAlarm: {fileID: 1432241338}
 --- !u!1 &1282050117
 GameObject:

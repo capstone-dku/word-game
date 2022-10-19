@@ -41,7 +41,8 @@ public class PanelPlayGame : MonoBehaviour
         if (SaveLoad.Instance.GetTicket() > 0)
         {
             SaveLoad.Instance.AddTicket(-1);
-            panelWordPuzzle.gameObject.SetActive(true);
+            panelCrossWord.gameObject.SetActive(true);
+            gameObject.SetActive(false);
 
             List<Voca> vocaList = vocaSelector.FindVocaWeight(5);
             if (vocaList.Count < 5)
@@ -51,8 +52,7 @@ public class PanelPlayGame : MonoBehaviour
             }
             panelCrossWord.Init(vocaList);
             panelCrossWord.StartGame();
-
-            gameObject.SetActive(false);
+            
             SaveLoad.Instance.SaveData();
         }
         else
