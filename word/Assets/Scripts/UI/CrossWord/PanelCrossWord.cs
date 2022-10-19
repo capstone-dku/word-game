@@ -38,6 +38,13 @@ public class PanelCrossWord : MonoBehaviour
     public Sprite[] spriteGreen;
     public Sprite[] spriteGrey;
 
+    public List<Sprite[]> answerSprites = new List<Sprite[]>();
+    public Sprite[] answerSpriteRed;
+    public Sprite[] answerSpriteBlue;
+    public Sprite[] answerSpritePurple;
+    public Sprite[] answerSpriteGreen;
+    public Sprite[] answerSpriteGrey;
+
     [SerializeField] private GameObject panelKeyboard;
     [SerializeField] private GameObject panelBoard;
     [SerializeField] private VocaSelector vocaSelector;
@@ -73,7 +80,14 @@ public class PanelCrossWord : MonoBehaviour
         sprites.Add(spritePurple);
         sprites.Add(spriteGreen);
         sprites.Add(spriteGrey);
-        
+
+        answerSprites.Add(answerSpriteRed);
+        answerSprites.Add(answerSpriteBlue);
+        answerSprites.Add(answerSpritePurple);
+        answerSprites.Add(answerSpriteGreen);
+        answerSprites.Add(answerSpriteGrey);
+
+
         List<Voca> vl = vocaSelector.FindVocaWeight(VOCA_NUM2);
         Init(vl);
         MakePuzzle(vl);
@@ -637,7 +651,7 @@ public class PanelCrossWord : MonoBehaviour
                 int x = currentInputButtons[i].x;
                 int y = currentInputButtons[i].y;
                 char alphabet = userInput[x, y];
-                currentInputButtons[i].GetComponent<Image>().sprite = sprites[color][alphabet - 'a'];
+                currentInputButtons[i].GetComponent<Image>().sprite = answerSprites[color][alphabet - 'a'];
                 currentInputButtons[i].GetComponent<Image>().color = Color.white;
                 currentInputButtons[i].correct = true;
             }
