@@ -3,7 +3,11 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.InteropServices;
 using System.Text;
+using System.Xml.XPath;
+using Unity.Notifications.iOS;
+using Unity.PlasticSCM.Editor.WebApi;
 using UnityEngine;
+using UnityEngine.Analytics;
 using UnityEngine.UI;
 using Random = UnityEngine.Random;
 
@@ -12,14 +16,16 @@ public class CWList
     public int x; // 시작지점
     public int y; // 시작지점
     public int angle; // 각도 0 : 가로, 1 : 세로
-    public String voca; // 답
+    public string voca; // 답
+    public string meaning; // 뜻
     
-    public CWList(int x, int y, int angle, String voca)
+    public CWList(int x, int y, int angle, string voca, string meaning)
     {
         this.x = x;
         this.y = y;
         this.angle = angle;
         this.voca = voca;
+        this.meaning = meaning;
     }
 }
 
@@ -33,20 +39,32 @@ public class PanelCrossWord : MonoBehaviour
     public Sprite[] spriteGrey;
 
     [SerializeField] private GameObject panelKeyboard;
+    [SerializeField] private GameObject panelBoard;
     [SerializeField] private VocaSelector vocaSelector;
     [SerializeField] private SaveLoad saveLoad;
     private const int VOCA_NUM = 10; // 퍼즐판 안에 몇개의 단어가 들어갈지 
     private const int WIDTH = 15; // 퍼즐판의 크기
     private const int HEIGHT = 15; // 퍼즐판의 크기
     private const int VOCA_NUM2 = 20; // 유효체크할 단어의 개수
-    public Button[] buttonCrossWords;
+
+    [SerializeField] public ButtonCrossWord[] buttonCrossWords;
+    [SerializeField] public Button[] buttonWord; // 밑에 나오는 단어 뜻 버튼
 
     private List<Voca> vocaList; // 퍼즐판에 출제될 단어 리스트
 
     private char[,] wordPuzzle; // 퍼즐판. 0의 경우 비어 있음 이외의 경우 채워야하는 답으로 문자형태로 들어가있음.
+    private char[,] userInput;
     private List<int> alPosition; // 퍼즐판에 배치된 알파벳의 위치를 담은 배열.
     private List<CWList> cwList;
     private int complete = 0; // 몇개의 단어가 퍼즐판에 들어갔는지.
+
+    private bool keyboardInput = false;
+    private int inputX = 0;
+    private int inputY = 0;
+    private int color = 0;
+    private List<ButtonCrossWord> currentInputButtons;
+    private int currentInputIndex = 0;
+    private int currentCWIndex = 0;
 
     private void Start()
     {
@@ -55,10 +73,7 @@ public class PanelCrossWord : MonoBehaviour
         sprites.Add(spritePurple);
         sprites.Add(spriteGreen);
         sprites.Add(spriteGrey);
-
-        char aa = 'a';
-        aa = (char)((int)aa - 32);
-        Debug.Log("A나와야함 : " + aa);
+        
         List<Voca> vl = vocaSelector.FindVocaWeight(VOCA_NUM2);
         Init(vl);
         MakePuzzle(vl);
@@ -69,22 +84,38 @@ public class PanelCrossWord : MonoBehaviour
             int idx = i;
             buttonKeyboard[i].onClick.AddListener(() => OnClickedKeyboard(buttonKeyboard[idx].gameObject));
         }
+        
+        for (int i = 0; i < buttonWord.Length; i++)
+        {
+            int idx = i;
+            buttonWord[i].onClick.AddListener(()=>BeginKeyboardInput(idx));
+        }
     }
 
     public void Init(List<Voca> vocaList)
     {
         this.vocaList = vocaList;
+        currentInputButtons = new List<ButtonCrossWord>();
         Clear();
     }
 
     public void Clear()
     {
         wordPuzzle = new char[WIDTH,HEIGHT];
+        userInput = new char[WIDTH, HEIGHT];
         alPosition = new List<int>();
         cwList = new List<CWList>();
-        for(int i=0;i<WIDTH;i++){
-            for(int j=0;j<HEIGHT;j++){
-                wordPuzzle[i,j]='0';
+
+        currentInputButtons.Clear();
+        currentInputIndex = 0; 
+        currentCWIndex = 0;
+
+        for (int i=0;i<WIDTH;i++)
+        {
+            for(int j=0;j<HEIGHT;j++)
+            {
+                wordPuzzle[i, j] = '0';
+                userInput[i, j] = '0';
             }
         }
         complete = 0;
@@ -126,7 +157,7 @@ public class PanelCrossWord : MonoBehaviour
                         wordPuzzle[x+j,y] = vocaList[i].voca[j];
                         alPosition.Add((x+j)*HEIGHT+ y);
                     }
-                    cwList.Add(new CWList(x,y,0,vocaList[i].voca));
+                    cwList.Add(new CWList(x, y, 0, vocaList[i].voca, vocaList[i].meaning[0]));
                 }
                 else//세로
                 {
@@ -138,7 +169,7 @@ public class PanelCrossWord : MonoBehaviour
                         wordPuzzle[x,y+j] = vocaList[i].voca[j];
                         alPosition.Add((x)*HEIGHT+y+j);
                     }
-                    cwList.Add(new CWList(x,y,1,vocaList[i].voca));
+                    cwList.Add(new CWList(x,y,1,vocaList[i].voca, vocaList[i].meaning[0]));
                 }
                 complete+=1;
             }
@@ -276,7 +307,7 @@ public class PanelCrossWord : MonoBehaviour
                                     }
                                     suc = true;
                                     complete+=1;
-                                    cwList.Add(new CWList(x,y,0,vocaList[i].voca));
+                                    cwList.Add(new CWList(x,y,0,vocaList[i].voca, vocaList[i].meaning[0]));
                                     Debug.Log("생성성공");  
                                 }
                                 else if(checkCol == 0)
@@ -288,7 +319,7 @@ public class PanelCrossWord : MonoBehaviour
                                     }
                                     suc = true;
                                     complete+=1;
-                                    cwList.Add(new CWList(x,y,1,vocaList[i].voca));
+                                    cwList.Add(new CWList(x,y,1,vocaList[i].voca, vocaList[i].meaning[0]));
                                     Debug.Log("생성성공");  
                                 }
                                 else
@@ -350,7 +381,7 @@ public class PanelCrossWord : MonoBehaviour
         Debug.Log(str);
 
         // 워드 퍼즐판을 채운다.
-        int color = Random.Range(0, sprites.Count);
+        color = Random.Range(0, sprites.Count);
         for (int i = 0; i < WIDTH; i++)
         {
             for (int j = 0; j < HEIGHT; j++)
@@ -359,15 +390,26 @@ public class PanelCrossWord : MonoBehaviour
                 {
                     int idx = wordPuzzle[i, j] - 'a';
                     // 정답 표시
-                    // buttonCrossWords[j + i * HEIGHT].GetComponent<Image>().sprite = sprites[color][idx];
-                    buttonCrossWords[j + i * HEIGHT].GetComponent<Image>().sprite = sprites[color][26];
+                    // buttonCrossWords[i * WIDTH + j].GetComponent<Image>().sprite = sprites[color][idx];
+                    buttonCrossWords[i * WIDTH + j].GetComponent<Image>().sprite = sprites[color][26];
+                    buttonCrossWords[i * WIDTH + j].GetComponent<Button>().interactable = true;
 
                 }
                 else
                 {
-                    buttonCrossWords[j + i * HEIGHT].GetComponent<Image>().sprite = sprites[color][27];
+                    buttonCrossWords[i * WIDTH + j].GetComponent<Image>().sprite = sprites[color][27];
+                    buttonCrossWords[i * WIDTH + j].GetComponent<Button>().interactable = false;
                 }
+
+                buttonCrossWords[i * WIDTH + j].x = i;
+                buttonCrossWords[i * WIDTH + j].y = j;
+                buttonCrossWords[i * WIDTH + j].correct = false;
             }
+        }
+
+        for (int i = 0; i < cwList.Count; i++)
+        {
+            buttonWord[i].GetComponentInChildren<Text>().text = cwList[i].meaning;
         }
     }
 
@@ -395,6 +437,7 @@ public class PanelCrossWord : MonoBehaviour
                                 /*
                                     cwList[i].x , cwList[i].y+j 에 있는 패널이 수정 불가능 하다는 것을 시각적으로 표시해야함.
                                 */
+                                buttonCrossWords[cwList[i].x*15 + cwList[i].y+j].GetComponent<Image>().color = Color.black;
                             }
                         }
                     }
@@ -435,13 +478,192 @@ public class PanelCrossWord : MonoBehaviour
 
     }
 
+    private void BeginKeyboardInput(int idx)
+    {
+        ShowKeyboard(true);
+        currentInputButtons.Clear();
+        currentInputIndex = 0;
+        currentCWIndex = idx;
+        int x = cwList[idx].x;
+        int y = cwList[idx].y;
+
+        if (cwList[idx].angle == 1)
+        {
+            for (int i = 0; i < WIDTH; i++)
+            {
+                if (wordPuzzle[x, i] == cwList[idx].voca[0])
+                {
+                    bool success = true;
+                    for (int j = 0; j < cwList[idx].voca.Length; j++)
+                    {
+                        if (i + j >= HEIGHT)
+                        {
+                            success = false;
+                            break;
+                        }
+                        if (wordPuzzle[x, i + j] != cwList[idx].voca[j])
+                        {
+                            i = i + j;
+                            success = false;
+                            break;
+                        }
+                    }
+
+                    if (success)
+                    {
+                        for (int j = 0; j < cwList[idx].voca.Length; j++)
+                        {
+                            if (!buttonCrossWords[x*15+i+j].correct)
+                                buttonCrossWords[x * 15 + i + j].GetComponent<Image>().color = Color.red;
+                            // if (userInput[x, i+j] == '0')
+                            currentInputButtons.Add(buttonCrossWords[x * 15 + i + j]);
+                        }
+                    }
+                }
+            }
+        }
+
+        if (cwList[idx].angle == 0)
+        {
+            for (int i = 0; i < HEIGHT; i++)
+            {
+                if (wordPuzzle[i, y] == cwList[idx].voca[0])
+                {
+                    bool success = true;
+                    for (int j = 0; j < cwList[idx].voca.Length; j++)
+                    {
+                        if (i + j >= HEIGHT)
+                        {
+                            success = false;
+                            break;
+                        };
+                        if (wordPuzzle[i+j,y] != cwList[idx].voca[j])
+                        {
+                            i = i + j;
+                            success = false;
+                            break;
+                        }
+                    }
+
+                    if (success)
+                    {
+                        for (int j = 0; j < cwList[idx].voca.Length; j++)
+                        {
+                            if (!buttonCrossWords[(i + j) * 15 + y].correct)
+                                buttonCrossWords[(i + j) * 15 + y].GetComponent<Image>().color = Color.red;
+                            // if (userInput[(i+j), y] == '0')
+                            currentInputButtons.Add(buttonCrossWords[(i+j)*15 + y]);
+                        }
+                    }
+                }
+            }
+        }
+    }
     private void ShowKeyboard(bool show)
     {
         panelKeyboard.SetActive(show);
+        keyboardInput = show;
+        for (int i = 0; i < buttonWord.Length; i++)
+            buttonWord[i].gameObject.SetActive(!show);
     }
 
     public void OnClickedKeyboard(GameObject button)
     {
-        Debug.Log(button.name);
+        if (keyboardInput)
+        {
+            string input = button.gameObject.name;
+            if (input.Equals("Backspace"))
+            {
+                // 임시
+                ShowKeyboard(false);
+                currentInputButtons.Clear();
+                currentInputIndex = 0;
+            }
+            else
+            {
+                Debug.Log(input);
+                char alphabet = input[0];
+
+                while (currentInputButtons[currentInputIndex].correct)
+                {
+                    currentInputIndex++;
+                }
+
+                if (currentInputIndex >= currentInputButtons.Count)
+                {
+                    currentInputIndex = 0;
+                    CheckAnswer();
+                    return;
+                }
+                currentInputButtons[currentInputIndex].GetComponent<Image>().sprite = sprites[color][alphabet - 'A'];
+                int x = currentInputButtons[currentInputIndex].x;
+                int y = currentInputButtons[currentInputIndex].y;
+                userInput[x,y] = Char.ToLower(alphabet);
+                currentInputIndex++;
+                if (currentInputIndex >= currentInputButtons.Count)
+                {
+                    currentInputIndex = 0;
+                    CheckAnswer();
+                }
+                if (currentInputButtons[currentInputIndex].correct && currentInputIndex == currentInputButtons.Count-1)
+                {
+                    currentInputIndex = 0;
+                    CheckAnswer();
+                }
+                // buttonCrossWords[inputX * 15 + inputY].GetComponent<Image>().sprite = sprites[color][alphabet - 'A'];
+            }
+        }
+    }
+    private void CheckAnswer()
+    {
+        bool success = true;
+        for (int i = 0; i < currentInputButtons.Count; i++)
+        {
+            int x = currentInputButtons[i].x;
+            int y = currentInputButtons[i].y;
+            Debug.Log("x:"+x+", y:"+y);
+            if (wordPuzzle[x, y] != userInput[x, y])
+            {
+                success = false;
+                break;
+            }
+        }
+
+        if (success)
+        {
+            Debug.Log("정답");
+            for (int i = 0; i < currentInputButtons.Count; i++)
+            {
+                int x = currentInputButtons[i].x;
+                int y = currentInputButtons[i].y;
+                char alphabet = userInput[x, y];
+                currentInputButtons[i].GetComponent<Image>().sprite = sprites[color][alphabet - 'a'];
+                currentInputButtons[i].GetComponent<Image>().color = Color.white;
+                currentInputButtons[i].correct = true;
+            }
+
+            buttonWord[currentCWIndex].interactable = false;
+        }
+        else
+        {
+            Debug.Log("오답");
+            for (int i = 0; i < currentInputButtons.Count; i++)
+            {
+                int x = currentInputButtons[i].x;
+                int y = currentInputButtons[i].y;
+                char alphabet = userInput[x, y];
+
+                if (currentInputButtons[i].correct)
+                {
+                    currentInputButtons[i].GetComponent<Image>().color = Color.white;
+                    continue;
+                }
+
+                currentInputButtons[i].GetComponent<Image>().sprite = sprites[color][26];
+                currentInputButtons[i].GetComponent<Image>().color = Color.red;
+                currentInputButtons[i].correct = false;
+            }
+            currentInputIndex = 0;
+        }
     }
 }
