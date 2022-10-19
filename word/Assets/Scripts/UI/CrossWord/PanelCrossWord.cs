@@ -590,6 +590,12 @@ public class PanelCrossWord : MonoBehaviour
             {
                 // 임시
                 ShowKeyboard(false);
+                for (int i = 0; i < currentInputButtons.Count; i++)
+                {
+                    currentInputButtons[i].GetComponent<Image>().color = Color.white;
+                    if (!currentInputButtons[i].correct)
+                        currentInputButtons[i].GetComponent<Image>().sprite = sprites[color][26];
+                }
                 currentInputButtons.Clear();
                 currentInputIndex = 0;
             }
@@ -635,7 +641,6 @@ public class PanelCrossWord : MonoBehaviour
         {
             int x = currentInputButtons[i].x;
             int y = currentInputButtons[i].y;
-            Debug.Log("x:"+x+", y:"+y);
             if (wordPuzzle[x, y] != userInput[x, y])
             {
                 success = false;
