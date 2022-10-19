@@ -38,6 +38,16 @@ public class PanelCrossWord : MonoBehaviour
     public Sprite[] spriteGreen;
     public Sprite[] spriteGrey;
 
+    public List<Sprite[]> answerSprites = new List<Sprite[]>();
+    public Sprite[] answerSpriteRed;
+    public Sprite[] answerSpriteBlue;
+    public Sprite[] answerSpritePurple;
+    public Sprite[] answerSpriteGreen;
+    public Sprite[] answerSpriteGrey;
+
+    [SerializeField] private GameObject panelCorrect;
+    [SerializeField] private GameObject panelWrong;
+
     [SerializeField] private GameObject panelKeyboard;
     [SerializeField] private GameObject panelBoard;
     [SerializeField] private VocaSelector vocaSelector;
@@ -66,34 +76,42 @@ public class PanelCrossWord : MonoBehaviour
     private int currentInputIndex = 0;
     private int currentCWIndex = 0;
 
-    private void Start()
-    {
-        sprites.Add(spriteRed);
-        sprites.Add(spriteBlue);
-        sprites.Add(spritePurple);
-        sprites.Add(spriteGreen);
-        sprites.Add(spriteGrey);
-        
-        List<Voca> vl = vocaSelector.FindVocaWeight(VOCA_NUM2);
-        Init(vl);
-        MakePuzzle(vl);
+    private int currentTime = 0;
+    [SerializeField] private Text textRemainTime;
+    private int answerCount = 0;
 
+    private Coroutine crossWordCoroutine = null;
+    
+    private void Awake()
+    {
         var buttonKeyboard = panelKeyboard.GetComponentsInChildren<Button>();
         for (int i = 0; i < buttonKeyboard.Length; i++)
         {
             int idx = i;
             buttonKeyboard[i].onClick.AddListener(() => OnClickedKeyboard(buttonKeyboard[idx].gameObject));
         }
-        
+
         for (int i = 0; i < buttonWord.Length; i++)
         {
             int idx = i;
-            buttonWord[i].onClick.AddListener(()=>BeginKeyboardInput(idx));
+            buttonWord[i].onClick.AddListener(() => BeginKeyboardInput(idx));
         }
     }
 
     public void Init(List<Voca> vocaList)
     {
+        sprites.Add(spriteRed);
+        sprites.Add(spriteBlue);
+        sprites.Add(spritePurple);
+        sprites.Add(spriteGreen);
+        sprites.Add(spriteGrey);
+
+        answerSprites.Add(answerSpriteRed);
+        answerSprites.Add(answerSpriteBlue);
+        answerSprites.Add(answerSpritePurple);
+        answerSprites.Add(answerSpriteGreen);
+        answerSprites.Add(answerSpriteGrey);
+
         this.vocaList = vocaList;
         currentInputButtons = new List<ButtonCrossWord>();
         Clear();
@@ -109,6 +127,8 @@ public class PanelCrossWord : MonoBehaviour
         currentInputButtons.Clear();
         currentInputIndex = 0; 
         currentCWIndex = 0;
+        answerCount = 0;
+        currentTime = 180;
 
         for (int i=0;i<WIDTH;i++)
         {
@@ -121,6 +141,44 @@ public class PanelCrossWord : MonoBehaviour
         complete = 0;
     }
 
+    public void StartGame()
+    {
+        List<Voca> vl = vocaSelector.FindVocaWeight(VOCA_NUM2);
+        crossWordCoroutine = StartCoroutine(GameStart(vl));
+    }
+
+    IEnumerator GameStart(List<Voca> vl)
+    {
+        while (complete < VOCA_NUM)
+        {
+            Init(vl);
+            Clear();
+            MakePuzzle(vl);
+        }
+        while (currentTime > 0)
+        {
+            currentTime--;
+            textRemainTime.text = (currentTime / 60).ToString() + " : " + (currentTime % 60).ToString();
+            yield return new WaitForSeconds(1.0f);
+        }
+
+        if (currentTime <= 0)
+        {
+            Debug.Log("게임 종료");
+            panelWrong.SetActive(true);
+            yield return new WaitForSeconds(2.0f);
+            gameObject.SetActive(false);
+
+        }
+        yield return null;
+    }
+
+    private IEnumerator GameFinished()
+    {
+        panelCorrect.SetActive(true);
+        yield return new WaitForSeconds(2.0f);
+        gameObject.SetActive(false);
+    }
     private void MakePuzzle(List<Voca> vocaList)
     {
         for(int i=0; i<vocaList.Count ; i++){
@@ -523,12 +581,6 @@ public class PanelCrossWord : MonoBehaviour
         }
         
     }
-
-    public void StartGame()
-    {
-
-    }
-
     private void BeginKeyboardInput(int idx)
     {
         ShowKeyboard(true);
@@ -627,6 +679,12 @@ public class PanelCrossWord : MonoBehaviour
             {
                 // 임시
                 ShowKeyboard(false);
+                for (int i = 0; i < currentInputButtons.Count; i++)
+                {
+                    currentInputButtons[i].GetComponent<Image>().color = Color.white;
+                    if (!currentInputButtons[i].correct)
+                        currentInputButtons[i].GetComponent<Image>().sprite = sprites[color][26];
+                }
                 currentInputButtons.Clear();
                 currentInputIndex = 0;
             }
@@ -639,13 +697,14 @@ public class PanelCrossWord : MonoBehaviour
                 {
                     currentInputIndex++;
                 }
-
+                
                 if (currentInputIndex >= currentInputButtons.Count)
                 {
                     currentInputIndex = 0;
                     CheckAnswer();
                     return;
                 }
+                currentInputButtons[currentInputIndex].GetComponent<Image>().color = Color.white;
                 currentInputButtons[currentInputIndex].GetComponent<Image>().sprite = sprites[color][alphabet - 'A'];
                 int x = currentInputButtons[currentInputIndex].x;
                 int y = currentInputButtons[currentInputIndex].y;
@@ -655,11 +714,13 @@ public class PanelCrossWord : MonoBehaviour
                 {
                     currentInputIndex = 0;
                     CheckAnswer();
+                    return;
                 }
                 if (currentInputButtons[currentInputIndex].correct && currentInputIndex == currentInputButtons.Count-1)
                 {
                     currentInputIndex = 0;
                     CheckAnswer();
+                    return;
                 }
                 // buttonCrossWords[inputX * 15 + inputY].GetComponent<Image>().sprite = sprites[color][alphabet - 'A'];
             }
@@ -672,7 +733,6 @@ public class PanelCrossWord : MonoBehaviour
         {
             int x = currentInputButtons[i].x;
             int y = currentInputButtons[i].y;
-            Debug.Log("x:"+x+", y:"+y);
             if (wordPuzzle[x, y] != userInput[x, y])
             {
                 success = false;
@@ -688,12 +748,17 @@ public class PanelCrossWord : MonoBehaviour
                 int x = currentInputButtons[i].x;
                 int y = currentInputButtons[i].y;
                 char alphabet = userInput[x, y];
-                currentInputButtons[i].GetComponent<Image>().sprite = sprites[color][alphabet - 'a'];
+                currentInputButtons[i].GetComponent<Image>().sprite = answerSprites[color][alphabet - 'a'];
                 currentInputButtons[i].GetComponent<Image>().color = Color.white;
                 currentInputButtons[i].correct = true;
             }
 
+            answerCount++;
             buttonWord[currentCWIndex].interactable = false;
+            if (answerCount >= VOCA_NUM)
+            {
+                StartCoroutine(GameFinished());
+            }
         }
         else
         {
