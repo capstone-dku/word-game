@@ -123,22 +123,27 @@ public class PanelCrossWord : MonoBehaviour
 
     private void MakePuzzle(List<Voca> vocaList)
     {
+        for(int i=0; i<vocaList.Count ; i++){
+            Debug.Log(vocaList[i].voca);
+        }
+        Debug.Log("섞기 전후");
         int x, y, len;
-        for(int i=0 ; (i<vocaList.Count) && (complete < VOCA_NUM) ; i++)//긴 단어 순으로 word 정렬
+        for(int i=0 ; i<vocaList.Count ; i++)//긴 단어 순으로 word 정렬
         {
             int temp = i;
+            int j = i+1;
             int tempLength = vocaList[i].voca.Length;
-            for(int j=i+1 ; j<VOCA_NUM ; j++)
+            for( ; j<vocaList.Count ; j++)
             {
                 if(vocaList[j].voca.Length > tempLength )
                 {
                     temp = j;
                     tempLength = vocaList[j].voca.Length;
                 }
-                Voca tempVoca = vocaList[i];
-                vocaList[i] = vocaList[j];
-                vocaList[j] = tempVoca;
             }
+            Voca tempVoca = vocaList[i];
+            vocaList[i] = vocaList[temp];
+            vocaList[temp] = tempVoca;
         }
 
         for(int i=0 ; (i<vocaList.Count) && (complete < VOCA_NUM) ; i++)
@@ -153,7 +158,6 @@ public class PanelCrossWord : MonoBehaviour
                     y = (int)(HEIGHT/4)+Random.Range(0, (int)(HEIGHT/2)); 
                     for(int j=0;j<len;j++)
                     {
-                        Debug.Log("체크2:"+vocaList.Count.ToString());
                         wordPuzzle[x+j,y] = vocaList[i].voca[j];
                         alPosition.Add((x+j)*HEIGHT+ y);
                     }
@@ -165,7 +169,6 @@ public class PanelCrossWord : MonoBehaviour
                     y = Random.Range(0, HEIGHT-len);
                     for(int j=0;j<len;j++)
                     {
-                        Debug.Log("체크2:"+vocaList.Count.ToString());
                         wordPuzzle[x,y+j] = vocaList[i].voca[j];
                         alPosition.Add((x)*HEIGHT+y+j);
                     }
@@ -177,7 +180,7 @@ public class PanelCrossWord : MonoBehaviour
             {//두번 째 부터
                 len = vocaList[i].voca.Length;
                 bool suc = false;
-                for(int count = 0; (count < 10) && (suc == false); count++)//겹치는 부분 확인 count 횟수 만큼 검색 << 나중에 리팩토링 << 똑같은 단어 2번 나올떄 있는거같음
+                for(int count = 0; (count < 10 + (complete*5)) && (suc == false); count++)//겹치는 부분 확인 count 횟수 만큼 검색 << 나중에 리팩토링 << 똑같은 단어 2번 나올떄 있는거같음
                 {
                     int position = (int)Random.Range(0, alPosition.Count);
                     x = (int)(alPosition[position]/HEIGHT);
@@ -254,6 +257,30 @@ public class PanelCrossWord : MonoBehaviour
                                             }
                                         }
                                     }
+                                    if(y-1>=0){
+                                        for(int k=0;k<len;k++)
+                                        {
+                                            if(wordPuzzle[x-j+k,y-1]!= '0')
+                                            {
+                                                if(wordPuzzle[x-j+k,y]!=vocaList[i].voca[k])
+                                                {
+                                                    checkValid = false;
+                                                }
+                                            }
+                                        }
+                                    }
+                                    if(y+1<HEIGHT){
+                                        for(int k=0;k<len;k++)
+                                        {
+                                            if(wordPuzzle[x-j+k,y+1]!= '0')
+                                            {
+                                                if(wordPuzzle[x-j+k,y]!=vocaList[i].voca[k])
+                                                {
+                                                    checkValid = false;
+                                                }
+                                            }
+                                        }
+                                    }
                                 }
                             }
                             else if(checkCol == 0)//세로가 비어있을 경우 (y-j가 시작점)
@@ -294,6 +321,30 @@ public class PanelCrossWord : MonoBehaviour
                                             }
                                         }
                                     }
+                                    if(x-1>=0){
+                                        for(int k=0;k<len;k++)
+                                        {
+                                            if(wordPuzzle[x-1,y-j+k]!= '0')
+                                            {
+                                                if(wordPuzzle[x,y-j+k]!=vocaList[i].voca[k]){
+
+                                                    checkValid = false;
+                                                }
+                                            }
+                                        }
+                                    }
+                                    if(x+1<WIDTH){
+                                        for(int k=0;k<len;k++)
+                                        {
+                                            if(wordPuzzle[x+1,y-j+k]!= '0')
+                                            {
+                                                if(wordPuzzle[x,y-j+k]!=vocaList[i].voca[k]){
+
+                                                    checkValid = false;
+                                                }
+                                            }
+                                        }
+                                    }
                                 }
                             }
                             if(checkValid)
@@ -308,7 +359,7 @@ public class PanelCrossWord : MonoBehaviour
                                     suc = true;
                                     complete+=1;
                                     cwList.Add(new CWList(x,y,0,vocaList[i].voca, vocaList[i].meaning[0]));
-                                    Debug.Log("생성성공");  
+                                    //Debug.Log("생성성공");  
                                 }
                                 else if(checkCol == 0)
                                 {
@@ -320,7 +371,7 @@ public class PanelCrossWord : MonoBehaviour
                                     suc = true;
                                     complete+=1;
                                     cwList.Add(new CWList(x,y,1,vocaList[i].voca, vocaList[i].meaning[0]));
-                                    Debug.Log("생성성공");  
+                                    //Debug.Log("생성성공");  
                                 }
                                 else
                                 {
