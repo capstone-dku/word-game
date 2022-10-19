@@ -755,6 +755,7 @@ public class PanelCrossWord : MonoBehaviour
 
             answerCount++;
             buttonWord[currentCWIndex].interactable = false;
+            ShowKeyboard(false);
             if (answerCount >= VOCA_NUM)
             {
                 StartCoroutine(GameFinished());
