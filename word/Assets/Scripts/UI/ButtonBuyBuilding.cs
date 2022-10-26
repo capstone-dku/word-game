@@ -17,7 +17,6 @@ public class ButtonBuyBuilding : MonoBehaviour
         buildingManager = GameObject.Find("Building Manager").GetComponent<BuildingManager>();
         button = GetComponent<Button>();
         button.onClick.AddListener(OnClicked);
-        Debug.Log(buildingManager);
     }
     public void UppdateBuilding(PriseList price)
     {

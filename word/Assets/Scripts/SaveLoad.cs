@@ -19,6 +19,7 @@ public class UserData
     public int[] items = new int[300]; // 가지고 있는 아이템 수
     public int[] purchasable = new int[300]; // 구매할 수 있는 아이템 수
     public List<BuildingData> buildingData = new List<BuildingData>();
+    public DateTime LastPlayedDateTime = DateTime.Now;
 
     public UserData()
     {
@@ -48,6 +49,7 @@ public class UserData
             items[j*2] = 0;
             items[j*2+1] = 0;
         }
+        LastPlayedDateTime = DateTime.Now;
     }
 }
  
@@ -124,6 +126,13 @@ public class SaveLoad : MonoBehaviour
         return data;
     }
 
+    void OnApplicationQuit()
+    {
+        Debug.Log("게임 종료 전 저장");
+        currentData.LastPlayedDateTime = DateTime.Now;
+        SaveData();
+    }
+
     public int GetStars(int difficulty, int set)
     {
         return currentData.stars[difficulty][set];
@@ -192,5 +201,10 @@ public class SaveLoad : MonoBehaviour
     public List<BuildingData> GetBuildingData()
     {
         return currentData.buildingData;
+    }
+
+    public DateTime GetLastPlayedDateTime()
+    {
+        return currentData.LastPlayedDateTime;
     }
 }
