@@ -72,7 +72,8 @@ public class PanelCardGame : MonoBehaviour
         {
             for (int j = 0; j < HEIGHT; j++)
             {
-                buttonCards[i * WIDTH + j].GetComponentInChildren<Text>().text = GetCardString(i, j);
+                Debug.Log("x:"+i+", y:" +j);
+                buttonCards[j*WIDTH + i].GetComponentInChildren<Text>().text = GetCardString(i, j);
             }
         }
     }
