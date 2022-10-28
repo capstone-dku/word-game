@@ -194,8 +194,8 @@ public class VocaSelector : MonoBehaviour
                     break;
                 }
             }
-            print(j);
-            print(k);
+            // print(j);
+            // print(k);
             
             if(j<BEGINNER/20){
                 voca.Add(beginnerVoca[j*20+k]);

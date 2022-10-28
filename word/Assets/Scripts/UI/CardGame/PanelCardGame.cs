@@ -13,6 +13,9 @@ using Random = UnityEngine.Random;
 
 public class PanelCardGame : MonoBehaviour
 {
+    [SerializeField] private VocaSelector vocaSelector;
+    [SerializeField] public Button[] buttonCards;
+
     private const int VOCA_NUM = 10; // 퍼즐판 안에 몇개의 단어가 들어갈지 
     private const int WIDTH = 4; // 퍼즐판의 크기 
     private const int HEIGHT = 5; // 퍼즐판의 크기 WIDTH*HEIGHT = VOCA_NUM*2
@@ -22,15 +25,25 @@ public class PanelCardGame : MonoBehaviour
 
     public void Init(List<Voca> vocaList)
     {
+        //// TEST/////
+        vocaList = vocaSelector.FindVocaWeight(VOCA_NUM);
+        //////////////
         this.vocaList = vocaList;
+    }
+    public void StartGame()
+    {
+
     }
 
     void Start()
     {
+        //// TEST/////
+        Init(null);
+        //////////////
         Clear();
         MakePuzzle();
     }
-
+    
     public void Clear() // CardSet을 생성하고 초기화함
     {
         cardSet = new int[WIDTH,HEIGHT];
@@ -48,10 +61,19 @@ public class PanelCardGame : MonoBehaviour
         for(int i=0; i<VOCA_NUM*2; i++)//섞기
         {
             int ran = (int)Random.Range(0,VOCA_NUM*2);
-            Debug.Log(ran);
             int temp = cardSet[i%WIDTH,(int)(i/WIDTH)];
+
             cardSet[i%WIDTH,(int)(i/WIDTH)] = cardSet[ran%WIDTH,(int)(ran/WIDTH)];
             cardSet[ran%WIDTH,(int)(ran/WIDTH)] = temp;
+        }
+
+
+        for (int i = 0; i < WIDTH; i++)
+        {
+            for (int j = 0; j < HEIGHT; j++)
+            {
+                buttonCards[i * WIDTH + j].GetComponentInChildren<Text>().text = GetCardString(i, j);
+            }
         }
     }
 
@@ -65,7 +87,7 @@ public class PanelCardGame : MonoBehaviour
 
     public String GetCardString(int x, int y) // c번째 카드에 적혀있는 내용을 String 형식으로 반환함
     {
-        int n = cardSet[x,y]; 
+        int n = cardSet[x,y];
         if(n%2 == 0)
         {
             return vocaList[(int)(n/2)].voca;
@@ -74,5 +96,6 @@ public class PanelCardGame : MonoBehaviour
         {
             return vocaList[(int)(n/2)].meaning[0]; // 첫번째 뜻만 반환하는데 나중에 수정
         }
+        
     }
 }
