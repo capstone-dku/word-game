@@ -194,20 +194,42 @@ public class VocaSelector : MonoBehaviour
                     break;
                 }
             }
-            // print(j);
-            // print(k);
             
             if(j<BEGINNER/20){
-                voca.Add(beginnerVoca[j*20+k]);
+                if(voca.Contains(beginnerVoca[j*20+k]))//중복이라면
+                {
+                    i--;
+                }
+                else{
+                    voca.Add(beginnerVoca[j*20+k]);
+                }
             }
             else if(j<(BEGINNER+INTERMEDIATE)/20){
-                voca.Add(intermediateVoca[(j-(BEGINNER/20))*20+k]);
+                if(voca.Contains(intermediateVoca[(j-(BEGINNER/20))*20+k]))//중복이라면
+                {
+                    i--;
+                }
+                else{
+                    voca.Add(intermediateVoca[(j-(BEGINNER/20))*20+k]);
+                }
             }
             else if(j<(BEGINNER+INTERMEDIATE+ADVANCED)/20){
-                voca.Add(advancedVoca[(j-(BEGINNER+INTERMEDIATE)/20)*20+k]);
+                if(voca.Contains(advancedVoca[(j-(BEGINNER+INTERMEDIATE)/20)*20+k]))//중복이라면
+                {
+                    i--;
+                }
+                else{
+                    voca.Add(advancedVoca[(j-(BEGINNER+INTERMEDIATE)/20)*20+k]);
+                }
             }
             else if(j<(BEGINNER+INTERMEDIATE+ADVANCED)/20){
-                voca.Add(toeicVoca[(j-(BEGINNER+INTERMEDIATE+ADVANCED)/20)*20+k]);
+                if(voca.Contains(toeicVoca[(j-(BEGINNER+INTERMEDIATE+ADVANCED)/20)*20+k]))//중복이라면
+                {
+                    i--;
+                }
+                else{
+                    voca.Add(toeicVoca[(j-(BEGINNER+INTERMEDIATE+ADVANCED)/20)*20+k]);
+                }
             }
         }
         return voca;
