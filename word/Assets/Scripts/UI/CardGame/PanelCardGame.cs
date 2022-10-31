@@ -1,13 +1,6 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
-using System.Runtime.InteropServices;
-using System.Text;
-using System.Xml.XPath;
-using Unity.Notifications.iOS;
-using Unity.PlasticSCM.Editor.WebApi;
 using UnityEngine;
-using UnityEngine.Analytics;
 using UnityEngine.UI;
 using Random = UnityEngine.Random;
 
@@ -22,7 +15,13 @@ public class PanelCardGame : MonoBehaviour
 
     private int[,] cardSet;
     private List<Voca> vocaList; // 퍼즐판에 출제될 단어 리스트
-
+    //
+    // 선택한 카드
+    //
+    private bool cardSelected = false;
+    private int cardY = 0;
+    private int cardX = 0;
+    //
     public void Init(List<Voca> vocaList)
     {
         //// TEST/////
@@ -35,13 +34,40 @@ public class PanelCardGame : MonoBehaviour
 
     }
 
-    void Start()
+    private void Start()
     {
         //// TEST/////
         Init(null);
         //////////////
         Clear();
         MakePuzzle();
+    }
+
+    private void OnClickedCard(int x, int y)
+    {
+        Debug.Log("x:" + x + ", y:" + y);
+        Debug.Log(GetCardString(x, y));
+        if (cardSelected)
+        {
+            if (cardX == x && cardY == y)
+            {
+                buttonCards[y * WIDTH + x].GetComponent<Image>().color = Color.white;
+                cardSelected = false;
+            }
+            else
+            {
+                Debug.Log("Correct Check: " +CorrectCheck(x,y,cardX,cardY));
+            }
+        }
+        else
+        {
+            buttonCards[y * WIDTH + x].GetComponent<Image>().color = Color.red;
+            cardSelected = true;
+            cardY = y;
+            cardX = x;
+        }
+        
+
     }
     
     public void Clear() // CardSet을 생성하고 초기화함
@@ -52,6 +78,7 @@ public class PanelCardGame : MonoBehaviour
             for(int j=0;j<HEIGHT;j++)
             {
                 cardSet[i, j] = i+(j*WIDTH);
+                buttonCards[j*WIDTH+i].onClick.RemoveAllListeners();
             }
         }
     }
@@ -72,8 +99,10 @@ public class PanelCardGame : MonoBehaviour
         {
             for (int j = 0; j < HEIGHT; j++)
             {
-                Debug.Log("x:"+i+", y:" +j);
                 buttonCards[j*WIDTH + i].GetComponentInChildren<Text>().text = GetCardString(i, j);
+                int x = i;
+                int y = j;
+                buttonCards[j*WIDTH+i].onClick.AddListener(()=>OnClickedCard(x,y));
             }
         }
     }
