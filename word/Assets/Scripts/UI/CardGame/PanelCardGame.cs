@@ -45,8 +45,8 @@ public class PanelCardGame : MonoBehaviour
 
     private void OnClickedCard(int x, int y)
     {
-        Debug.Log("x:" + x + ", y:" + y);
-        Debug.Log(GetCardString(x, y));
+        // Debug.Log("x:" + x + ", y:" + y);
+        // Debug.Log(GetCardString(x, y));
         if (cardSelected)
         {
             if (cardX == x && cardY == y)
@@ -109,7 +109,8 @@ public class PanelCardGame : MonoBehaviour
 
     public bool CorrectCheck(int x1, int y1, int x2, int y2) // (x1, y1)과 (x2, y2)에 있는 카드가 같은 카드인지 여부를 반환한다.
     {
-        if((int)(cardSet[x1,y1]/2) == (int)(cardSet[x2,y2])){
+        Debug.Log("Correct Check\nx1: " + x1 + ", y1: " + y1 + "\nx2: " + x2 + ", y2: " + y2 + "\n" + cardSet[x1,y1] + ", " + cardSet[x2,y2]);
+        if ((int)(cardSet[x1,y1]/2) == (int)(cardSet[x2,y2])){
             return true;
         }
         return false;
