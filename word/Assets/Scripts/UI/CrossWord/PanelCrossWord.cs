@@ -167,6 +167,7 @@ public class PanelCrossWord : MonoBehaviour
             Debug.Log("게임 종료");
             panelWrong.SetActive(true);
             yield return new WaitForSeconds(2.0f);
+            panelWrong.SetActive(false);
             gameObject.SetActive(false);
 
         }
@@ -178,6 +179,7 @@ public class PanelCrossWord : MonoBehaviour
         panelCorrect.SetActive(true);
         yield return new WaitForSeconds(2.0f);
         gameObject.SetActive(false);
+        yield return null;
     }
     private void MakePuzzle(List<Voca> vocaList)
     {

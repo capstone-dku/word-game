@@ -62,7 +62,7 @@ public class PanelPlayGame : MonoBehaviour
             panelAlarm.SetText("티켓이 부족합니다.");
         }
     }
-    public void OnClickedCardgame()
+    public void OnClickedCardGame()
     {
         if (SaveLoad.Instance.GetTicket() > 0)
         {
@@ -70,8 +70,8 @@ public class PanelPlayGame : MonoBehaviour
             panelCardGame.gameObject.SetActive(true);
             gameObject.SetActive(false);
 
-            List<Voca> vocaList = vocaSelector.FindVocaWeight(5);
-            if (vocaList.Count < 5)
+            List<Voca> vocaList = vocaSelector.FindVocaWeight(10);
+            if (vocaList.Count < 10)
             {
                 panelAlarm.gameObject.SetActive(true);
                 panelAlarm.SetText("학습을 먼저 해주세요.");
