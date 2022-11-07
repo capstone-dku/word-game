@@ -1,13 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Runtime.InteropServices;
-using System.Text;
-using System.Xml.XPath;
-using Unity.Notifications.iOS;
-using Unity.PlasticSCM.Editor.WebApi;
 using UnityEngine;
-using UnityEngine.Analytics;
 using UnityEngine.UI;
 using Random = UnityEngine.Random;
 
@@ -45,6 +39,7 @@ public class PanelCrossWord : MonoBehaviour
     public Sprite[] answerSpriteGreen;
     public Sprite[] answerSpriteGrey;
 
+    [SerializeField] private PanelItem panelItem;
     [SerializeField] private GameObject panelCorrect;
     [SerializeField] private GameObject panelWrong;
 
@@ -167,6 +162,7 @@ public class PanelCrossWord : MonoBehaviour
             Debug.Log("게임 종료");
             panelWrong.SetActive(true);
             yield return new WaitForSeconds(2.0f);
+            panelItem.UpdateTicket(saveLoad.GetTicket());
             panelWrong.SetActive(false);
             gameObject.SetActive(false);
 
@@ -178,6 +174,11 @@ public class PanelCrossWord : MonoBehaviour
     {
         panelCorrect.SetActive(true);
         yield return new WaitForSeconds(2.0f);
+        panelItem.UpdateTicket(saveLoad.GetTicket());
+        saveLoad.AdjustCoin(1, 25);
+        saveLoad.AdjustCoin(2, 50);
+        panelItem.UpdateCoin(1, saveLoad.GetCoin(1));
+        panelItem.UpdateCoin(2, saveLoad.GetCoin(2));
         gameObject.SetActive(false);
         yield return null;
     }

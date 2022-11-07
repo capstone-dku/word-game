@@ -7138,7 +7138,7 @@ MonoBehaviour:
   panelQuiz: {fileID: 225640259}
   panelVocaList: {fileID: 113438548}
   panelResult: {fileID: 2144715937}
-  TEST_MODE: 1
+  TEST_MODE: 0
 --- !u!4 &261400367
 Transform:
   m_ObjectHideFlags: 0
@@ -16406,7 +16406,7 @@ MonoBehaviour:
   - {fileID: 1444191656}
   - {fileID: 276205641}
   panelWrong: {fileID: 988584350}
-  panelCorrect: {fileID: 0}
+  panelCorrect: {fileID: 210202287}
 --- !u!114 &565808839
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34503,6 +34503,7 @@ MonoBehaviour:
   - {fileID: -5858099233694746440, guid: 02adaa72ea0c2d94bba9643f30c5e477, type: 3}
   - {fileID: 6198132458206164251, guid: 02adaa72ea0c2d94bba9643f30c5e477, type: 3}
   - {fileID: -5793760909466436984, guid: 02adaa72ea0c2d94bba9643f30c5e477, type: 3}
+  panelItem: {fileID: 120637122}
   panelCorrect: {fileID: 346575568}
   panelWrong: {fileID: 643163447}
   panelKeyboard: {fileID: 1795728934}

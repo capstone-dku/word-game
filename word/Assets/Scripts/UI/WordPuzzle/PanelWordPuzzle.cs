@@ -339,6 +339,7 @@ public class PanelWordPuzzle : MonoBehaviour
             // 보상 지급
             saveLoad.AdjustCoin(0,50+(vocaSuccess*50));
             saveLoad.AdjustCoin(1,25+(vocaSuccess*25));
+            panelItem.UpdateTicket(saveLoad.GetTicket());
             panelItem.UpdateCoin(0, saveLoad.GetCoin(0));
             panelItem.UpdateCoin(1, saveLoad.GetCoin(1));
             // 정답, 오답 단어 가중치 변경

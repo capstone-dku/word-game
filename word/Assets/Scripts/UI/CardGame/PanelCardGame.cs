@@ -75,6 +75,7 @@ public class PanelCardGame : MonoBehaviour
         // 보상 지급
         saveLoad.AdjustCoin(1, 25);
         saveLoad.AdjustCoin(2, 50);
+        panelItem.UpdateTicket(saveLoad.GetTicket());
         panelItem.UpdateCoin(1, saveLoad.GetCoin(1));
         panelItem.UpdateCoin(2, saveLoad.GetCoin(2));
         // 정답, 오답 단어 가중치 변경
