@@ -20,6 +20,10 @@ public class UserData
     public int[] purchasable = new int[300]; // 구매할 수 있는 아이템 수
     public List<BuildingData> buildingData = new List<BuildingData>();
     public DateTime LastPlayedDateTime = DateTime.Now;
+    public int todayStudyMissionCount = 0;
+    public int weekStudyMissionCount = 0;
+    public bool todayStudyClear = false;
+    public bool weekStudyClear = false;
 
     public UserData()
     {
@@ -50,6 +54,10 @@ public class UserData
             items[j*2+1] = 0;
         }
         LastPlayedDateTime = DateTime.Now;
+        todayStudyMissionCount = 0;
+        weekStudyMissionCount = 0;
+        todayStudyClear = false;
+        weekStudyClear = false;
     }
 }
  
@@ -206,5 +214,33 @@ public class SaveLoad : MonoBehaviour
     public DateTime GetLastPlayedDateTime()
     {
         return currentData.LastPlayedDateTime;
+    }
+
+    public void AddTodayStudyMission(int value)
+    {
+        currentData.todayStudyMissionCount += value;
+        if (currentData.todayStudyMissionCount >= 1)
+        {
+            currentData.todayStudyMissionCount = 1;
+            if (!currentData.todayStudyClear)
+            {
+                Mission.Instance.OnSuccessTodayStudyMission();
+                Mission.Instance.ShowAlarm(true);
+            }
+        }
+    }
+    public void AddWeekStudyMission(int value)
+    {
+        currentData.weekStudyMissionCount += value;
+    }
+    public void ResetTodayStudyMission()
+    {
+        currentData.todayStudyClear = false;
+        currentData.todayStudyMissionCount = 0;
+    }
+    public void ResetWeekStudyMission()
+    {
+        currentData.weekStudyClear = false;
+        currentData.weekStudyMissionCount = 0;
     }
 }

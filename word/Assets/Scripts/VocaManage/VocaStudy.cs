@@ -216,6 +216,10 @@ public class VocaStudy : MonoBehaviour
             // 3. 획득한 별 갯수를 저장한다.
             saveLoad.SetStars(currentDifficulty, currentSetNumber, stars);
             Debug.Log("별 갯수 저장: " + stars + "개");
+            // 4. 미션 카운트 증가시킨다.
+            saveLoad.AddTodayStudyMission(1);
+            saveLoad.AddWeekStudyMission(1);
+            
         }
 
         // 학습한 단어 저장 및 세트 해금
