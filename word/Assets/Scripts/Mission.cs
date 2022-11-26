@@ -39,6 +39,11 @@ public class Mission : MonoBehaviour
         }
     }
 
+    public void OnClickedMission()
+    {
+        gameObject.SetActive(true);
+    }
+
     public void ShowAlarm(bool active)
     {
         alarm.SetActive(active);

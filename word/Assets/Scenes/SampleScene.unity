@@ -2028,10 +2028,10 @@ RectTransform:
   m_Father: {fileID: 1551492312}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 483.265, y: -515}
-  m_SizeDelta: {x: 906.53, y: 200}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &97225967
 MonoBehaviour:
@@ -31352,7 +31352,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &808338393
 RectTransform:
   m_ObjectHideFlags: 0
@@ -36096,8 +36096,8 @@ RectTransform:
   m_Father: {fileID: 662370673}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.081400156}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -52123,6 +52123,7 @@ MonoBehaviour:
   buttonMission: {fileID: 1551422050}
   vocaStudy: {fileID: 261400366}
   vocaGame: {fileID: 1609879276}
+  missionMenu: {fileID: 808338396}
   BuildingManager: {fileID: 100764791}
 --- !u!1 &1472833072
 GameObject:
@@ -67521,10 +67522,10 @@ RectTransform:
   m_Father: {fileID: 1551492312}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 483.265, y: -105}
-  m_SizeDelta: {x: 906.53, y: 200}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1968210843
 MonoBehaviour:
@@ -67738,10 +67739,10 @@ RectTransform:
   m_Father: {fileID: 1551492312}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 483.265, y: -310}
-  m_SizeDelta: {x: 906.53, y: 200}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1972161313
 MonoBehaviour:
@@ -69824,10 +69825,10 @@ RectTransform:
   m_Father: {fileID: 1551492312}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 483.265, y: -720}
-  m_SizeDelta: {x: 906.53, y: 200}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2022417284
 MonoBehaviour:
@@ -72852,7 +72853,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   alarm: {fileID: 1991867051}
-  TodayMissionText: {fileID: 0}
+  TodayMissionText: {fileID: 264529208}
 --- !u!4 &2124995330
 Transform:
   m_ObjectHideFlags: 0

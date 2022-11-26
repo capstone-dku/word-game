@@ -31,6 +31,6 @@ public class PanelBottomMenu : MonoBehaviour
 
     public void OnClickedMission()
     {
-        // missionMenu.
+        missionMenu.OnClickedMission();
     }
 }
