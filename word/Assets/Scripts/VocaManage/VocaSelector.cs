@@ -76,13 +76,13 @@ public class VocaSelector : MonoBehaviour
     public void JsonLoad()
     {
         string jdata;
-        jdata = File.ReadAllText(Application.dataPath + "/Resources/JsonData/Beginner.json");
+        jdata = File.ReadAllText(Application.streamingAssetsPath + "/JsonData/Beginner.json");
         beginnerVoca = JsonConvert.DeserializeObject<List<Voca>>(jdata);
-        jdata = File.ReadAllText(Application.dataPath + "/Resources/JsonData/Intermediate.json");
+        jdata = File.ReadAllText(Application.streamingAssetsPath + "/JsonData/Intermediate.json");
         intermediateVoca = JsonConvert.DeserializeObject<List<Voca>>(jdata);
-        jdata = File.ReadAllText(Application.dataPath + "/Resources/JsonData/Advanced.json");
+        jdata = File.ReadAllText(Application.streamingAssetsPath + "/JsonData/Advanced.json");
         advancedVoca = JsonConvert.DeserializeObject<List<Voca>>(jdata);
-        jdata = File.ReadAllText(Application.dataPath + "/Resources/JsonData/Toeic.json");
+        jdata = File.ReadAllText(Application.streamingAssetsPath + "/JsonData/Toeic.json");
         toeicVoca = JsonConvert.DeserializeObject<List<Voca>>(jdata);
     }
     /// <summary>

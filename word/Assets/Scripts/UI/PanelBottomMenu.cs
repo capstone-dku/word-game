@@ -12,6 +12,7 @@ public class PanelBottomMenu : MonoBehaviour
 
     public VocaStudy vocaStudy;
     public VocaGame vocaGame;
+    public Mission missionMenu;
     public BuildingManager BuildingManager;
     public void OnClickedStudy()
     {
@@ -30,6 +31,6 @@ public class PanelBottomMenu : MonoBehaviour
 
     public void OnClickedMission()
     {
-
+        // missionMenu.
     }
 }

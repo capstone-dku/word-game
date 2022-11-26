@@ -72,6 +72,8 @@ public class SaveLoad : MonoBehaviour
     {
         Instance = this;
         filePath = Application.dataPath + "/data.json";
+        Debug.Log(Application.streamingAssetsPath);
+        Debug.Log(filePath);
         currentData = new UserData();
         if (File.Exists(filePath))
         {

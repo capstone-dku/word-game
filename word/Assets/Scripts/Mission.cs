@@ -9,6 +9,7 @@ public class Mission : MonoBehaviour
 {
     public static Mission Instance;
     [SerializeField] private GameObject alarm;
+    [SerializeField] private Text TodayMissionText;
     private void Awake()
     {
         Instance = this;
@@ -45,15 +46,17 @@ public class Mission : MonoBehaviour
 
     public void OnSuccessTodayStudyMission()
     {
-
+        TodayMissionText.text = "1/1";
     }
     public void GetRewordTodayStudyMission()
     {
-        // SaveLoad.Instance.AddTicket(1);
+        SaveLoad.Instance.AddTicket(1);
+        ShowAlarm(false);
     }
-    public void WeekStudyMissionSuccess()
+    public void GetRewordWeekStudyMission()
     {
-        // SaveLoad.Instance.AddTicket(1);
+        SaveLoad.Instance.AddTicket(1);
+        ShowAlarm(false);
     }
 
 }

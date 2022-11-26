@@ -1,0 +1,6492 @@
+﻿[
+    {
+        "num": 1,
+        "voca": "might",
+        "meaning": [
+            "힘"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 2,
+        "voca": "fire",
+        "meaning": [
+            "불"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 3,
+        "voca": "alone",
+        "meaning": [
+            "다만 홀로(혼자서)"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 4,
+        "voca": "clock",
+        "meaning": [
+            "시계"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 5,
+        "voca": "lion",
+        "meaning": [
+            "사자"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 6,
+        "voca": "test",
+        "meaning": [
+            "시험"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 7,
+        "voca": "luck",
+        "meaning": [
+            "운"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 8,
+        "voca": "gesture",
+        "meaning": [
+            "몸짓"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 9,
+        "voca": "down",
+        "meaning": [
+            "아래로"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 10,
+        "voca": "run",
+        "meaning": [
+            "달리다"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 11,
+        "voca": "boss",
+        "meaning": [
+            "두목"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 12,
+        "voca": "place",
+        "meaning": [
+            "장소"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 13,
+        "voca": "all",
+        "meaning": [
+            "모든"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 14,
+        "voca": "between",
+        "meaning": [
+            "-의 사이에 사이에"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 15,
+        "voca": "fat",
+        "meaning": [
+            "살찐"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 16,
+        "voca": "sea",
+        "meaning": [
+            "바다"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 17,
+        "voca": "umbrella",
+        "meaning": [
+            "우산"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 18,
+        "voca": "wife",
+        "meaning": [
+            "아내"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 19,
+        "voca": "frog",
+        "meaning": [
+            "개구리"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 20,
+        "voca": "exercise",
+        "meaning": [
+            "운동"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 21,
+        "voca": "month",
+        "meaning": [
+            "월",
+            " 달"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 22,
+        "voca": "lesson",
+        "meaning": [
+            "수업"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 23,
+        "voca": "heavy",
+        "meaning": [
+            "무거운"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 24,
+        "voca": "show",
+        "meaning": [
+            "보이다"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 25,
+        "voca": "morning",
+        "meaning": [
+            "아침"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 26,
+        "voca": "fact",
+        "meaning": [
+            "사실"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 27,
+        "voca": "cloth",
+        "meaning": [
+            "천"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 28,
+        "voca": "beside",
+        "meaning": [
+            "-의 옆에"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 29,
+        "voca": "king",
+        "meaning": [
+            "왕"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 30,
+        "voca": "wake",
+        "meaning": [
+            "일어나다"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 31,
+        "voca": "gentleman",
+        "meaning": [
+            "신사"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 32,
+        "voca": "flower",
+        "meaning": [
+            "꽃"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 33,
+        "voca": "open",
+        "meaning": [
+            "열다"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 34,
+        "voca": "brush",
+        "meaning": [
+            "솔"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 35,
+        "voca": "when",
+        "meaning": [
+            "언제"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 36,
+        "voca": "May",
+        "meaning": [
+            "5월"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 37,
+        "voca": "wood",
+        "meaning": [
+            "숲"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 38,
+        "voca": "start",
+        "meaning": [
+            "시작하다"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 39,
+        "voca": "about",
+        "meaning": [
+            "-에 대하여"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 40,
+        "voca": "who",
+        "meaning": [
+            "누구"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 41,
+        "voca": "agree",
+        "meaning": [
+            "동의하다"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 42,
+        "voca": "textbook",
+        "meaning": [
+            "교과서"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 43,
+        "voca": "beauty",
+        "meaning": [
+            "아름다움"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 44,
+        "voca": "sock",
+        "meaning": [
+            "양말"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 45,
+        "voca": "check",
+        "meaning": [
+            "확인하다"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 46,
+        "voca": "garden",
+        "meaning": [
+            "정원"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 47,
+        "voca": "floor",
+        "meaning": [
+            "바닥"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 48,
+        "voca": "year",
+        "meaning": [
+            "연도"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 49,
+        "voca": "tail",
+        "meaning": [
+            "꼬리"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 50,
+        "voca": "I",
+        "meaning": [
+            "나"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 51,
+        "voca": "clerk",
+        "meaning": [
+            "직원",
+            " 사무원"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 52,
+        "voca": "die",
+        "meaning": [
+            "죽다"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 53,
+        "voca": "where",
+        "meaning": [
+            "어디"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 54,
+        "voca": "wait",
+        "meaning": [
+            "기다리다"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 55,
+        "voca": "example",
+        "meaning": [
+            "예시",
+            " 예"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 56,
+        "voca": "eat",
+        "meaning": [
+            "먹다"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 57,
+        "voca": "young",
+        "meaning": [
+            "젊은"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 58,
+        "voca": "he",
+        "meaning": [
+            "(3인칭단수 남성)그"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 59,
+        "voca": "puzzle",
+        "meaning": [
+            "퍼즐",
+            " 알아맞히기"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 60,
+        "voca": "study",
+        "meaning": [
+            "공부하다"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 61,
+        "voca": "wind",
+        "meaning": [
+            "바람"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 62,
+        "voca": "want",
+        "meaning": [
+            "원하다"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 63,
+        "voca": "welcome",
+        "meaning": [
+            "환영하다",
+            " 반가운"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 64,
+        "voca": "bed",
+        "meaning": [
+            "침대"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 65,
+        "voca": "tape",
+        "meaning": [
+            "테이프"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 66,
+        "voca": "around",
+        "meaning": [
+            "사방에",
+            " 주위에",
+            " 약(대략)"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 67,
+        "voca": "happy",
+        "meaning": [
+            "행복한"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 68,
+        "voca": "during",
+        "meaning": [
+            "-동안에"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 69,
+        "voca": "free",
+        "meaning": [
+            "자유로운",
+            " 무료"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 70,
+        "voca": "old",
+        "meaning": [
+            "늙은"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 71,
+        "voca": "bomb",
+        "meaning": [
+            "폭탄",
+            " 폭격하다"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 72,
+        "voca": "danger",
+        "meaning": [
+            "위험"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 73,
+        "voca": "queen",
+        "meaning": [
+            "여왕"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 74,
+        "voca": "father",
+        "meaning": [
+            "아버지"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 75,
+        "voca": "bill",
+        "meaning": [
+            "계산서"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 76,
+        "voca": "under",
+        "meaning": [
+            "-아래에"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 77,
+        "voca": "address",
+        "meaning": [
+            "주소"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 78,
+        "voca": "see",
+        "meaning": [
+            "보다"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 79,
+        "voca": "brake",
+        "meaning": [
+            "브레이크",
+            " 제동"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 80,
+        "voca": "heart",
+        "meaning": [
+            "심장"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 81,
+        "voca": "telephone",
+        "meaning": [
+            "전화"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 82,
+        "voca": "bug",
+        "meaning": [
+            "벌레"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 83,
+        "voca": "quiet",
+        "meaning": [
+            "조용한"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 84,
+        "voca": "sit",
+        "meaning": [
+            "앉다"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 85,
+        "voca": "bite",
+        "meaning": [
+            "물다"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 86,
+        "voca": "afternoon",
+        "meaning": [
+            "오후"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 87,
+        "voca": "color",
+        "meaning": [
+            "색",
+            " 색상"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 88,
+        "voca": "soft",
+        "meaning": [
+            "부드러운"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 89,
+        "voca": "new",
+        "meaning": [
+            "새로운"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 90,
+        "voca": "error",
+        "meaning": [
+            "실수",
+            " 오류"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 91,
+        "voca": "hard",
+        "meaning": [
+            "단단한"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 92,
+        "voca": "daughter",
+        "meaning": [
+            "딸"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 93,
+        "voca": "cinema",
+        "meaning": [
+            "영화관"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 94,
+        "voca": "history",
+        "meaning": [
+            "역사"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 95,
+        "voca": "circle",
+        "meaning": [
+            "원"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 96,
+        "voca": "up",
+        "meaning": [
+            "위로"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 97,
+        "voca": "park",
+        "meaning": [
+            "공원"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 98,
+        "voca": "weight",
+        "meaning": [
+            "무게"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 99,
+        "voca": "wedding",
+        "meaning": [
+            "결혼"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 100,
+        "voca": "from",
+        "meaning": [
+            "(분리",
+            "이탈",
+            "출발점",
+            "기점)-로 부터"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 101,
+        "voca": "stay",
+        "meaning": [
+            "머무르다"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 102,
+        "voca": "mouth",
+        "meaning": [
+            "입"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 103,
+        "voca": "city",
+        "meaning": [
+            "도시"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 104,
+        "voca": "grey",
+        "meaning": [
+            "회색의"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 105,
+        "voca": "above",
+        "meaning": [
+            "-보다 위에"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 106,
+        "voca": "duck",
+        "meaning": [
+            "오리"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 107,
+        "voca": "noon",
+        "meaning": [
+            "정오"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 108,
+        "voca": "background",
+        "meaning": [
+            "배경"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 109,
+        "voca": "little",
+        "meaning": [
+            "작은"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 110,
+        "voca": "kill",
+        "meaning": [
+            "죽이다"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 111,
+        "voca": "bake",
+        "meaning": [
+            "굽다"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 112,
+        "voca": "basket",
+        "meaning": [
+            "바구니"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 113,
+        "voca": "house",
+        "meaning": [
+            "집"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 114,
+        "voca": "bean",
+        "meaning": [
+            "콩"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 115,
+        "voca": "heaven",
+        "meaning": [
+            "천국"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 116,
+        "voca": "letter",
+        "meaning": [
+            "편지"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 117,
+        "voca": "please",
+        "meaning": [
+            "기쁘게 하다",
+            " 제발"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 118,
+        "voca": "she",
+        "meaning": [
+            "그녀"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 119,
+        "voca": "use",
+        "meaning": [
+            "쓰다",
+            " 사용"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 120,
+        "voca": "warm",
+        "meaning": [
+            "따뜻한"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 121,
+        "voca": "present",
+        "meaning": [
+            "선물",
+            " 현재의"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 122,
+        "voca": "mountain",
+        "meaning": [
+            "산"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 123,
+        "voca": "grow",
+        "meaning": [
+            "성장하다"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 124,
+        "voca": "note",
+        "meaning": [
+            "기록",
+            " 공책"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 125,
+        "voca": "enough",
+        "meaning": [
+            "충분한"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 126,
+        "voca": "help",
+        "meaning": [
+            "돕다"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 127,
+        "voca": "hello",
+        "meaning": [
+            "안녕하세요"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 128,
+        "voca": "listen",
+        "meaning": [
+            "듣다"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 129,
+        "voca": "mad",
+        "meaning": [
+            "미친"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 130,
+        "voca": "bread",
+        "meaning": [
+            "빵"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 131,
+        "voca": "body",
+        "meaning": [
+            "신체"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 132,
+        "voca": "college",
+        "meaning": [
+            "대학"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 133,
+        "voca": "certain",
+        "meaning": [
+            "확신하는",
+            " 확실한"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 134,
+        "voca": "cotton",
+        "meaning": [
+            "목화",
+            " 면"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 135,
+        "voca": "next",
+        "meaning": [
+            "다음"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 136,
+        "voca": "side",
+        "meaning": [
+            "한 쪽",
+            " 옆면"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 137,
+        "voca": "pocket",
+        "meaning": [
+            "주머니"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 138,
+        "voca": "condition",
+        "meaning": [
+            "상태",
+            " 조건"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 139,
+        "voca": "hill",
+        "meaning": [
+            "언덕"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 140,
+        "voca": "picnic",
+        "meaning": [
+            "소풍"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 141,
+        "voca": "death",
+        "meaning": [
+            "죽음"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 142,
+        "voca": "song",
+        "meaning": [
+            "노래"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 143,
+        "voca": "take",
+        "meaning": [
+            "잡다",
+            " 가지고가다"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 144,
+        "voca": "inside",
+        "meaning": [
+            "안에",
+            " 안으로"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 145,
+        "voca": "buy",
+        "meaning": [
+            "사다"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 146,
+        "voca": "score",
+        "meaning": [
+            "점수",
+            " 득점"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 147,
+        "voca": "yesterday",
+        "meaning": [
+            "어제"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 148,
+        "voca": "we",
+        "meaning": [
+            "우리"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 149,
+        "voca": "tiger",
+        "meaning": [
+            "호랑이"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 150,
+        "voca": "hour",
+        "meaning": [
+            "시간"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 151,
+        "voca": "soccer",
+        "meaning": [
+            "축구"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 152,
+        "voca": "crazy",
+        "meaning": [
+            "미친"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 153,
+        "voca": "gift",
+        "meaning": [
+            "선물"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 154,
+        "voca": "however",
+        "meaning": [
+            "하지만"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 155,
+        "voca": "sour",
+        "meaning": [
+            "시큼한",
+            " 신"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 156,
+        "voca": "night",
+        "meaning": [
+            "밤"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 157,
+        "voca": "fever",
+        "meaning": [
+            "열"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 158,
+        "voca": "cost",
+        "meaning": [
+            "가격",
+            " 값",
+            " 비용"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 159,
+        "voca": "group",
+        "meaning": [
+            "집단"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 160,
+        "voca": "middle",
+        "meaning": [
+            "한복판의"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 161,
+        "voca": "dinner",
+        "meaning": [
+            "저녁"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 162,
+        "voca": "north",
+        "meaning": [
+            "북쪽"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 163,
+        "voca": "power",
+        "meaning": [
+            "힘"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 164,
+        "voca": "grandfather",
+        "meaning": [
+            "할아버지"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 165,
+        "voca": "case",
+        "meaning": [
+            "경우",
+            " 사례"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 166,
+        "voca": "dry",
+        "meaning": [
+            "마른"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 167,
+        "voca": "road",
+        "meaning": [
+            "길"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 168,
+        "voca": "great",
+        "meaning": [
+            "커다란"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 169,
+        "voca": "near",
+        "meaning": [
+            "가까운",
+            " 가까이"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 170,
+        "voca": "any",
+        "meaning": [
+            "어느",
+            " 어떤",
+            " 아무"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 171,
+        "voca": "corner",
+        "meaning": [
+            "모퉁이",
+            " 모서리"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 172,
+        "voca": "small",
+        "meaning": [
+            "작은",
+            " 적게"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 173,
+        "voca": "could",
+        "meaning": [
+            "~ 할 수 있었다(can의 과거형)"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 174,
+        "voca": "forest",
+        "meaning": [
+            "숲"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 175,
+        "voca": "along",
+        "meaning": [
+            "-을 따라"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 176,
+        "voca": "church",
+        "meaning": [
+            "교회"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 177,
+        "voca": "sorry",
+        "meaning": [
+            "미안한",
+            " 미안합니다"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 178,
+        "voca": "decide",
+        "meaning": [
+            "결정하다"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 179,
+        "voca": "foot",
+        "meaning": [
+            "발"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 180,
+        "voca": "drive",
+        "meaning": [
+            "운전하다"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 181,
+        "voca": "finish",
+        "meaning": [
+            "끝내다"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 182,
+        "voca": "bottle",
+        "meaning": [
+            "병"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 183,
+        "voca": "sad",
+        "meaning": [
+            "슬픈"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 184,
+        "voca": "almost",
+        "meaning": [
+            "거의"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 185,
+        "voca": "teach",
+        "meaning": [
+            "가르치다"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 186,
+        "voca": "exit",
+        "meaning": [
+            "출구"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 187,
+        "voca": "left",
+        "meaning": [
+            "왼쪽"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 188,
+        "voca": "famous",
+        "meaning": [
+            "유명한"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 189,
+        "voca": "homework",
+        "meaning": [
+            "숙제"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 190,
+        "voca": "culture",
+        "meaning": [
+            "문화"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 191,
+        "voca": "with",
+        "meaning": [
+            "함께"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 192,
+        "voca": "block",
+        "meaning": [
+            "덩어리",
+            " 막다"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 193,
+        "voca": "age",
+        "meaning": [
+            "나이"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 194,
+        "voca": "sister",
+        "meaning": [
+            "자매"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 195,
+        "voca": "room",
+        "meaning": [
+            "방"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 196,
+        "voca": "advise",
+        "meaning": [
+            "충고하다"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 197,
+        "voca": "cycle",
+        "meaning": [
+            "순환"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 198,
+        "voca": "mind",
+        "meaning": [
+            "마음",
+            " 정신"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 199,
+        "voca": "fast",
+        "meaning": [
+            "빠른"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 200,
+        "voca": "concert",
+        "meaning": [
+            "연주회"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 201,
+        "voca": "giraffe",
+        "meaning": [
+            "기린"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 202,
+        "voca": "rich",
+        "meaning": [
+            "부자",
+            " 부자의"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 203,
+        "voca": "over",
+        "meaning": [
+            "위쪽"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 204,
+        "voca": "size",
+        "meaning": [
+            "크기"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 205,
+        "voca": "file",
+        "meaning": [
+            "파일"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 206,
+        "voca": "couple",
+        "meaning": [
+            "한 쌍"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 207,
+        "voca": "fall",
+        "meaning": [
+            "떨어지다"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 208,
+        "voca": "pick",
+        "meaning": [
+            "선택하다"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 209,
+        "voca": "push",
+        "meaning": [
+            "밀다"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 210,
+        "voca": "return",
+        "meaning": [
+            "돌아가다"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 211,
+        "voca": "salt",
+        "meaning": [
+            "소금"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 212,
+        "voca": "put",
+        "meaning": [
+            "놓다",
+            " 두다"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 213,
+        "voca": "gate",
+        "meaning": [
+            "문"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 214,
+        "voca": "ground",
+        "meaning": [
+            "땅"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 215,
+        "voca": "swim",
+        "meaning": [
+            "헤엄치다",
+            " 수영"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 216,
+        "voca": "son",
+        "meaning": [
+            "아들"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 217,
+        "voca": "restroom",
+        "meaning": [
+            "화장실"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 218,
+        "voca": "chair",
+        "meaning": [
+            "의자"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 219,
+        "voca": "hang",
+        "meaning": [
+            "\b걸다",
+            " 매달다"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 220,
+        "voca": "doll",
+        "meaning": [
+            "인형"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 221,
+        "voca": "save",
+        "meaning": [
+            "구하다",
+            " 저장"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 222,
+        "voca": "fry",
+        "meaning": [
+            "튀기다"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 223,
+        "voca": "week",
+        "meaning": [
+            "주"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 224,
+        "voca": "some",
+        "meaning": [
+            "일부",
+            " 약간"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 225,
+        "voca": "nurse",
+        "meaning": [
+            "간호사"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 226,
+        "voca": "white",
+        "meaning": [
+            "흰"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 227,
+        "voca": "travel",
+        "meaning": [
+            "여행하다"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 228,
+        "voca": "go",
+        "meaning": [
+            "가다"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 229,
+        "voca": "potato",
+        "meaning": [
+            "감자"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 230,
+        "voca": "plan",
+        "meaning": [
+            "계획"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 231,
+        "voca": "angel",
+        "meaning": [
+            "천사"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 232,
+        "voca": "bone",
+        "meaning": [
+            "뼈"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 233,
+        "voca": "bad",
+        "meaning": [
+            "나쁜"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 234,
+        "voca": "a",
+        "meaning": [
+            "하나의",
+            " (단수형 명사 앞에서 쓰임)"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 235,
+        "voca": "fantastic",
+        "meaning": [
+            "환상적인"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 236,
+        "voca": "hold",
+        "meaning": [
+            "잡고 있다"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 237,
+        "voca": "hair",
+        "meaning": [
+            "\b머리카락",
+            " 털"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 238,
+        "voca": "yellow",
+        "meaning": [
+            "노란색"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 239,
+        "voca": "nation",
+        "meaning": [
+            "국가"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 240,
+        "voca": "war",
+        "meaning": [
+            "전쟁"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 241,
+        "voca": "arrive",
+        "meaning": [
+            "도착하다"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 242,
+        "voca": "people",
+        "meaning": [
+            "사람들"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 243,
+        "voca": "thing",
+        "meaning": [
+            "물건"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 244,
+        "voca": "cool",
+        "meaning": [
+            "시원한"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 245,
+        "voca": "skirt",
+        "meaning": [
+            "치마"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 246,
+        "voca": "ant",
+        "meaning": [
+            "개미"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 247,
+        "voca": "rain",
+        "meaning": [
+            "비"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 248,
+        "voca": "strawberry",
+        "meaning": [
+            "딸기"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 249,
+        "voca": "add",
+        "meaning": [
+            "추가하다",
+            " 더하다"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 250,
+        "voca": "hand",
+        "meaning": [
+            "손"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 251,
+        "voca": "again",
+        "meaning": [
+            "다시"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 252,
+        "voca": "blue",
+        "meaning": [
+            "푸른"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 253,
+        "voca": "fan",
+        "meaning": [
+            "(영화 등의)팬"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 254,
+        "voca": "east",
+        "meaning": [
+            "동쪽",
+            " 동쪽의"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 255,
+        "voca": "come",
+        "meaning": [
+            "오다"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 256,
+        "voca": "print",
+        "meaning": [
+            "인쇄하다",
+            " 프린트하다"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 257,
+        "voca": "in",
+        "meaning": [
+            "-속에",
+            " ~안에"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 258,
+        "voca": "library",
+        "meaning": [
+            "도서관"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 259,
+        "voca": "believe",
+        "meaning": [
+            "믿다"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 260,
+        "voca": "window",
+        "meaning": [
+            "창"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 261,
+        "voca": "bring",
+        "meaning": [
+            "가져오다"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 262,
+        "voca": "into",
+        "meaning": [
+            "-안으로"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 263,
+        "voca": "carry",
+        "meaning": [
+            "나르다"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 264,
+        "voca": "honey",
+        "meaning": [
+            "벌꿀"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 265,
+        "voca": "understand",
+        "meaning": [
+            "이해하다"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 266,
+        "voca": "office",
+        "meaning": [
+            "사무실"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 267,
+        "voca": "one",
+        "meaning": [
+            "하나"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 268,
+        "voca": "often",
+        "meaning": [
+            "자주"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 269,
+        "voca": "ready",
+        "meaning": [
+            "준비가 된"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 270,
+        "voca": "helicopter",
+        "meaning": [
+            "헬리콥터"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 271,
+        "voca": "bank",
+        "meaning": [
+            "은행"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 272,
+        "voca": "train",
+        "meaning": [
+            "기차"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 273,
+        "voca": "knife",
+        "meaning": [
+            "칼"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 274,
+        "voca": "dirty",
+        "meaning": [
+            "더러운"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 275,
+        "voca": "doctor",
+        "meaning": [
+            "의사"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 276,
+        "voca": "clever",
+        "meaning": [
+            "영리한"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 277,
+        "voca": "family",
+        "meaning": [
+            "가족"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 278,
+        "voca": "supper",
+        "meaning": [
+            "저녁"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 279,
+        "voca": "paint",
+        "meaning": [
+            "도료",
+            " 페인트",
+            " 그림물감"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 280,
+        "voca": "restaurant",
+        "meaning": [
+            "식당"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 281,
+        "voca": "cat",
+        "meaning": [
+            "고양이"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 282,
+        "voca": "name",
+        "meaning": [
+            "이름"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 283,
+        "voca": "ice",
+        "meaning": [
+            "얼음"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 284,
+        "voca": "basic",
+        "meaning": [
+            "기본의"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 285,
+        "voca": "field",
+        "meaning": [
+            "들"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 286,
+        "voca": "thank",
+        "meaning": [
+            "감사하다",
+            " 감사"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 287,
+        "voca": "parent",
+        "meaning": [
+            "부모님"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 288,
+        "voca": "answer",
+        "meaning": [
+            "대답"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 289,
+        "voca": "pink",
+        "meaning": [
+            "분홍색"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 290,
+        "voca": "than",
+        "meaning": [
+            "-보다"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 291,
+        "voca": "bicycle",
+        "meaning": [
+            "자전거"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 292,
+        "voca": "hospital",
+        "meaning": [
+            "병원"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 293,
+        "voca": "airplane",
+        "meaning": [
+            "비행기"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 294,
+        "voca": "friend",
+        "meaning": [
+            "친구"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 295,
+        "voca": "front",
+        "meaning": [
+            "정면"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 296,
+        "voca": "be",
+        "meaning": [
+            "-이다"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 297,
+        "voca": "fog",
+        "meaning": [
+            "안개"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 298,
+        "voca": "button",
+        "meaning": [
+            "단추"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 299,
+        "voca": "god",
+        "meaning": [
+            "신"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 300,
+        "voca": "slow",
+        "meaning": [
+            "느린"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 301,
+        "voca": "glove",
+        "meaning": [
+            "장갑"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 302,
+        "voca": "tonight",
+        "meaning": [
+            "오늘밤"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 303,
+        "voca": "joy",
+        "meaning": [
+            "즐거움"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 304,
+        "voca": "battery",
+        "meaning": [
+            "건전지"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 305,
+        "voca": "for",
+        "meaning": [
+            "~을 위한"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 306,
+        "voca": "cash",
+        "meaning": [
+            "현금"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 307,
+        "voca": "police",
+        "meaning": [
+            "경찰"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 308,
+        "voca": "every",
+        "meaning": [
+            "모든"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 309,
+        "voca": "dentist",
+        "meaning": [
+            "치과의사"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 310,
+        "voca": "copy",
+        "meaning": [
+            "사본"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 311,
+        "voca": "no",
+        "meaning": [
+            "아니"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 312,
+        "voca": "calendar",
+        "meaning": [
+            "달력"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 313,
+        "voca": "date",
+        "meaning": [
+            "날짜"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 314,
+        "voca": "candy",
+        "meaning": [
+            "사탕"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 315,
+        "voca": "wash",
+        "meaning": [
+            "씻다"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 316,
+        "voca": "this",
+        "meaning": [
+            "이것"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 317,
+        "voca": "apple",
+        "meaning": [
+            "사과"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 318,
+        "voca": "aunt",
+        "meaning": [
+            "이모"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 319,
+        "voca": "roof",
+        "meaning": [
+            "지붕"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 320,
+        "voca": "drink",
+        "meaning": [
+            "마시다"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 321,
+        "voca": "paper",
+        "meaning": [
+            "종이"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 322,
+        "voca": "finger",
+        "meaning": [
+            "손가락"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 323,
+        "voca": "countryside",
+        "meaning": [
+            "시골"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 324,
+        "voca": "subway",
+        "meaning": [
+            "지하철"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 325,
+        "voca": "read",
+        "meaning": [
+            "읽다"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 326,
+        "voca": "jeans",
+        "meaning": [
+            "청바지"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 327,
+        "voca": "stress",
+        "meaning": [
+            "압박"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 328,
+        "voca": "stop",
+        "meaning": [
+            "멈추다"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 329,
+        "voca": "fill",
+        "meaning": [
+            "채우다"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 330,
+        "voca": "water",
+        "meaning": [
+            "물"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 331,
+        "voca": "food",
+        "meaning": [
+            "음식"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 332,
+        "voca": "ear",
+        "meaning": [
+            "귀"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 333,
+        "voca": "become",
+        "meaning": [
+            "-이 되다"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 334,
+        "voca": "lake",
+        "meaning": [
+            "호수"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 335,
+        "voca": "congratulate",
+        "meaning": [
+            "축하하다"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 336,
+        "voca": "time",
+        "meaning": [
+            "시간"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 337,
+        "voca": "pig",
+        "meaning": [
+            "돼지"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 338,
+        "voca": "just",
+        "meaning": [
+            "단지"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 339,
+        "voca": "dance",
+        "meaning": [
+            "댄스"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 340,
+        "voca": "uncle",
+        "meaning": [
+            "삼촌"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 341,
+        "voca": "win",
+        "meaning": [
+            "이기다"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 342,
+        "voca": "hungry",
+        "meaning": [
+            "배고픈"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 343,
+        "voca": "join",
+        "meaning": [
+            "연결하다"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 344,
+        "voca": "climb",
+        "meaning": [
+            "오르다"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 345,
+        "voca": "remember",
+        "meaning": [
+            "기억하다"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 346,
+        "voca": "glass",
+        "meaning": [
+            "유리"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 347,
+        "voca": "birth",
+        "meaning": [
+            "출생"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 348,
+        "voca": "draw",
+        "meaning": [
+            "그리다"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 349,
+        "voca": "bath",
+        "meaning": [
+            "욕조",
+            " 목욕하다"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 350,
+        "voca": "dark",
+        "meaning": [
+            "어두운"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 351,
+        "voca": "livingroom",
+        "meaning": [
+            "거실"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 352,
+        "voca": "bee",
+        "meaning": [
+            "꿀벌"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 353,
+        "voca": "far",
+        "meaning": [
+            "멀리"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 354,
+        "voca": "table",
+        "meaning": [
+            "테이블"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 355,
+        "voca": "bright",
+        "meaning": [
+            "밝은"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 356,
+        "voca": "band",
+        "meaning": [
+            "그룹"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 357,
+        "voca": "factory",
+        "meaning": [
+            "공장"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 358,
+        "voca": "black",
+        "meaning": [
+            "검은색"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 359,
+        "voca": "must",
+        "meaning": [
+            "-해야 한다"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 360,
+        "voca": "smell",
+        "meaning": [
+            "냄새"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 361,
+        "voca": "dish",
+        "meaning": [
+            "접시"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 362,
+        "voca": "ugly",
+        "meaning": [
+            "못생긴"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 363,
+        "voca": "skin",
+        "meaning": [
+            "피부"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 364,
+        "voca": "care",
+        "meaning": [
+            "걱정"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 365,
+        "voca": "pretty",
+        "meaning": [
+            "예쁜"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 366,
+        "voca": "feel",
+        "meaning": [
+            "느끼다"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 367,
+        "voca": "discuss",
+        "meaning": [
+            "토론하다"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 368,
+        "voca": "bottom",
+        "meaning": [
+            "밑바닥"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 369,
+        "voca": "holiday",
+        "meaning": [
+            "휴일"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 370,
+        "voca": "money",
+        "meaning": [
+            "금전"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 371,
+        "voca": "tell",
+        "meaning": [
+            "말하다"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 372,
+        "voca": "top",
+        "meaning": [
+            "정상"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 373,
+        "voca": "make",
+        "meaning": [
+            "만들다"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 374,
+        "voca": "well",
+        "meaning": [
+            "잘"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 375,
+        "voca": "headache",
+        "meaning": [
+            "두통"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 376,
+        "voca": "brown",
+        "meaning": [
+            "갈색의 갈색"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 377,
+        "voca": "newspaper",
+        "meaning": [
+            "신문"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 378,
+        "voca": "rainbow",
+        "meaning": [
+            "무지개"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 379,
+        "voca": "out",
+        "meaning": [
+            "밖으로"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 380,
+        "voca": "move",
+        "meaning": [
+            "움직이다"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 381,
+        "voca": "on",
+        "meaning": [
+            "위에"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 382,
+        "voca": "off",
+        "meaning": [
+            "끄다"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 383,
+        "voca": "music",
+        "meaning": [
+            "음악"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 384,
+        "voca": "farm",
+        "meaning": [
+            "농장"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 385,
+        "voca": "divide",
+        "meaning": [
+            "나누다"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 386,
+        "voca": "design",
+        "meaning": [
+            "디자인"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 387,
+        "voca": "ball",
+        "meaning": [
+            "공"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 388,
+        "voca": "sale",
+        "meaning": [
+            "판매"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 389,
+        "voca": "behind",
+        "meaning": [
+            "뒤에"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 390,
+        "voca": "classroom",
+        "meaning": [
+            "교실"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 391,
+        "voca": "stand",
+        "meaning": [
+            "서다"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 392,
+        "voca": "honest",
+        "meaning": [
+            "정직한"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 393,
+        "voca": "arm",
+        "meaning": [
+            "팔"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 394,
+        "voca": "comedy",
+        "meaning": [
+            "희극"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 395,
+        "voca": "cloud",
+        "meaning": [
+            "구름"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 396,
+        "voca": "movie",
+        "meaning": [
+            "영화"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 397,
+        "voca": "ask",
+        "meaning": [
+            "묻다"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 398,
+        "voca": "business",
+        "meaning": [
+            "직업"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 399,
+        "voca": "now",
+        "meaning": [
+            "지금"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 400,
+        "voca": "not",
+        "meaning": [
+            "아니다"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 401,
+        "voca": "branch",
+        "meaning": [
+            "가지"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 402,
+        "voca": "cross",
+        "meaning": [
+            "십자형"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 403,
+        "voca": "kitchen",
+        "meaning": [
+            "부엌"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 404,
+        "voca": "fool",
+        "meaning": [
+            "바보"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 405,
+        "voca": "always",
+        "meaning": [
+            "늘"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 406,
+        "voca": "part",
+        "meaning": [
+            "부분"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 407,
+        "voca": "important",
+        "meaning": [
+            "중요한"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 408,
+        "voca": "glue",
+        "meaning": [
+            "풀",
+            " 접착제"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 409,
+        "voca": "red",
+        "meaning": [
+            "빨간색"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 410,
+        "voca": "bat",
+        "meaning": [
+            "박쥐"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 411,
+        "voca": "wear",
+        "meaning": [
+            "입다"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 412,
+        "voca": "spoon",
+        "meaning": [
+            "숟가락"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 413,
+        "voca": "puppy",
+        "meaning": [
+            "강아지"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 414,
+        "voca": "mother",
+        "meaning": [
+            "어머니"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 415,
+        "voca": "cart",
+        "meaning": [
+            "수레",
+            " 카트"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 416,
+        "voca": "ahead",
+        "meaning": [
+            "앞으로"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 417,
+        "voca": "aloud",
+        "meaning": [
+            "소리 내어",
+            " 큰 소리로"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 418,
+        "voca": "glad",
+        "meaning": [
+            "기쁜"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 419,
+        "voca": "last",
+        "meaning": [
+            "마지막"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 420,
+        "voca": "guess",
+        "meaning": [
+            "추측하다"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 421,
+        "voca": "leg",
+        "meaning": [
+            "다리"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 422,
+        "voca": "tooth",
+        "meaning": [
+            "이"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 423,
+        "voca": "today",
+        "meaning": [
+            "오늘"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 424,
+        "voca": "sand",
+        "meaning": [
+            "모래"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 425,
+        "voca": "cook",
+        "meaning": [
+            "요리하다",
+            " 요리사"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 426,
+        "voca": "that",
+        "meaning": [
+            "저것"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 427,
+        "voca": "kick",
+        "meaning": [
+            "걷어차다",
+            " 발차기"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 428,
+        "voca": "big",
+        "meaning": [
+            "큰"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 429,
+        "voca": "nature",
+        "meaning": [
+            "자연"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 430,
+        "voca": "class",
+        "meaning": [
+            "수업"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 431,
+        "voca": "hobby",
+        "meaning": [
+            "취미"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 432,
+        "voca": "worry",
+        "meaning": [
+            "걱정하다"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 433,
+        "voca": "toy",
+        "meaning": [
+            "장난감"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 434,
+        "voca": "learn",
+        "meaning": [
+            "배우다"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 435,
+        "voca": "tour",
+        "meaning": [
+            "관광",
+            " 여행",
+            " 관광하다"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 436,
+        "voca": "at",
+        "meaning": [
+            "-에서"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 437,
+        "voca": "lazy",
+        "meaning": [
+            "게으른"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 438,
+        "voca": "build",
+        "meaning": [
+            "짓다"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 439,
+        "voca": "earth",
+        "meaning": [
+            "지구"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 440,
+        "voca": "neck",
+        "meaning": [
+            "목"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 441,
+        "voca": "coin",
+        "meaning": [
+            "동전"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 442,
+        "voca": "snow",
+        "meaning": [
+            "눈"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 443,
+        "voca": "birthday",
+        "meaning": [
+            "생일"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 444,
+        "voca": "town",
+        "meaning": [
+            "도시"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 445,
+        "voca": "brave",
+        "meaning": [
+            "용감한"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 446,
+        "voca": "shop",
+        "meaning": [
+            "상점"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 447,
+        "voca": "contest",
+        "meaning": [
+            "대회"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 448,
+        "voca": "what",
+        "meaning": [
+            "무엇",
+            " 어떤"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 449,
+        "voca": "day",
+        "meaning": [
+            "낮"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 450,
+        "voca": "map",
+        "meaning": [
+            "지도"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 451,
+        "voca": "type",
+        "meaning": [
+            "형태",
+            " 종류"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 452,
+        "voca": "by",
+        "meaning": [
+            "옆에",
+            " ~에 의해"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 453,
+        "voca": "speak",
+        "meaning": [
+            "말하다"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 454,
+        "voca": "kind",
+        "meaning": [
+            "친절한"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 455,
+        "voca": "grass",
+        "meaning": [
+            "잔디"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 456,
+        "voca": "ago",
+        "meaning": [
+            "이전에"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 457,
+        "voca": "good",
+        "meaning": [
+            "좋은"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 458,
+        "voca": "bell",
+        "meaning": [
+            "종"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 459,
+        "voca": "away",
+        "meaning": [
+            "떨어져서"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 460,
+        "voca": "zebra",
+        "meaning": [
+            "얼룩말"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 461,
+        "voca": "dialogue",
+        "meaning": [
+            "대화"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 462,
+        "voca": "love",
+        "meaning": [
+            "사랑"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 463,
+        "voca": "idea",
+        "meaning": [
+            "관념"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 464,
+        "voca": "meet",
+        "meaning": [
+            "-을 만나다"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 465,
+        "voca": "nothing",
+        "meaning": [
+            "아무것도 …없다"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 466,
+        "voca": "end",
+        "meaning": [
+            "끝"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 467,
+        "voca": "goodbye",
+        "meaning": [
+            "안녕히 가세요",
+            " 잘가"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 468,
+        "voca": "boat",
+        "meaning": [
+            "배"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 469,
+        "voca": "give",
+        "meaning": [
+            "주다"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 470,
+        "voca": "different",
+        "meaning": [
+            "다른"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 471,
+        "voca": "accent",
+        "meaning": [
+            "말씨(액센트)",
+            " 강조",
+            " 강조하다"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 472,
+        "voca": "prize",
+        "meaning": [
+            "상"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 473,
+        "voca": "girl",
+        "meaning": [
+            "소녀"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 474,
+        "voca": "rabbit",
+        "meaning": [
+            "토끼"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 475,
+        "voca": "hope",
+        "meaning": [
+            "희망"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 476,
+        "voca": "the",
+        "meaning": [
+            "정관사(정해진 명사 앞에 붙음)"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 477,
+        "voca": "act",
+        "meaning": [
+            "행동"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 478,
+        "voca": "job",
+        "meaning": [
+            "직업"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 479,
+        "voca": "engine",
+        "meaning": [
+            "엔진"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 480,
+        "voca": "moon",
+        "meaning": [
+            "달"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 481,
+        "voca": "drop",
+        "meaning": [
+            "방울"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 482,
+        "voca": "green",
+        "meaning": [
+            "초록색"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 483,
+        "voca": "right",
+        "meaning": [
+            "올바른"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 484,
+        "voca": "so",
+        "meaning": [
+            "그와 같이"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 485,
+        "voca": "nose",
+        "meaning": [
+            "코"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 486,
+        "voca": "school",
+        "meaning": [
+            "학교"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 487,
+        "voca": "sound",
+        "meaning": [
+            "소리"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 488,
+        "voca": "dog",
+        "meaning": [
+            "개"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 489,
+        "voca": "palace",
+        "meaning": [
+            "궁전"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 490,
+        "voca": "adventure",
+        "meaning": [
+            "모험 모험하다"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 491,
+        "voca": "engineer",
+        "meaning": [
+            "기사"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 492,
+        "voca": "pay",
+        "meaning": [
+            "지불하다"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 493,
+        "voca": "bubble",
+        "meaning": [
+            "거품 거품이 일다"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 494,
+        "voca": "back",
+        "meaning": [
+            "등"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 495,
+        "voca": "safe",
+        "meaning": [
+            "안전한"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 496,
+        "voca": "cry",
+        "meaning": [
+            "소리치다"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 497,
+        "voca": "change",
+        "meaning": [
+            "변화"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 498,
+        "voca": "car",
+        "meaning": [
+            "자동차"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 499,
+        "voca": "fly",
+        "meaning": [
+            "날다"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 500,
+        "voca": "double",
+        "meaning": [
+            "2배의"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 501,
+        "voca": "flag",
+        "meaning": [
+            "기"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 502,
+        "voca": "forever",
+        "meaning": [
+            "영원히"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 503,
+        "voca": "crowd",
+        "meaning": [
+            "군중"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 504,
+        "voca": "taste",
+        "meaning": [
+            "맛"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 505,
+        "voca": "if",
+        "meaning": [
+            "만일 -이라면"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 506,
+        "voca": "lie",
+        "meaning": [
+            "눕다"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 507,
+        "voca": "castle",
+        "meaning": [
+            "성"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 508,
+        "voca": "meat",
+        "meaning": [
+            "(식용짐승의)고기"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 509,
+        "voca": "teen",
+        "meaning": [
+            "슬픔"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 510,
+        "voca": "carrot",
+        "meaning": [
+            "당근"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 511,
+        "voca": "board",
+        "meaning": [
+            "널빤지"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 512,
+        "voca": "keep",
+        "meaning": [
+            "계속하다"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 513,
+        "voca": "cheap",
+        "meaning": [
+            "값싼"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 514,
+        "voca": "busy",
+        "meaning": [
+            "바쁜"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 515,
+        "voca": "forget",
+        "meaning": [
+            "잊다"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 516,
+        "voca": "walk",
+        "meaning": [
+            "걷다"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 517,
+        "voca": "sing",
+        "meaning": [
+            "노래하다"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 518,
+        "voca": "fun",
+        "meaning": [
+            "즐거운 생각"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 519,
+        "voca": "they",
+        "meaning": [
+            "그들"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 520,
+        "voca": "picture",
+        "meaning": [
+            "그림"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 521,
+        "voca": "here",
+        "meaning": [
+            "여기에"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 522,
+        "voca": "breakfast",
+        "meaning": [
+            "아침밥"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 523,
+        "voca": "sun",
+        "meaning": [
+            "태양"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 524,
+        "voca": "poor",
+        "meaning": [
+            "가난한 부족한",
+            " 불충분한",
+            " 빈약한"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 525,
+        "voca": "cap",
+        "meaning": [
+            "모자"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 526,
+        "voca": "crown",
+        "meaning": [
+            "왕관"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 527,
+        "voca": "of",
+        "meaning": [
+            "출신의"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 528,
+        "voca": "P.M.",
+        "meaning": [
+            "오후"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 529,
+        "voca": "desk",
+        "meaning": [
+            "책상"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 530,
+        "voca": "exam",
+        "meaning": [
+            "시험"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 531,
+        "voca": "south",
+        "meaning": [
+            "남쪽",
+            " 남쪽의 남으로"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 532,
+        "voca": "vegetable",
+        "meaning": [
+            "식물",
+            "  야채",
+            " 푸성귀",
+            " 남새",
+            " 채소"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 533,
+        "voca": "handsome",
+        "meaning": [
+            "얼굴(자태)이 잘생긴"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 534,
+        "voca": "thirst",
+        "meaning": [
+            "갈증"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 535,
+        "voca": "pants",
+        "meaning": [
+            "바지"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 536,
+        "voca": "milk",
+        "meaning": [
+            "젖"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 537,
+        "voca": "ship",
+        "meaning": [
+            "배"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 538,
+        "voca": "mathematics",
+        "meaning": [
+            "수학"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 539,
+        "voca": "hate",
+        "meaning": [
+            "미워하다"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 540,
+        "voca": "fox",
+        "meaning": [
+            "교활한 사람"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 541,
+        "voca": "airline",
+        "meaning": [
+            "정기항공"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 542,
+        "voca": "long",
+        "meaning": [
+            "(길이",
+            "시간 등)긴"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 543,
+        "voca": "hit",
+        "meaning": [
+            "명중하다"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 544,
+        "voca": "wrong",
+        "meaning": [
+            "나쁜"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 545,
+        "voca": "line",
+        "meaning": [
+            "선"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 546,
+        "voca": "alright",
+        "meaning": [
+            "더할나위없이"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 547,
+        "voca": "point",
+        "meaning": [
+            "점"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 548,
+        "voca": "do",
+        "meaning": [
+            "하다"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 549,
+        "voca": "fight",
+        "meaning": [
+            "싸움"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 550,
+        "voca": "rock",
+        "meaning": [
+            "바위"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 551,
+        "voca": "as",
+        "meaning": [
+            "-와 같은 정도로"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 552,
+        "voca": "ring",
+        "meaning": [
+            "고리"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 553,
+        "voca": "club",
+        "meaning": [
+            "클럽"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 554,
+        "voca": "never",
+        "meaning": [
+            "결코 -아니다"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 555,
+        "voca": "area",
+        "meaning": [
+            "면적"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 556,
+        "voca": "word",
+        "meaning": [
+            "낱말"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 557,
+        "voca": "send",
+        "meaning": [
+            "보내다"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 558,
+        "voca": "lunch",
+        "meaning": [
+            "점심"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 559,
+        "voca": "speed",
+        "meaning": [
+            "속도"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 560,
+        "voca": "introduce",
+        "meaning": [
+            "안으로 들이다"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 561,
+        "voca": "adult",
+        "meaning": [
+            "성인"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 562,
+        "voca": "fine",
+        "meaning": [
+            "훌륭한"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 563,
+        "voca": "mouse",
+        "meaning": [
+            "새앙쥐"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 564,
+        "voca": "elementary",
+        "meaning": [
+            "기본의"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 565,
+        "voca": "head",
+        "meaning": [
+            "머리"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 566,
+        "voca": "catch",
+        "meaning": [
+            "붙잡다"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 567,
+        "voca": "it",
+        "meaning": [
+            "그것은"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 568,
+        "voca": "eraser",
+        "meaning": [
+            "지우는 사람"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 569,
+        "voca": "short",
+        "meaning": [
+            "짧은"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 570,
+        "voca": "dream",
+        "meaning": [
+            "꿈"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 571,
+        "voca": "store",
+        "meaning": [
+            "가게"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 572,
+        "voca": "child",
+        "meaning": [
+            "아이"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 573,
+        "voca": "find",
+        "meaning": [
+            "발견하다"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 574,
+        "voca": "home",
+        "meaning": [
+            "가정"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 575,
+        "voca": "twice",
+        "meaning": [
+            "두 번"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 576,
+        "voca": "choose",
+        "meaning": [
+            "고르다"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 577,
+        "voca": "full",
+        "meaning": [
+            "가득찬"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 578,
+        "voca": "customer",
+        "meaning": [
+            "고객"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 579,
+        "voca": "also",
+        "meaning": [
+            "-도 또한"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 580,
+        "voca": "hundred",
+        "meaning": [
+            "100 100의"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 581,
+        "voca": "like",
+        "meaning": [
+            "좋아하다"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 582,
+        "voca": "against",
+        "meaning": [
+            "…에 반대하여"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 583,
+        "voca": "number",
+        "meaning": [
+            "수"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 584,
+        "voca": "hurry",
+        "meaning": [
+            "서두르다"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 585,
+        "voca": "cute",
+        "meaning": [
+            "귀여운"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 586,
+        "voca": "watermelon",
+        "meaning": [
+            "수박"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 587,
+        "voca": "door",
+        "meaning": [
+            "문"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 588,
+        "voca": "future",
+        "meaning": [
+            "미래"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 589,
+        "voca": "voice",
+        "meaning": [
+            "목소리",
+            " 음성",
+            " 음성"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 590,
+        "voca": "story",
+        "meaning": [
+            "층"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 591,
+        "voca": "man",
+        "meaning": [
+            "남자"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 592,
+        "voca": "clear",
+        "meaning": [
+            "맑은"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 593,
+        "voca": "play",
+        "meaning": [
+            "놀다"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 594,
+        "voca": "face",
+        "meaning": [
+            "얼굴"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 595,
+        "voca": "shy",
+        "meaning": [
+            "수줍은"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 596,
+        "voca": "stone",
+        "meaning": [
+            "돌"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 597,
+        "voca": "goal",
+        "meaning": [
+            "결승점"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 598,
+        "voca": "season",
+        "meaning": [
+            "계절"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 599,
+        "voca": "favorite",
+        "meaning": [
+            "마음에 드는 좋아하는 물건"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 600,
+        "voca": "across",
+        "meaning": [
+            "가로질러"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 601,
+        "voca": "fail",
+        "meaning": [
+            "실패하다"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 602,
+        "voca": "kid",
+        "meaning": [
+            "아이"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 603,
+        "voca": "say",
+        "meaning": [
+            "말하다"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 604,
+        "voca": "lady",
+        "meaning": [
+            "귀부인"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 605,
+        "voca": "memory",
+        "meaning": [
+            "기억"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 606,
+        "voca": "true",
+        "meaning": [
+            "진실"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 607,
+        "voca": "zoo",
+        "meaning": [
+            "동물원"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 608,
+        "voca": "and",
+        "meaning": [
+            "및"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 609,
+        "voca": "tower",
+        "meaning": [
+            "탑"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 610,
+        "voca": "should",
+        "meaning": [
+            "aushall의 과거"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 611,
+        "voca": "why",
+        "meaning": [
+            "왜"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 612,
+        "voca": "light",
+        "meaning": [
+            "빛"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 613,
+        "voca": "balloon",
+        "meaning": [
+            "기구"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 614,
+        "voca": "too",
+        "meaning": [
+            "(-도)또한"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 615,
+        "voca": "humor",
+        "meaning": [
+            "유우머"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 616,
+        "voca": "cold",
+        "meaning": [
+            "추운"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 617,
+        "voca": "key",
+        "meaning": [
+            "열쇠"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 618,
+        "voca": "space",
+        "meaning": [
+            "공간"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 619,
+        "voca": "art",
+        "meaning": [
+            "예술"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 620,
+        "voca": "burn",
+        "meaning": [
+            "시내"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 621,
+        "voca": "difficult",
+        "meaning": [
+            "곤란한"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 622,
+        "voca": "how",
+        "meaning": [
+            "어떻게"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 623,
+        "voca": "wet",
+        "meaning": [
+            "축축한"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 624,
+        "voca": "habit",
+        "meaning": [
+            "습관"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 625,
+        "voca": "mail",
+        "meaning": [
+            "우편물"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 626,
+        "voca": "peace",
+        "meaning": [
+            "평화"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 627,
+        "voca": "tall",
+        "meaning": [
+            "키큰"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 628,
+        "voca": "shock",
+        "meaning": [
+            "격돌"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 629,
+        "voca": "fruit",
+        "meaning": [
+            "과일"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 630,
+        "voca": "beach",
+        "meaning": [
+            "해안"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 631,
+        "voca": "collect",
+        "meaning": [
+            "모으다"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 632,
+        "voca": "eye",
+        "meaning": [
+            "눈"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 633,
+        "voca": "fish",
+        "meaning": [
+            "물고기"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 634,
+        "voca": "elephant",
+        "meaning": [
+            "코끼리"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 635,
+        "voca": "grape",
+        "meaning": [
+            "포도"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 636,
+        "voca": "world",
+        "meaning": [
+            "세계"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 637,
+        "voca": "guy",
+        "meaning": [
+            "녀석"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 638,
+        "voca": "street",
+        "meaning": [
+            "거리"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 639,
+        "voca": "quick",
+        "meaning": [
+            "빠른"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 640,
+        "voca": "triangle",
+        "meaning": [
+            "각형"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 641,
+        "voca": "brain",
+        "meaning": [
+            "뇌"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 642,
+        "voca": "horse",
+        "meaning": [
+            "말"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 643,
+        "voca": "weekend",
+        "meaning": [
+            "주말",
+            " 주말의",
+            " 주말을 지내다"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 644,
+        "voca": "control",
+        "meaning": [
+            "억제하다"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 645,
+        "voca": "lip",
+        "meaning": [
+            "입술"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 646,
+        "voca": "hat",
+        "meaning": [
+            "(테있는)모자 모자를 씌우다"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 647,
+        "voca": "late",
+        "meaning": [
+            "늦은"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 648,
+        "voca": "baseball",
+        "meaning": [
+            "야구"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 649,
+        "voca": "captain",
+        "meaning": [
+            "우두머리(chief)"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 650,
+        "voca": "tomorrow",
+        "meaning": [
+            "내일(은)"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 651,
+        "voca": "bedroom",
+        "meaning": [
+            "침실 성적인"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 652,
+        "voca": "way",
+        "meaning": [
+            "길"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 653,
+        "voca": "after",
+        "meaning": [
+            "후에"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 654,
+        "voca": "ghost",
+        "meaning": [
+            "유령"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 655,
+        "voca": "only",
+        "meaning": [
+            "유일한"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 656,
+        "voca": "pencil",
+        "meaning": [
+            "연필 연필로 쓰다"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 657,
+        "voca": "monkey",
+        "meaning": [
+            "원숭이"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 658,
+        "voca": "much",
+        "meaning": [
+            "많은"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 659,
+        "voca": "baby",
+        "meaning": [
+            "갓난아이",
+            " 막내   관심사",
+            " 골치아픈 일",
+            ""
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 660,
+        "voca": "chance",
+        "meaning": [
+            "우연"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 661,
+        "voca": "cut",
+        "meaning": [
+            "베다"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 662,
+        "voca": "fix",
+        "meaning": [
+            "고정시키다"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 663,
+        "voca": "live",
+        "meaning": [
+            "살다"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 664,
+        "voca": "hero",
+        "meaning": [
+            "영웅"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 665,
+        "voca": "borrow",
+        "meaning": [
+            "빌다"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 666,
+        "voca": "enjoy",
+        "meaning": [
+            "즐기다"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 667,
+        "voca": "river",
+        "meaning": [
+            "강"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 668,
+        "voca": "heat",
+        "meaning": [
+            "열"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 669,
+        "voca": "curtain",
+        "meaning": [
+            "커튼"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 670,
+        "voca": "football",
+        "meaning": [
+            "축구"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 671,
+        "voca": "marry",
+        "meaning": [
+            "결혼하다"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 672,
+        "voca": "pass",
+        "meaning": [
+            "지나가다"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 673,
+        "voca": "think",
+        "meaning": [
+            "생각하다"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 674,
+        "voca": "wall",
+        "meaning": [
+            "벽"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 675,
+        "voca": "another",
+        "meaning": [
+            "또 하나"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 676,
+        "voca": "get",
+        "meaning": [
+            "얻다"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 677,
+        "voca": "sleep",
+        "meaning": [
+            "잠자다"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 678,
+        "voca": "wish",
+        "meaning": [
+            "바라다"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 679,
+        "voca": "tree",
+        "meaning": [
+            "나무"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 680,
+        "voca": "land",
+        "meaning": [
+            "육지",
+            " 뭍",
+            " 땅"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 681,
+        "voca": "or",
+        "meaning": [
+            "혹은"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 682,
+        "voca": "to",
+        "meaning": [
+            "-로"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 683,
+        "voca": "write",
+        "meaning": [
+            "쓰다"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 684,
+        "voca": "form",
+        "meaning": [
+            "모양"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 685,
+        "voca": "brother",
+        "meaning": [
+            "형제"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 686,
+        "voca": "afraid",
+        "meaning": [
+            "두려워하여"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 687,
+        "voca": "strong",
+        "meaning": [
+            "강한"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 688,
+        "voca": "mirror",
+        "meaning": [
+            "거울"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 689,
+        "voca": "below",
+        "meaning": [
+            "아래에"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 690,
+        "voca": "air",
+        "meaning": [
+            "공기"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 691,
+        "voca": "museum",
+        "meaning": [
+            "박물관"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 692,
+        "voca": "chain",
+        "meaning": [
+            "사슬"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 693,
+        "voca": "student",
+        "meaning": [
+            "학생"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 694,
+        "voca": "trip",
+        "meaning": [
+            "여행"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 695,
+        "voca": "cage",
+        "meaning": [
+            "새장"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 696,
+        "voca": "hunt",
+        "meaning": [
+            "사냥하다"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 697,
+        "voca": "cow",
+        "meaning": [
+            "위협하다 암소"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 698,
+        "voca": "science",
+        "meaning": [
+            "과학"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 699,
+        "voca": "anger",
+        "meaning": [
+            "성"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 700,
+        "voca": "weather",
+        "meaning": [
+            "날씨"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 701,
+        "voca": "husband",
+        "meaning": [
+            "남편 절약하다"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 702,
+        "voca": "shoe",
+        "meaning": [
+            "구두"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 703,
+        "voca": "leaf",
+        "meaning": [
+            "잎"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 704,
+        "voca": "watch",
+        "meaning": [
+            "손목시계"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 705,
+        "voca": "question",
+        "meaning": [
+            "물음",
+            " 질문",
+            " 질의"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 706,
+        "voca": "hot",
+        "meaning": [
+            "뜨거운"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 707,
+        "voca": "work",
+        "meaning": [
+            "일"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 708,
+        "voca": "delicious",
+        "meaning": [
+            "맛있는"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 709,
+        "voca": "touch",
+        "meaning": [
+            "닿다"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 710,
+        "voca": "easy",
+        "meaning": [
+            "쉬운"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 711,
+        "voca": "many",
+        "meaning": [
+            "많은"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 712,
+        "voca": "you",
+        "meaning": [
+            "당신"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 713,
+        "voca": "but",
+        "meaning": [
+            "그러나 다만 (-을)제외하고"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 714,
+        "voca": "sugar",
+        "meaning": [
+            "설탕"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 715,
+        "voca": "visit",
+        "meaning": [
+            "방문하다",
+            " …의 손님으로 묵다"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 716,
+        "voca": "prince",
+        "meaning": [
+            "왕자",
+            " 태자",
+            " 세자",
+            " 대군"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 717,
+        "voca": "there",
+        "meaning": [
+            "거기에"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 718,
+        "voca": "turn",
+        "meaning": [
+            "돌리다"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 719,
+        "voca": "clean",
+        "meaning": [
+            "청결한"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 720,
+        "voca": "ocean",
+        "meaning": [
+            "대양"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 721,
+        "voca": "gold",
+        "meaning": [
+            "금"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 722,
+        "voca": "country",
+        "meaning": [
+            "나라"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 723,
+        "voca": "invite",
+        "meaning": [
+            "초대하다"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 724,
+        "voca": "dad",
+        "meaning": [
+            "아빠"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 725,
+        "voca": "have",
+        "meaning": [
+            "가지(고 있)다"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 726,
+        "voca": "low",
+        "meaning": [
+            "낮은"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 727,
+        "voca": "clip",
+        "meaning": [
+            "가위로 자르다"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 728,
+        "voca": "sky",
+        "meaning": [
+            "하늘"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 729,
+        "voca": "smart",
+        "meaning": [
+            "재치있는"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 730,
+        "voca": "brand",
+        "meaning": [
+            "상표"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 731,
+        "voca": "bird",
+        "meaning": [
+            "새"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 732,
+        "voca": "both",
+        "meaning": [
+            "쌍방의"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 733,
+        "voca": "miss",
+        "meaning": [
+            "미혼 여성 실수하다"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 734,
+        "voca": "company",
+        "meaning": [
+            "교제"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 735,
+        "voca": "know",
+        "meaning": [
+            "알다"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 736,
+        "voca": "fresh",
+        "meaning": [
+            "새로운"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 737,
+        "voca": "before",
+        "meaning": [
+            "앞에"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 738,
+        "voca": "already",
+        "meaning": [
+            "이미"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 739,
+        "voca": "cover",
+        "meaning": [
+            "덮다"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 740,
+        "voca": "nice",
+        "meaning": [
+            "니스(프랑스 남부의 항구도시)"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 741,
+        "voca": "A.M.",
+        "meaning": [
+            "오전"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 742,
+        "voca": "bridge",
+        "meaning": [
+            "다리"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 743,
+        "voca": "very",
+        "meaning": [
+            "매우"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 744,
+        "voca": "base",
+        "meaning": [
+            "기초"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 745,
+        "voca": "blood",
+        "meaning": [
+            "피"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 746,
+        "voca": "sick",
+        "meaning": [
+            "병난"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 747,
+        "voca": "high",
+        "meaning": [
+            "높은"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 748,
+        "voca": "battle",
+        "meaning": [
+            "전투"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 749,
+        "voca": "race",
+        "meaning": [
+            "인종"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 750,
+        "voca": "early",
+        "meaning": [
+            "이른"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 751,
+        "voca": "beef",
+        "meaning": [
+            "쇠고기"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 752,
+        "voca": "bear",
+        "meaning": [
+            "나르다"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 753,
+        "voca": "airport",
+        "meaning": [
+            "공항"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 754,
+        "voca": "cookie",
+        "meaning": [
+            "쿠키"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 755,
+        "voca": "look",
+        "meaning": [
+            "보다"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 756,
+        "voca": "same",
+        "meaning": [
+            "같은"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 757,
+        "voca": "can",
+        "meaning": [
+            "au-할 수 있다"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 758,
+        "voca": "because",
+        "meaning": [
+            "왜냐하면"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 759,
+        "voca": "woman",
+        "meaning": [
+            "부인"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 760,
+        "voca": "close",
+        "meaning": [
+            "닫다"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 761,
+        "voca": "sell",
+        "meaning": [
+            "팔다"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 762,
+        "voca": "boy",
+        "meaning": [
+            "소년"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 763,
+        "voca": "boot",
+        "meaning": [
+            "목이 긴 구두"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 764,
+        "voca": "curious",
+        "meaning": [
+            "이상스러운"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 765,
+        "voca": "dead",
+        "meaning": [
+            "죽은"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 766,
+        "voca": "pear",
+        "meaning": [
+            "서양배"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 767,
+        "voca": "accident",
+        "meaning": [
+            "뜻밖의 사건"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 768,
+        "voca": "will",
+        "meaning": [
+            "의지"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 769,
+        "voca": "calm",
+        "meaning": [
+            "평온한"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 770,
+        "voca": "talk",
+        "meaning": [
+            "말하다"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 771,
+        "voca": "focus",
+        "meaning": [
+            "초점"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 772,
+        "voca": "academy",
+        "meaning": [
+            "학술원"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 773,
+        "voca": "oil",
+        "meaning": [
+            "기름"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 774,
+        "voca": "yes",
+        "meaning": [
+            "예"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 775,
+        "voca": "deep",
+        "meaning": [
+            "깊은"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 776,
+        "voca": "begin",
+        "meaning": [
+            "시작하다"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 777,
+        "voca": "scissors",
+        "meaning": [
+            "가위"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 778,
+        "voca": "cousin",
+        "meaning": [
+            "사촌"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 779,
+        "voca": "bowl",
+        "meaning": [
+            "사발"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 780,
+        "voca": "book",
+        "meaning": [
+            "책"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 781,
+        "voca": "smile",
+        "meaning": [
+            "미소짓다 미소"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 782,
+        "voca": "basketball",
+        "meaning": [
+            "농구"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 783,
+        "voca": "enter",
+        "meaning": [
+            "들어가다"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 784,
+        "voca": "problem",
+        "meaning": [
+            "문제"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 785,
+        "voca": "west",
+        "meaning": [
+            "서쪽"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 786,
+        "voca": "break",
+        "meaning": [
+            "부수다"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 787,
+        "voca": "evening",
+        "meaning": [
+            "저녁"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 788,
+        "voca": "guide",
+        "meaning": [
+            "이끌다"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 789,
+        "voca": "diary",
+        "meaning": [
+            "일기"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 790,
+        "voca": "together",
+        "meaning": [
+            "같이"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 791,
+        "voca": "large",
+        "meaning": [
+            "큰"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 792,
+        "voca": "need",
+        "meaning": [
+            "필요"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 793,
+        "voca": "bathroom",
+        "meaning": [
+            "욕실"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 794,
+        "voca": "egg",
+        "meaning": [
+            "알"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 795,
+        "voca": "try",
+        "meaning": [
+            "시험해보다"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 796,
+        "voca": "animal",
+        "meaning": [
+            "동물"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 797,
+        "voca": "giant",
+        "meaning": [
+            "거인"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 798,
+        "voca": "call",
+        "meaning": [
+            "부르다"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 799,
+        "voca": "dolphin",
+        "meaning": [
+            "돌고래"
+        ],
+        "difficulty": 0
+    },
+    {
+        "num": 800,
+        "voca": "human",
+        "meaning": [
+            "인간의"
+        ],
+        "difficulty": 0
+    }
+]
