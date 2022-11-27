@@ -61,6 +61,15 @@ public class VocaStudy : MonoBehaviour
         panelDifficulty.SetActive(true);
         
     }
+
+    public void OnClose()
+    {
+        panelDifficulty.SetActive(false);
+        for (int i = 0; i < 4; i++)
+        {
+            panelVocaSet[i].gameObject.SetActive(false);
+        }
+    }
     /// <summary>
     /// 닫기 버튼 눌렀을 때 호출되는 함수.
     /// 패널 창을 닫는다.
