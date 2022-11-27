@@ -19,6 +19,7 @@ public class PanelPlayGame : MonoBehaviour
             panelWordPuzzle.gameObject.SetActive(true);
 
             List<Voca> vocaList = vocaSelector.FindVocaWeight(5);
+            Debug.Log(vocaList.Count);
             if (vocaList.Count < 5)
             {
                 panelAlarm.gameObject.SetActive(true);
@@ -46,6 +47,7 @@ public class PanelPlayGame : MonoBehaviour
             gameObject.SetActive(false);
 
             List<Voca> vocaList = vocaSelector.FindVocaWeight(5);
+            Debug.Log(vocaList.Count);
             if (vocaList.Count < 5)
             {
                 panelAlarm.gameObject.SetActive(true);
@@ -71,6 +73,7 @@ public class PanelPlayGame : MonoBehaviour
             gameObject.SetActive(false);
 
             List<Voca> vocaList = vocaSelector.FindVocaWeight(10);
+            Debug.Log(vocaList.Count);
             if (vocaList.Count < 10)
             {
                 panelAlarm.gameObject.SetActive(true);

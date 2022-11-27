@@ -241,6 +241,8 @@ public class PanelWordPuzzle : MonoBehaviour
         Clear();
         running = true;
         currentIndex = index;
+        Debug.Log(vocaList.Count);
+        Debug.Log(index);
         MakePuzzle(vocaList[index]);
         while (currentTime > 0)
         {

@@ -23,6 +23,7 @@ public class VocaSelector : MonoBehaviour
     
     private void Awake()
     {
+        Debug.Log(Application.persistentDataPath);
         JsonLoad();
     }
     // TODO: 특정 difficulty, level의 단어를 단어장 json 파일에서 가져온다.
@@ -230,16 +231,19 @@ public class VocaSelector : MonoBehaviour
                     voca.Add(advancedVoca[(j-(BEGINNER+INTERMEDIATE)/20)*20+k]);
                 }
             }
-            else if(j<(BEGINNER+INTERMEDIATE+ADVANCED)/20){
-                if(voca.Contains(toeicVoca[(j-(BEGINNER+INTERMEDIATE+ADVANCED)/20)*20+k]))//중복이라면
+            else if(j<(BEGINNER+INTERMEDIATE+ADVANCED+TOEIC)/20)
+            {
+                Debug.Log("idx" + (j - (BEGINNER + INTERMEDIATE + ADVANCED) / 20) * 20 + k);
+                if (voca.Contains(toeicVoca[(j-(BEGINNER+INTERMEDIATE+ADVANCED) /20)*20+k]))//중복이라면
                 {
                     i--;
                 }
                 else{
-                    voca.Add(toeicVoca[(j-(BEGINNER+INTERMEDIATE+ADVANCED)/20)*20+k]);
+                    voca.Add(toeicVoca[(j-(BEGINNER+INTERMEDIATE+ADVANCED) /20)*20+k]);
                 }
             }
         }
+        Debug.Log(voca.Count);
         return voca;
     }
     /// <summary>
