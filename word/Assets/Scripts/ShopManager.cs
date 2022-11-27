@@ -37,8 +37,10 @@ public class ShopManager : MonoBehaviour
     ///
     
     /// 가격 리스트 불러오기 ///
-    public void GetPriseList(){
-        string jdata = File.ReadAllText(Application.streamingAssetsPath + "/JsonData/ShopList.json");
+    public void GetPriseList()
+    {
+        var str = Resources.Load<TextAsset>("JsonData/ShopList");
+        var jdata = str.ToString();
         priseList = JsonConvert.DeserializeObject<List<PriseList>>(jdata);
         /*
         for (int i = 0; i < priseList.Count; i++)

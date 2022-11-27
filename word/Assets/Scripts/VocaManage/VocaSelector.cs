@@ -76,13 +76,21 @@ public class VocaSelector : MonoBehaviour
     public void JsonLoad()
     {
         string jdata;
-        jdata = File.ReadAllText(Application.streamingAssetsPath + "/JsonData/Beginner.json");
+
+        var beginner = Resources.Load<TextAsset>("JsonData/Beginner");
+        jdata = beginner.ToString();
         beginnerVoca = JsonConvert.DeserializeObject<List<Voca>>(jdata);
-        jdata = File.ReadAllText(Application.streamingAssetsPath + "/JsonData/Intermediate.json");
+
+        var intermediate = Resources.Load<TextAsset>("JsonData/Intermediate");
+        jdata = intermediate.ToString();
         intermediateVoca = JsonConvert.DeserializeObject<List<Voca>>(jdata);
-        jdata = File.ReadAllText(Application.streamingAssetsPath + "/JsonData/Advanced.json");
+
+        var advanced = Resources.Load<TextAsset>("JsonData/Advanced");
+        jdata = advanced.ToString();
         advancedVoca = JsonConvert.DeserializeObject<List<Voca>>(jdata);
-        jdata = File.ReadAllText(Application.streamingAssetsPath + "/JsonData/Toeic.json");
+
+        var toeic = Resources.Load<TextAsset>("JsonData/Toeic");
+        jdata = toeic.ToString();
         toeicVoca = JsonConvert.DeserializeObject<List<Voca>>(jdata);
     }
     /// <summary>
@@ -108,9 +116,9 @@ public class VocaSelector : MonoBehaviour
         }
         vtm = new VocaWeightMeta(BEGINNER,INTERMEDIATE,ADVANCED,TOEIC);
         string jdata = JsonConvert.SerializeObject(vtlist);
-        File.WriteAllText(Application.dataPath + "/VocaWeight.json", jdata);
+        File.WriteAllText(Application.persistentDataPath + "/VocaWeight.json", jdata);
         jdata = JsonConvert.SerializeObject(vtm);
-        File.WriteAllText(Application.dataPath + "/VocaWeightMeta.json", jdata);
+        File.WriteAllText(Application.persistentDataPath + "/VocaWeightMeta.json", jdata);
     }
 
     /// <summary>
@@ -119,13 +127,13 @@ public class VocaSelector : MonoBehaviour
     public void AddVocaWeight(int difficulty, int level)
     {
         string jdata;
-        if(!File.Exists(Application.dataPath + "/VocaWeight.json")){
+        if(!File.Exists(Application.persistentDataPath + "/VocaWeight.json")){
             InitVocaWeight();
         }
         if(vtlist == null){
-            jdata = File.ReadAllText(Application.dataPath + "/VocaWeight.json");
+            jdata = File.ReadAllText(Application.persistentDataPath + "/VocaWeight.json");
             vtlist = JsonConvert.DeserializeObject<List<VocaWeight>>(jdata);
-            jdata = File.ReadAllText(Application.dataPath + "/VocaWeightMeta.json");
+            jdata = File.ReadAllText(Application.persistentDataPath + "/VocaWeightMeta.json");
             vtm = JsonConvert.DeserializeObject<VocaWeightMeta>(jdata);
         }
         //불러오기
@@ -155,9 +163,9 @@ public class VocaSelector : MonoBehaviour
         vtm.sum += 200 - tempSum;
         
         jdata = JsonConvert.SerializeObject(vtlist);
-        File.WriteAllText(Application.dataPath + "/VocaWeight.json", jdata);
+        File.WriteAllText(Application.persistentDataPath + "/VocaWeight.json", jdata);
         jdata = JsonConvert.SerializeObject(vtm);
-        File.WriteAllText(Application.dataPath + "/VocaWeightMeta.json", jdata);
+        File.WriteAllText(Application.persistentDataPath + "/VocaWeightMeta.json", jdata);
         //저장
     }
 
@@ -167,9 +175,9 @@ public class VocaSelector : MonoBehaviour
     public List<Voca> FindVocaWeight(int num) // 몇개를 반환할 것인지를 인자로
     {
         if(vtlist == null){
-            string jdata = File.ReadAllText(Application.dataPath + "/VocaWeight.json");
+            string jdata = File.ReadAllText(Application.persistentDataPath + "/VocaWeight.json");
             vtlist = JsonConvert.DeserializeObject<List<VocaWeight>>(jdata);
-            jdata = File.ReadAllText(Application.dataPath + "/VocaWeightMeta.json");
+            jdata = File.ReadAllText(Application.persistentDataPath + "/VocaWeightMeta.json");
             vtm = JsonConvert.DeserializeObject<VocaWeightMeta>(jdata);
         }
         List<Voca> voca = new List<Voca>();
@@ -240,9 +248,9 @@ public class VocaSelector : MonoBehaviour
     public int getVocaWeight(Voca voca) // newWeight는 순서대로 새로 부여할 가중치
     {
         if(vtlist == null){
-            string jdata = File.ReadAllText(Application.dataPath + "/VocaWeight.json");
+            string jdata = File.ReadAllText(Application.persistentDataPath + "/VocaWeight.json");
             vtlist = JsonConvert.DeserializeObject<List<VocaWeight>>(jdata);
-            jdata = File.ReadAllText(Application.dataPath + "/VocaWeightMeta.json");
+            jdata = File.ReadAllText(Application.persistentDataPath + "/VocaWeightMeta.json");
             vtm = JsonConvert.DeserializeObject<VocaWeightMeta>(jdata);
         }
         int w = 0;
@@ -269,14 +277,14 @@ public class VocaSelector : MonoBehaviour
     public void SaveVocaWeight(List<Voca> voca, int[] newWeight) // newWeight는 순서대로 새로 부여할 가중치
     {
         string jdata;
-        if(!File.Exists(Application.dataPath + "/VocaWeight.json")){
+        if(!File.Exists(Application.persistentDataPath + "/VocaWeight.json")){
             InitVocaWeight();
         }
 
         if(vtlist == null){
-            jdata = File.ReadAllText(Application.dataPath + "/VocaWeight.json");
+            jdata = File.ReadAllText(Application.persistentDataPath + "/VocaWeight.json");
             vtlist = JsonConvert.DeserializeObject<List<VocaWeight>>(jdata);
-            jdata = File.ReadAllText(Application.dataPath + "/VocaWeightMeta.json");
+            jdata = File.ReadAllText(Application.persistentDataPath + "/VocaWeightMeta.json");
             vtm = JsonConvert.DeserializeObject<VocaWeightMeta>(jdata);
         }
         //불러오기
@@ -305,9 +313,9 @@ public class VocaSelector : MonoBehaviour
             }
         }
         jdata = JsonConvert.SerializeObject(vtlist);
-        File.WriteAllText(Application.dataPath + "/VocaWeight.json", jdata);
+        File.WriteAllText(Application.persistentDataPath + "/VocaWeight.json", jdata);
         jdata = JsonConvert.SerializeObject(vtm);
-        File.WriteAllText(Application.dataPath + "/VocaWeightMeta.json", jdata);
+        File.WriteAllText(Application.persistentDataPath + "/VocaWeightMeta.json", jdata);
         //저장
     }
 }

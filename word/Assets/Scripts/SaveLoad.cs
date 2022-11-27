@@ -71,7 +71,7 @@ public class SaveLoad : MonoBehaviour
     private void Awake()
     {
         Instance = this;
-        filePath = Application.dataPath + "/data.json";
+        filePath = Application.persistentDataPath + "/data.json";
         Debug.Log(Application.streamingAssetsPath);
         Debug.Log(filePath);
         currentData = new UserData();
@@ -118,9 +118,9 @@ public class SaveLoad : MonoBehaviour
         byte[] bytes = System.Text.Encoding.UTF8.GetBytes(jdata);
         string format = System.Convert.ToBase64String(bytes);
 
-        File.WriteAllText(Application.dataPath + "/data.json", format);
+        File.WriteAllText(Application.persistentDataPath + "/data.json", format);
 
-        File.WriteAllText(Application.dataPath + "/data-string.json", jdata);
+        File.WriteAllText(Application.persistentDataPath + "/data-string.json", jdata);
     }
     /// <summary>
     /// 데이터를 불러온다.
