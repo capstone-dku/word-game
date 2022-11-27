@@ -5,7 +5,7 @@ using Newtonsoft.Json;
 using System.IO;
 
 public class VocaSelector : MonoBehaviour
-{    
+{
     const int BEGINNER = 800;
     const int INTERMEDIATE = 1800;
     const int ADVANCED = 400;

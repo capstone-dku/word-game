@@ -50,10 +50,10 @@ public class BuildingManager : MonoBehaviour
         return null;
     }
     
-    public void OnClickedBuild()
+    public void OnClickedBuild(bool active)
     {
-        panelShop.gameObject.SetActive(true);
-        panelShop.UpdateButton();
+        panelShop.gameObject.SetActive(active);
+        if(active) panelShop.UpdateButton();
     }
 
     public void OnClickedButton(int id)

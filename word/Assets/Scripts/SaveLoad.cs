@@ -129,7 +129,7 @@ public class SaveLoad : MonoBehaviour
     public UserData LoadData()
     {
         UserData data = null;
-        string jdata = File.ReadAllText(Application.dataPath + "/data.json");
+        string jdata = File.ReadAllText(Application.persistentDataPath + "/data.json");
         byte[] bytes = System.Convert.FromBase64String(jdata);
         string reformat = System.Text.Encoding.UTF8.GetString(bytes);
         data = JsonConvert.DeserializeObject<UserData>(reformat);

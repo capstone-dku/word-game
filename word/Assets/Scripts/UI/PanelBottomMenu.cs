@@ -17,20 +17,36 @@ public class PanelBottomMenu : MonoBehaviour
     public void OnClickedStudy()
     {
         vocaStudy.OnButtonClickedStudy();
+
+        vocaGame.OnClickedGame(false);
+        missionMenu.OnClickedMission(false);
+        BuildingManager.gameObject.SetActive(false);
     }
 
     public void OnClickedGame()
     {
-        vocaGame.OnClickedGame();
+        vocaGame.OnClickedGame(true);
+
+        vocaStudy.OnClose();
+        missionMenu.OnClickedMission(false);
+        BuildingManager.OnClickedBuild(false);
     }
 
     public void OnClickedBuilding()
     {
-        BuildingManager.OnClickedBuild();
+        BuildingManager.OnClickedBuild(true);
+
+        vocaStudy.OnClose();
+        vocaGame.OnClickedGame(false);
+        missionMenu.OnClickedMission(false);
     }
 
     public void OnClickedMission()
     {
-        missionMenu.OnClickedMission();
+        missionMenu.OnClickedMission(true);
+
+        vocaStudy.OnClose();
+        vocaGame.OnClickedGame(false);
+        BuildingManager.OnClickedBuild(false);
     }
 }
