@@ -87,6 +87,7 @@ public class VocaStudy : MonoBehaviour
     public void OnButtonClickDifficulty(int diff)
     {
         ShowPanelVocaSet(diff);
+        panelStudyConfirm.UpdateDifficulty(diff);
     }
 
     /// <summary>
@@ -125,6 +126,7 @@ public class VocaStudy : MonoBehaviour
     public void Study(int difficulty, int setNumber)
     {
         // 학습할 단어를 불러온다.
+        Debug.Log(difficulty);
         currentVocaList = vocaSelector.SelectVoca(difficulty, setNumber);
         this.currentDifficulty = difficulty;
         this.currentSetNumber = setNumber;

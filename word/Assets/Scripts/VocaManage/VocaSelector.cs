@@ -79,19 +79,19 @@ public class VocaSelector : MonoBehaviour
 
         var beginner = Resources.Load<TextAsset>("JsonData/Beginner");
         jdata = beginner.ToString();
-        beginnerVoca = JsonConvert.DeserializeObject<List<Voca>>(jdata);
+        beginnerVoca = JsonConvert.DeserializeObject<List<Voca>>(beginner.ToString());
 
         var intermediate = Resources.Load<TextAsset>("JsonData/Intermediate");
         jdata = intermediate.ToString();
-        intermediateVoca = JsonConvert.DeserializeObject<List<Voca>>(jdata);
+        intermediateVoca = JsonConvert.DeserializeObject<List<Voca>>(intermediate.ToString());
 
         var advanced = Resources.Load<TextAsset>("JsonData/Advanced");
         jdata = advanced.ToString();
-        advancedVoca = JsonConvert.DeserializeObject<List<Voca>>(jdata);
+        advancedVoca = JsonConvert.DeserializeObject<List<Voca>>(advanced.ToString());
 
         var toeic = Resources.Load<TextAsset>("JsonData/Toeic");
         jdata = toeic.ToString();
-        toeicVoca = JsonConvert.DeserializeObject<List<Voca>>(jdata);
+        toeicVoca = JsonConvert.DeserializeObject<List<Voca>>(toeic.ToString());
     }
     /// <summary>
     /// 티켓파일 초기화 파일생성해주지만 만들어진 상태로 파일 넣어주는게 나을것 같아요.
