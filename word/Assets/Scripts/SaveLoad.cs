@@ -191,6 +191,10 @@ public class SaveLoad : MonoBehaviour
     public void Build(BuildingData buildingData)
     {
         currentData.buildingData.Add(buildingData);
+        for (int i = 0; i < currentData.coin.Length; i++)
+        {
+            panelItem.UpdateCoin(i, GetCoin(i));
+        }
     }
 
     public int GetBuilding(Vector3 pos)
