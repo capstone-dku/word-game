@@ -249,4 +249,24 @@ public class SaveLoad : MonoBehaviour
         currentData.weekStudyClear = false;
         currentData.weekStudyMissionCount = 0;
     }
+
+    public int GetTodayStudyMissionCount()
+    {
+        return currentData.todayStudyMissionCount;
+    }
+
+    public bool GetTodayStudyMissionClear()
+    {
+        return currentData.todayStudyClear;
+    }
+
+    public int GetWeekStudyMissionCount()
+    {
+        return currentData.weekStudyMissionCount;
+    }
+    public bool GetWeekStudyMissionClear()
+    {
+        return currentData.weekStudyClear;
+    }
+
 }

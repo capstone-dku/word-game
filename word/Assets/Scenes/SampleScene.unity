@@ -2072,7 +2072,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 97225968}
   m_OnClick:
     m_PersistentCalls:
@@ -31426,7 +31426,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   alarm: {fileID: 1991867051}
+  TodayMissionButton: {fileID: 0}
   TodayMissionText: {fileID: 0}
+  WeekMissionButton: []
+  weekMissionText: []
 --- !u!1 &810919281
 GameObject:
   m_ObjectHideFlags: 0
@@ -69869,7 +69872,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 2022417285}
   m_OnClick:
     m_PersistentCalls:
@@ -72853,7 +72856,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   alarm: {fileID: 1991867051}
+  TodayMissionButton: {fileID: 1968210843}
   TodayMissionText: {fileID: 264529208}
+  WeekMissionButton:
+  - {fileID: 1972161313}
+  - {fileID: 97225967}
+  - {fileID: 2022417284}
+  weekMissionText:
+  - {fileID: 1455446343}
+  - {fileID: 854903067}
+  - {fileID: 1528980934}
 --- !u!4 &2124995330
 Transform:
   m_ObjectHideFlags: 0
